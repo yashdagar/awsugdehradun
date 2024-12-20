@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Testing files
+coverage/
+
+# Log files
+npm-debug.log*
+yarn-error.log*
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vimrc
+.viminfo
+
+# Package-lock and yarn-lock files
+package-lock.json
+yarn.lock
+
+# Local environment files
+.env
+.env.local
+.env.development
+.env.production

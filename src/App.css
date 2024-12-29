@@ -31,3 +31,7 @@ body{
   background-color: #252F3E;
   color: white;
 }
+
+.ulList li a {
+  font-weight: 600;
+}

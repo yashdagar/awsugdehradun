@@ -33,7 +33,34 @@ const About = () => {
         <div>
           <h2>What can you expect</h2>
           <div className="h-8" />
-          <p>Need content</p>
+          <ol>
+            <li>
+              Renew, revive & revitalize to exemplify your excitement about the
+              work you do
+            </li>
+            <li>
+              Learn industry trends and intricacies about innovative
+              implementations from AWS experts
+            </li>
+            <li>
+              Harness the power of networking with AWS users, DevOps, developers
+              & solutions architects
+            </li>
+            <li>Network with fellow AWS veterans & techies during breaks</li>
+            <li>
+              Novice to pioneer on relentless pursuit to learn can rejoice the
+              AWS offerings & success stories under one roof.
+            </li>
+            <li>Take helpful and valuable information back to business</li>
+            <li>
+              Gain visibility to get more publicity for your esteemed
+              organisation
+            </li>
+            <li>
+              Sporting chance for active participants to win AWS credits,
+              goodies and avail various certification vouchers
+            </li>
+          </ol>
         </div>
         <div className="flex mt-16">
           <a href="/code-of-conduct" className="link">

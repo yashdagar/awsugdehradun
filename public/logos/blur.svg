@@ -1,4 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 1200 1200">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.dev/svgjs"
+    viewBox="0 0 1200 1200"
+>
     <defs>
         <filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
        	<feGaussianBlur stdDeviation="130" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur">
@@ -6,9 +12,9 @@
         </filter>
     </defs>
     <g filter="url(#bbblurry-filter)">
-        <ellipse rx="82" ry="83.5" cx="510.1994399874479" cy="438.715374647753" fill="#9d69fb">
+        <ellipse rx="82" ry="83.5" cx="510.1994399874479" cy="308" fill="#9d69fb">
         </ellipse>
-        <ellipse rx="82" ry="83.5" cx="239.6778887797136" cy="292.54394707884524" fill="#ff9901">
+        <ellipse rx="82" ry="83.5" cx="239.6778887797136" cy="292" fill="#ff9901">
         </ellipse>
     </g>
 </svg>

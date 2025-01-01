@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
   font-family: 'AmazonEmber';
   src: url('../../../fonts/AmazonEmberDisplay.otf') format('otf');
@@ -15,14 +16,31 @@
   src: url('./fonts/AmazonEmberThin.ttf') format('ttf');
   font-weight: 200;
   font-style: normal;
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --orange: #ff9901;
+    --purple: #9d69fb;
+    --links: #31a6fa;
+    --white: #dee8ed;
+    --black: #111111;
+    --gray: #333f53;
+    --light-gray: #c0c9ce;
+    --dark-gray: #171d27;
+    --text-gradient: linear-gradient(to top right, #f79552, #f79552, #dd918f);
+>>>>>>> 7e2d22c (about section implemented)
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 body{
   width: 100%;
   height: 100%;
@@ -35,3 +53,103 @@ body{
 .ulList li a {
   font-weight: 600;
 }
+=======
+body {
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -1Q;
+    max-width: fit-content;
+    color: var(--orange);
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    /* color: var(--light-gray); */
+}
+
+.link {
+    color: var(--links);
+    font-weight: 600;
+    display: flex;
+}
+
+header {
+    @apply transition-all duration-500 ease-in-out;
+}
+
+button {
+    background-color: var(--orange);
+    white-space: nowrap;
+}
+
+.ulList li a {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 1rem 0.8rem;
+    display: flex;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.hero {
+    background: radial-gradient(80% 130% at 110% -10%, #320133, #3d00ff3d),
+        radial-gradient(80% 130% at -10% 110%, #100033, #121b272b);
+}
+
+.hero::after {
+    content: "";
+    filter: blur(5px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0008;
+    z-index: -1;
+}
+
+.hero canvas {
+    display: block;
+    position: fixed;
+    z-index: -1;
+}
+
+.about,
+.speakers {
+    background-image: url("logos/rect.svg");
+}
+
+.blur1 {
+    content: "";
+    display: block;
+    background-image: url("logos/blur.svg");
+    position: absolute;
+    height: 512px;
+    width: 512px;
+    top: -150px;
+    left: 100px;
+    rotate: 120deg;
+}
+
+/* .blur2 {
+    content: "";
+    display: block;
+    background-image: url("logos/blur.svg");
+    position: absolute;
+    height: 512px;
+    width: 512px;
+    top: 0px;
+    right: 100px;
+    rotate: -90deg;
+} */
+>>>>>>> 7e2d22c (about section implemented)

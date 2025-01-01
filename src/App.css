@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-@font-face {
-  font-family: 'AmazonEmber';
-  src: url('../../../fonts/AmazonEmberDisplay.otf') format('otf');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'AmazonEmber';
-  src: url('./fonts/AmazonEmberBold.ttf') format('ttf');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'AmazonEmber';
-  src: url('./fonts/AmazonEmberThin.ttf') format('ttf');
-  font-weight: 200;
-  font-style: normal;
-=======
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,7 +12,6 @@
     --light-gray: #c0c9ce;
     --dark-gray: #171d27;
     --text-gradient: linear-gradient(to top right, #f79552, #f79552, #dd918f);
->>>>>>> 7e2d22c (about section implemented)
 }
 
 * {
@@ -40,20 +20,6 @@
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-body{
-  width: 100%;
-  height: 100%;
-  font-family: "AmazonEmber";
-  font-weight: 400;
-  background-color: #252F3E;
-  color: white;
-}
-
-.ulList li a {
-  font-weight: 600;
-}
-=======
 body {
     width: 100%;
     font-family: "Open Sans", sans-serif;
@@ -152,4 +118,3 @@ button {
     right: 100px;
     rotate: -90deg;
 } */
->>>>>>> 7e2d22c (about section implemented)

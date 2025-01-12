@@ -4,17 +4,17 @@ const CodeOfConduct = () => {
   return (
     <>
       <div>
-        <div className="bg-[url('https://doplrafkvxyec.cloudfront.net/assets/img/banner_bg.jpg')] h-96 bg-cover bg-center bg-no-repeat -mt-5"></div>
+        <div className="bg-[url('https://doplrafkvxyec.cloudfront.net/assets/img/banner_bg.jpg')] h-72 md:h-[28rem] bg-contain bg-center bg-repeat -mt-5"></div>
 
         <img
-          className="absolute mx-auto w-96 top-14 left-1/2 -translate-x-1/2"
+          className="absolute mx-auto w-48 md:w-96 top-14 left-1/2 -translate-x-1/2"
           src="public/logos/aws.png"
           alt=""
           loading="lazy"
         />
       </div>
-      <div className="bg-[#222E3F] py-10">
-        <h2 className="mx-auto mb-8">Code of Conduct</h2>
+      <div className="bg-white text-black py-10">
+        <h2 className="text-primary mb-16">Code of Conduct</h2>
         <div className="w-[80vw] mx-auto mb-20">
           <div>
             <h3 className="my-2">Importance</h3>
@@ -31,23 +31,29 @@ const CodeOfConduct = () => {
 
           <div className="mt-5">
             <h3 className="my-2">Behaviour</h3>
-            <p>
-              You will behave in a way as to create a safe and supportive
-              environment for all event participants.
-              <br />
-              You will not engage in disruptive speech or behavior or otherwise
-              interfere with the event or other individuals’ participation in
-              the event. <br />
-              You will not engage in any form of harassing, offensive,
-              discriminatory, or threatening speech or behavior, including (but
-              not limited to) relating to race, gender, gender identity and
-              expression, national origin, religion, disability, marital status,
-              age, sexual orientation, military or veteran status, or other
-              protected category. <br />
-              You will comply with the instructions of event and venue staff.{" "}
-              <br />
-              You will comply with all applicable laws.
-            </p>
+            <ul className="list-circle">
+              <li>
+                You will behave in a way as to create a safe and supportive
+                environment for all event participants.
+              </li>
+              <li>
+                You will not engage in disruptive speech or behavior or
+                otherwise interfere with the event or other individuals’
+                participation in the event.
+              </li>
+              <li>
+                You will not engage in any form of harassing, offensive,
+                discriminatory, or threatening speech or behavior, including
+                (but not limited to) relating to race, gender, gender identity
+                and expression, national origin, religion, disability, marital
+                status, age, sexual orientation, military or veteran status, or
+                other protected category.
+              </li>
+              <li>
+                You will comply with the instructions of event and venue staff.{" "}
+              </li>
+              <li>You will comply with all applicable laws.</li>
+            </ul>
           </div>
 
           <div className="mt-5">
@@ -81,7 +87,7 @@ const CodeOfConduct = () => {
               If you witness or are subjected to inappropriate behavior, or have
               concerns related to this Code of Conduct, please promptly contact
               at{" "}
-              <a className="text-[--links]" href="mailto:support@awsugddn.in">
+              <a className="text-blue" href="mailto:support@awsugddn.in">
                 support@awsugddn.in
               </a>
             </p>

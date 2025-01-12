@@ -1,0 +1,58 @@
+.platinum {
+    letter-spacing: 0.5Q;
+    width: fit-content;
+    /* --g: -72deg, #dedeff, #ffffff 16%, #dedeff 21%, #ffffff 24%, #555564 27%,
+        #dedeff 36%, #ffffff 45%, #ffffff 60%, #dedeff 72%, #ffffff 80%,
+        #dedeff 84%, #555564;
+    background: -moz-linear-gradient(var(--g));
+    background: -webkit-linear-gradient(var(--g));
+    background: -o-linear-gradient(var(--g));
+    background: linear-gradient(var(--g)); */
+    --blur: 12px;
+    background: lavender;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: #e6e6fa04 1px 0 12px;
+}
+
+.gold {
+    width: fit-content;
+    /* --g: -72deg, #ffc373, #ffffff 16%, #ffc373 21%, #ffffff 24%, #a17434 27%,
+        #ffc373 36%, #ffffff 45%, #ffffff 60%, #ffc373 72%, #ffffff 80%,
+        #ffc373 84%, #a17434;
+    background: -moz-linear-gradient(var(--g));
+    background: -webkit-linear-gradient(var(--g));
+    background: -o-linear-gradient(var(--g));
+    background: linear-gradient(var(--g)); */
+    background-color: goldenrod;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.silver {
+    width: fit-content;
+    /* --g: -72deg, #dedede, #ffffff 16%, #dedede 21%, #ffffff 24%, #454545 27%,
+        #dedede 36%, #ffffff 45%, #ffffff 60%, #dedede 72%, #ffffff 80%,
+        #dedede 84%, #a1a1a1;
+    background: -moz-linear-gradient(var(--g));
+    background: -webkit-linear-gradient(var(--g));
+    background: -o-linear-gradient(var(--g));
+    background: linear-gradient(var(--g)); */
+    background-color: silver;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bronze {
+    width: fit-content;
+    /* --g: -72deg, #ca7345, #ffdeca 16%, #ca7345 21%, #ffdeca 24%, #a14521 27%,
+        #ca7345 36%, #ffdeca 45%, #ffdeca 60%, #ca7345 72%, #ffdeca 80%,
+        #ca7345 84%, #732100;
+    background: -moz-linear-gradient(var(--g));
+    background: -webkit-linear-gradient(var(--g));
+    background: -o-linear-gradient(var(--g));
+    background: linear-gradient(var(--g)); */
+    background-color: #cd7f32;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

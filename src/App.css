@@ -2,135 +2,170 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --orange: #ff9901;
-    --purple: #9d69fb;
-    --links: #31a6fa;
-    --white: #dee8ed;
-    --black: #111111;
-    --gray: #333f53;
-    --light-gray: #c0c9ce;
-    --dark-gray: #171d27;
-    --text-gradient: linear-gradient(to top right, #f79552, #f79552, #dd918f);
-}
+@layer base {
+    :root {
+        --primary: 255 166 34; /* orange */
+        --secondary: 157 105 251; /* purple */
+        --blue: 49 166 250;
+        --white: 255 255 255;
+        --black: 17 17 17;
+        --gray-100: 222 232 237;
+        --gray-200: 192 201 206;
+        --gray-500: 51 63 83;
+        --gray-900: 32 32 32;
+    }
+    * {
+        @apply m-0 p-0 box-border;
+    }
+    section:not(.hero) {
+        scroll-margin-top: 4rem;
+        @apply relative px-12 sm:px-16 lg:px-24 py-16 text-black;
+        * {
+            @apply z-20;
+        }
+    }
+    .header {
+        @apply w-full fixed top-0 left-0 z-50 transition-all duration-300 ease-in-out;
+    }
+    body {
+        @apply w-full font-light bg-white text-black;
+    }
+    h2 {
+        @apply relative w-fit mb-16 sm:mb-12 mx-auto tracking-tight text-2xl sm:text-3xl md:text-4xl text-black font-semibold;
+    }
+    h3 {
+        @apply text-xl sm:text-2xl md:text-3xl font-medium tracking-tight max-w-fit;
+    }
+    h4 {
+        @apply text-lg sm:text-xl md:text-2xl font-medium;
+    }
+    p {
+        @apply leading-6 tracking-wide text-base;
+    }
+    img {
+        -webkit-user-drag: none; /* Safari and Chrome */
+        -moz-user-drag: none; /* Firefox */
+        -ms-user-drag: none; /* Internet Explorer/Edge */
+        user-drag: none;
+    }
+    .navbar {
+        * {
+            @apply relative font-bold text-xs py-2 flex text-center whitespace-nowrap cursor-pointer;
+        }
+        div::after {
+            @apply content-[""] absolute bottom-0 left-0 w-full max-w-0 h-1 bg-primary transition-all duration-300;
+        }
+        button {
+            @apply border-none;
+        }
+    }
+    .hero {
+        --size: 150vw;
+        --brightness: 1;
+        --blur: 0px;
+        img {
+            z-index: 10;
+        }
+        background-color: gray;
+    }
+    .link {
+        @apply text-blue font-bold flex;
+    }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    .team {
+        background: white;
+        @apply relative px-12 sm:px-16 lg:px-24 py-16 text-black;
+        * {
+            @apply z-20;
+        }
+        h2 {
+            @apply text-black;
+        }
+    }
 
-body {
-    width: 100%;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    background-color: var(--black);
-    color: var(--white);
-}
+    .person-img {
+        img:first-child {
+            scale: 1;
+        }
+        img:last-child {
+            transform-origin: center;
+            max-width: 0;
+        }
+    }
 
-h2 {
-    font-family: "Raleway", sans-serif;
-    font-size: 36px;
-    font-weight: 500;
-    letter-spacing: -1Q;
-    max-width: fit-content;
-    color: var(--orange);
-}
+    .person-img:hover {
+        cursor: pointer;
+        img:first-child {
+            scale: 1.1;
+            filter: brightness(0.5);
+        }
+        img:last-child {
+            max-width: 10rem;
+        }
+    }
 
-h3 {
-    font-family: "Raleway", sans-serif;
-    font-size: 28px;
-    font-weight: 500;
-    letter-spacing: -1Q;
-    max-width: fit-content;
-    color: var(--orange);
-}
+    .schedule {
+        * {
+            @apply z-20;
+        }
+    }
 
-p {
-    font-size: 18px;
-    font-weight: 300;
-    /* color: var(--light-gray); */
-}
+    .team {
+        background: #d1faff;
+    }
 
-.link {
-    color: var(--links);
-    font-weight: 600;
-    display: flex;
-}
+    .footer {
+        position: relative;
+        height: 28rem;
+        background:
+            no-repeat bottom / cover url("logos/footer_bg.svg"),
+            linear-gradient(#d1faff, #fff 50%);
+    }
 
-header {
-    @apply transition-all duration-500 ease-in-out;
+    .list-circle {
+        @apply flex flex-col list-[circle] gap-2 md:gap-2 pl-2;
+    }
+    .about {
+        @apply relative px-4 md:px-12 lg:px-24 py-16 flex justify-between pb-[12rem];
+        background:
+            no-repeat bottom / cover url("logos/sky.webp"),
+            #ebfdff;
+    }
 }
-
-button {
-    background-color: var(--orange);
-    white-space: nowrap;
+@layer components {
+    section {
+        h2::after {
+            @apply content-[""] absolute left-1/4 w-2/4 -bottom-4 h-1 bg-primary bg-repeat-x;
+        }
+    }
+    .hero::before {
+        background: no-repeat top / cover url("logos/hero_bg.png");
+        filter: brightness(var(--brightness)) blur(var(--blur));
+        background-size: var(--size);
+        @apply content-[""] absolute left-0 top-0 w-full h-full;
+    }
+    .navbar div:hover::after {
+        @apply max-w-40;
+    }
+    /* .hero::before {
+        @apply content-[""] absolute left-0 top-0 w-full h-full bg-[#0004] backdrop-blur-sm;
+    } */
+    .about::before {
+        background: repeat-x bottom / contain url("logos/about_bg.png");
+        @apply content-[""] absolute left-0 bottom-0 w-full h-48;
+    }
+    .speakers::before {
+        @apply content-[""] absolute left-0 bottom-0 w-full h-full opacity-50;
+        background:
+            repeat center / 50vw url("logos/speakers_bg.png"),
+            linear-gradient(45deg, rgb(var(--blue)), green);
+        /* background-size: 50vw; */
+    }
+    .schedule::before {
+        @apply content-[""] absolute left-0 bottom-0 w-full h-full opacity-50;
+        background:
+            repeat center / 50vw url("logos/speakers_bg.png"),
+            linear-gradient(135deg, rgb(var(--blue)), green);
+        /* background-size: 50vw; */
+    }
 }
-
-.ulList li a {
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 1rem 0.8rem;
-    display: flex;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.hero {
-    background: radial-gradient(80% 130% at 110% -10%, #320133, #3d00ff3d),
-        radial-gradient(80% 130% at -10% 110%, #100033, #121b272b);
-}
-
-img {
-    -webkit-user-drag: none; /* Safari and Chrome */
-    -moz-user-drag: none; /* Firefox */
-    -ms-user-drag: none; /* Internet Explorer/Edge */
-    user-drag: none; /* Standard */
-}
-
-.hero::after {
-    content: "";
-    filter: blur(5px);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #0008;
-    z-index: -1;
-}
-
-.hero canvas {
-    display: block;
-    position: fixed;
-    z-index: -1;
-}
-
-.about,
-.speakers {
-    background-image: url("logos/rect.svg");
-}
-
-.blur1 {
-    content: "";
-    display: block;
-    background-image: url("logos/blur.svg");
-    position: absolute;
-    height: 512px;
-    width: 512px;
-    top: -150px;
-    left: 0;
-    rotate: 120deg;
-}
-
-/* .blur2 {
-    content: "";
-    display: block;
-    background-image: url("logos/blur.svg");
-    position: absolute;
-    height: 512px;
-    width: 512px;
-    top: 0px;
-    right: 100px;
-    rotate: -90deg;
-} */

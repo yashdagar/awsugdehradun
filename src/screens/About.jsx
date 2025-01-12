@@ -1,16 +1,9 @@
 const About = () => {
   return (
-    <section className="relative about px-4 md:px-12 lg:px-24 py-16 flex justify-between bg-[--dark-gray] overflow-clip">
-      <img
-        src="logos/chapter-badge.svg"
-        className="hidden md:block md:w-[150px] lg:w-[400px]"
-        loading="lazy"
-      />
-      <div className="w-16 lg:w-24" />
-      <div className="block">
-        <div>
-          <h2>About AWS User Group Dehradun</h2>
-          <div className="h-8" />
+    <section className="about">
+      <div className="flex flex-col gap-y-8 z-10 mb-36">
+        <div className="flex flex-col gap-y-4">
+          <h3 className="text-primary">About AWS User Group Dehradun</h3>
           <p>
             AWS User Group Dehradun is a community of cloud enthusiasts focused
             on bringing together AWS partners, customers, practitioners,
@@ -29,11 +22,9 @@ const About = () => {
             acquire AWS knowledge in their preferred way: from one another.
           </p>
         </div>
-        <div className="h-16" />
-        <div>
-          <h2>What can you expect</h2>
-          <div className="h-8" />
-          <ol>
+        <div className="flex flex-col gap-y-4">
+          <h3 className="text-primary">What can you expect</h3>
+          <ul className="list-circle">
             <li>
               Renew, revive & revitalize to exemplify your excitement about the
               work you do
@@ -60,16 +51,13 @@ const About = () => {
               Sporting chance for active participants to win AWS credits,
               goodies and avail various certification vouchers
             </li>
-          </ol>
+          </ul>
         </div>
-        <div className="flex mt-16">
-          <a href="/code-of-conduct" className="link">
-            Code Of Conduct
-            <img src="logos/arrow-up-right.svg" loading="lazy" />
-          </a>
-        </div>
+        <a href="/code-of-conduct" className="link">
+          Code Of Conduct
+          <img src="logos/arrow-up-right.svg" loading="lazy" />
+        </a>
       </div>
-      <div className="blur1" />
     </section>
   );
 };

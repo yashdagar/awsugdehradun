@@ -1,27 +1,71 @@
 const Speakers = () => {
   const speakers = [
-    "Johnni Welch",
-    "Florence Jackson",
-    "Brandie Palmer",
-    "Deanna Little",
-    "Jim Grant",
-    "Logan Fernandez",
-    "Jonathan Lucas",
-    "Ethel Medina",
-    "Gavin Caldwell",
-    "Greg Ray",
+    {
+      name: "Johnni Welch",
+      designation: "CTO & Founder",
+      img: "https://thispersondoesnotexist.com/",
+    },
+    {
+      name: "Florence Jackson",
+      designation: "CTO & Founder",
+      img: "https://thispersondoesnotexist.com/",
+    },
+    {
+      name: "Brandie Palmer",
+      designation: "CTO & Founder",
+      img: "https://thispersondoesnotexist.com/",
+    },
+    {
+      name: "Deanna Little",
+      designation: "CTO & Founder",
+      img: "https://thispersondoesnotexist.com/",
+    },
+    {
+      name: "Jim Grant",
+      designation: "CTO & Founder",
+      img: "https://thispersondoesnotexist.com/",
+    },
+    {
+      name: "Logan Fernandez",
+      designation: "CTO & Founder",
+      img: "https://thispersondoesnotexist.com/",
+    },
+    {
+      name: "Jonathan Lucas",
+      designation: "CTO & Founder",
+      img: "https://thispersondoesnotexist.com/",
+    },
   ];
 
   return (
-    <section className="speakers relative px-4 md:px-12 lg:px-24 py-16 justify-between bg-[--dark-gray]">
-      <div className="blur2" />
-      <h2 className="w-min mx-auto mb-8">SPEAKERS</h2>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <section className="speakers">
+      <h2 className="">SPEAKERS</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
         {speakers.map((speaker) => (
-          <div className="speaker relative border border-[--gray] overflow-clip">
-            <img src="https://thispersondoesnotexist.com/" loading="lazy" />
-            <div className="absolute bottom-0 w-full p-4 bg-[#333f5380]">
-              {speaker}
+          <div
+            className="speaker relative mx-auto flex flex-col"
+            key={speaker["name"]}
+          >
+            <a href={speaker["linkedin"]} target="_blank">
+              <div
+                className="person-img overflow-clip w-fit mx-auto rounded-full border border-[#0002]"
+                loading="lazy"
+              >
+                <img
+                  src={speaker["img"]}
+                  className="transition-all duration-500 aspect-square w-36 md:w-40 xl:w-52 object-cover"
+                />
+                <img
+                  src="logos/linkedin.svg"
+                  className="absolute w-1/3 h-1/3 top-1/3 left-1/3 invert"
+                />
+              </div>
+            </a>
+            <h4 className="text-center text-lg font-semibold capitalize">
+              {speaker["name"]}
+            </h4>
+            <div className="text-center text-gray-900 text-sm font-medium backdrop-blur-sm border border-[#0002] rounded-full px-2 w-fit self-center">
+              {speaker["designation"]}
             </div>
           </div>
         ))}

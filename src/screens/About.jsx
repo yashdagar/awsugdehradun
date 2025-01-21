@@ -1,9 +1,13 @@
+import LinkIcon from "../components/icons/link";
+
 const About = () => {
   return (
     <section className="about">
       <div className="flex flex-col gap-y-8 z-10 mb-36">
         <div className="flex flex-col gap-y-4">
-          <h3 className="text-primary">About AWS User Group Dehradun</h3>
+          <h3 className="text-primary animate__slideInLeft">
+            About AWS User Group Dehradun
+          </h3>
           <p>
             AWS User Group Dehradun is a community of cloud enthusiasts focused
             on bringing together AWS partners, customers, practitioners,
@@ -55,7 +59,8 @@ const About = () => {
         </div>
         <a href="/code-of-conduct" className="link">
           Code Of Conduct
-          <img src="logos/arrow-up-right.svg" loading="lazy" />
+          <LinkIcon />
+          {/* <img src="logos/arrow-up-right.svg" loading="lazy" /> */}
         </a>
       </div>
     </section>

@@ -78,15 +78,20 @@ const FAQ = () => {
                     {item["question"]}
                   </h4>
                   <div
-                    className={`bg-[url('logos/chevron-down.svg')] w-6 h-6 transition duration-300 ${isOpen[index] ? "rotate-180" : ""}`}
+                    style={{
+                      background:
+                        "no-repeat center / 1rem url(logos/chevron-down.svg), #fff8",
+                    }}
+                    className={`aspect-square bg-[#fff8] rounded-full w-6 transition-all duration-300 ${isOpen[index] ? "rotate-180" : ""}`}
                     onClick={() => toggleIsOpen(index)}
                   />
                 </div>
                 <p
-                  className={`${isOpen[index] ? "max-h-96 pb-8" : "max-h-0"} overflow-hidden border-b-[1px] border-b-[#0004] transition-all duration-300`}
+                  className={`${isOpen[index] ? "max-h-96 pb-8 opacity-100" : "max-h-0 opacity-0"} overflow-hidden transition-all duration-300`}
                 >
                   {item["answer"]}
                 </p>
+                <div className="border-b-[1px] border-b-[#0004]" />
               </div>
             );
           })}
@@ -105,15 +110,20 @@ const FAQ = () => {
                     {item["question"]}
                   </h4>
                   <div
-                    className={`bg-[url('logos/chevron-down.svg')] w-6 h-6 transition-all duration-300 ${isOpen[index + half] ? "rotate-180" : ""}`}
+                    style={{
+                      background:
+                        "no-repeat center / 1rem url(logos/chevron-down.svg), #fff8",
+                    }}
+                    className={`aspect-square bg-[#fff8] rounded-full w-6 transition-all duration-300 ${isOpen[index + half] ? "rotate-180" : ""}`}
                     onClick={() => toggleIsOpen(index + half)}
                   />
                 </div>
                 <p
-                  className={`${isOpen[index + half] ? "max-h-96 pb-8" : "max-h-0"} transition-all duration-300 overflow-hidden border-b-[1px] border-b-[#0004]`}
+                  className={`${isOpen[index + half] ? "max-h-96 pb-8 opacity-100" : "max-h-0 opacity-0"} transition-all duration-300 overflow-hidden border-b-[1px] border-b-[#0004]`}
                 >
                   {item["answer"]}
                 </p>
+                <div className="border-b-[1px] border-b-[#0004]" />
               </div>
             );
           })}

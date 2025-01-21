@@ -29,9 +29,9 @@ const Footer = () => {
             />
           </a>
         </div>
-        <h4 className="ml-4 text-nowrap flex my-auto text-base sm:text-base md:text-lg">
+        <h4 className="ml-4 text-nowrap flex my-auto font-light">
           Made with ❤️ by
-          <a className="text-[#32ccff] font-semibold ml-1">@awsugddn</a>
+          <a className="text-[#32ccff] font-medium ml-1">@yashdagar</a>
         </h4>
       </footer>
     </div>

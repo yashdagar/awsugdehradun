@@ -25,14 +25,14 @@ function App() {
               <>
                 <Header />
                 <Hero />
-                <About />
+                {/* <About /> */}
                 <Speakers />
                 <Schedule />
                 <Venue />
                 <Gallery />
                 <Sponsors />
-                <FAQ />
                 <Team />
+                <FAQ />
                 {/* <Contact /> */}
                 <Footer />
               </>

@@ -3,19 +3,30 @@ import { useState } from "react";
 
 const Gallery = () => {
   const content = [
-    "https://picsum.photos/seed/q/1600/900",
-    "https://picsum.photos/seed/w/1600/900",
-    "https://picsum.photos/seed/e/1600/900",
-    "https://picsum.photos/seed/d/1600/900",
-    "https://picsum.photos/seed/t/1600/900",
-    "https://picsum.photos/seed/y/1600/900",
-    "https://picsum.photos/seed/u/1600/900",
-    "https://picsum.photos/seed/i/1600/900",
-    "https://picsum.photos/seed/o/1600/900",
-    "https://picsum.photos/seed/p/1600/900",
-    "https://picsum.photos/seed/a/1600/900",
-    "https://picsum.photos/seed/s/1600/900",
+    "gallery/1.jpg",
+    "gallery/2.jpg",
+    "gallery/3.jpg",
+    "gallery/8.jpg",
+    "gallery/9.jpg",
+    "gallery/10.jpg",
+    "gallery/11.jpg",
+    "gallery/12.jpg",
+    "gallery/13.jpg",
+    "gallery/14.jpg",
+    "gallery/6.jpg",
+    "gallery/7.jpg",
+    "gallery/4.jpg",
+    "gallery/5.jpg",
+    "gallery/15.jpg",
+    "gallery/16.jpg",
+    "gallery/17.jpg",
+    "gallery/18.jpeg",
+    "gallery/19.jpeg",
+    "gallery/20.jpeg",
+    "gallery/21.jpeg",
+    "gallery/22.jpeg",
   ];
+
   const [tolerance, setTolerance] = useState(3);
   const [selectedIndex, setIndex] = useState(0);
 
@@ -46,22 +57,24 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section className="gallery">
-      <h2>GALLERY</h2>
+    <section className="gallery !px-4 sm:px-8">
+      <h2>Gallery</h2>
       <div className="flex items-center">
         <div
           onClick={handleIndexDecrement}
-          className="w-12 aspect-square mr-4 rounded-full bg-[url('logos/arrow-left.svg')] bg-white bg-no-repeat bg-center hover:bg-gray-100"
+          className="w-12 aspect-square mr-4 rounded-full bg-[url('logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100"
         />
         <div className="flex overflow-x-scroll w-full transition-all ease-in-out gap-4">
           {content.map((item, curIndex) => (
             <div
-              className={`${curIndex >= selectedIndex && curIndex <= selectedIndex + tolerance ? "" : "hidden"} speaker relative flex flex-col flex-1 items-center`}
+              className={`${curIndex >= selectedIndex && curIndex <= selectedIndex + tolerance ? "" : "hidden"} gallery-item relative flex flex-col flex-1 items-center  rounded-md overflow-clip`}
               key={item + curIndex}
             >
               <div
-                className={`flex aspect-video w-full bg-contain bg-no-repeat rounded-md`}
-                style={{ background: `url(${item})` }}
+                style={{
+                  background: `no-repeat center / cover url(${item})`,
+                }}
+                className={`flex aspect-video w-full hover:scale-110 hover:brightness-75 transition-all duration-300`}
                 loading="lazy"
               />
             </div>
@@ -69,7 +82,7 @@ const Gallery = () => {
         </div>
         <div
           onClick={handleIndexInceremnt}
-          className="w-12 aspect-square ml-4 rounded-full bg-[url('logos/arrow-left.svg')] bg-white bg-no-repeat bg-center hover:bg-gray-100 rotate-180"
+          className="w-12 aspect-square ml-4 rounded-full bg-[url('logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100 rotate-180"
         />
       </div>
     </section>

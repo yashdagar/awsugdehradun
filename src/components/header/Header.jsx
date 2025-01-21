@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 const Header = () => {
-  const [headerScrolled, setHeaderScrolled] = useState(true);
+  const [headerScrolled, setHeaderScrolled] = useState(window.scrollY > 100);
 
   const [navBarOpen, setNavBarOpen] = useState(false);
 
   const sections = [
     "Home",
-    "About",
+    // "About",
     "Speakers",
     "Schedule",
     "Venue",
@@ -15,7 +15,7 @@ const Header = () => {
     "Sponsors",
     "Team",
     "FAQ",
-    "Contact",
+    // "Contact",
   ];
 
   useEffect(() => {
@@ -25,10 +25,7 @@ const Header = () => {
         const h = 150 - Math.round((scrollY * 50) / window.innerHeight);
         document
           .getElementsByClassName("hero")[0]
-          .style.setProperty(
-            "--size",
-            `${h * 1.2}${window.innerWidth > window.innerHeight ? "vw" : "vh"}`,
-          );
+          .style.setProperty("--size", `${h * 1.1 * 1.4}vh ${h * 1.1}vh`);
         document
           .getElementsByClassName("hero")[0]
           .style.setProperty("--brightness", `${(h - 70) / 100}`);
@@ -36,7 +33,6 @@ const Header = () => {
           .getElementsByClassName("hero")[0]
           .style.setProperty("--blur", `${Math.min((150 - h) / 5, 8)}px`);
       }
-
       if (scrollY > 100) {
         const width = Math.floor(
           (scrollY * window.innerWidth) / window.innerHeight,
@@ -56,7 +52,11 @@ const Header = () => {
 
   const handleSectionClick = (name) => {
     const section = document.getElementsByClassName(name.toLowerCase())[0];
-    section.scrollIntoView(true);
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
   };
 
   const toggleNavBar = () => setNavBarOpen(!navBarOpen);
@@ -65,19 +65,19 @@ const Header = () => {
     <header>
       {navBarOpen ? (
         <div
-          className="header lg:hidden flex flex-col bg-[#000b] text-white w-screen h-full justify-evenly items-center"
+          className="backdrop-blur header lg:hidden flex flex-col bg-[#000d] text-white w-screen h-full justify-evenly py-8"
           onClick={() => toggleNavBar()}
         >
           {sections.map((section) => (
             <div
               key={section}
-              className="py-4 px-32 w-fit"
+              className="py-4 mx-8 w-[-webkit-fill-available] px-8 text-lg font-medium"
               onClick={() => handleSectionClick(section)}
             >
               {section}
             </div>
           ))}
-          <button className="px-4 py-3 rounded-full font-normal text-white bg-primary whitespace-nowrap">
+          <button className="mx-14 px-4 py-3 w-fit rounded-full font-normal text-white bg-primary whitespace-nowrap">
             Buy Tickets
           </button>
         </div>
@@ -89,7 +89,11 @@ const Header = () => {
               : "h-24 bg-transparent text-white"
           }`}
         >
-          <img src="logos/logo.png" className="p-4 size-20" loading="lazy" />
+          <img
+            src="logos/logo.png"
+            className={`p-4 ${headerScrolled ? "size-20" : "size-24"}`}
+            loading="lazy"
+          />
           <div
             className={`bg-[url(logos/menu.svg)] size-8 ${headerScrolled ? "" : "inverted"} py-2`}
             onClick={() => toggleNavBar()}
@@ -103,7 +107,11 @@ const Header = () => {
             : "h-24 bg-transparent text-white"
         }`}
       >
-        <img src="logos/logo.png" className="p-4 w-24 h-24" loading="lazy" />
+        <img
+          src="logos/logo.png"
+          className={`transition-all ${headerScrolled ? "size-22 p-2" : "size-24 p-4"}`}
+          loading="lazy"
+        />
         <div className="navbar items-center gap-8 flex">
           {sections.map((section) => (
             <div key={section} onClick={() => handleSectionClick(section)}>

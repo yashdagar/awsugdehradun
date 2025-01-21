@@ -1,4 +1,4 @@
-import "./Sponsors.css";
+import LinkIcon from "../../components/icons/link";
 
 const Sponsors = () => {
   const sponsors = {
@@ -14,49 +14,16 @@ const Sponsors = () => {
         url: "https://www.whizlabs.com/",
       },
     ],
-    gold: [
-      {
-        name: "Kanan",
-        icon: "https://awsugddn.in/images/Kanan_DEHRADUN%20(1).png",
-        url: "https://kanan.co",
-      },
-      {
-        name: "Whizlabs",
-        icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvddrAXpW8iZk3ONVJ1iTpQ-zlWs1eAwP9Lw&s",
-        url: "https://www.whizlabs.com/",
-      },
-    ],
-    silver: [
-      {
-        name: "Kanan",
-        icon: "https://awsugddn.in/images/Kanan_DEHRADUN%20(1).png",
-        url: "https://kanan.co",
-      },
-      {
-        name: "Whizlabs",
-        icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvddrAXpW8iZk3ONVJ1iTpQ-zlWs1eAwP9Lw&s",
-        url: "https://www.whizlabs.com/",
-      },
-    ],
-    bronze: [
-      {
-        name: "Kanan",
-        icon: "https://awsugddn.in/images/Kanan_DEHRADUN%20(1).png",
-        url: "https://kanan.co",
-      },
-      {
-        name: "Whizlabs",
-        icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvddrAXpW8iZk3ONVJ1iTpQ-zlWs1eAwP9Lw&s",
-        url: "https://www.whizlabs.com/",
-      },
-    ],
+    gold: [],
+    silver: [],
+    bronze: [],
   };
   return (
     <section className="sponsors">
-      <h2>SPONSORS</h2>
+      <h2>Sponsors</h2>
       <div className="items-center">
-        {Object.entries(sponsors).map((entry, index) => (
-          <div key={entry}>
+        {Object.entries(sponsors).map((entry) => (
+          <div key={entry} className={entry[1].length == 0 ? "hidden " : ""}>
             <h3 className="text-primary font-semibold">
               {entry[0].toUpperCase()}
             </h3>
@@ -64,21 +31,27 @@ const Sponsors = () => {
               {entry[1].map((item) => (
                 <div
                   key={item["name"]}
-                  className="flex flex-col text-center gap-4 justify-between align-middle capitalize px-8 py-4 rounded-md border border-gray-200 w-auto"
+                  className="flex flex-col text-center gap-4 justify-between align-middle items-center capitalize px-12 py-4 rounded-3xl border border-gray-100 w-auto1"
                 >
                   <div />
                   <img
                     src={item["icon"]}
                     loading="lazy"
-                    className="rounded-md"
+                    className="rounded-lg max-h-24"
                   />
-                  <h4 key={item["name"]}>{item["name"]}</h4>
+                  <h5 className="text-gray-500">{item["name"]}</h5>
                 </div>
               ))}
             </div>
           </div>
         ))}
       </div>
+
+      <a href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal">
+        <h5 className="link">
+          Become a sponsor <LinkIcon />
+        </h5>
+      </a>
     </section>
   );
 };

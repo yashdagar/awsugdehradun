@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
         <h4 className="ml-4 text-nowrap flex my-auto font-light">
           Made with ❤️ by
-          <a className="text-[#32ccff] font-medium ml-1">@yashdagar</a>
+          <a className="text-[#32ccff] font-medium ml-1 cursor-pointer" href="https://www.linkedin.com/in/yoursyash/">@yashdagar</a>
         </h4>
         <div />
       </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Header = () => {
-  const [headerScrolled, setHeaderScrolled] = useState(window.scrollY > 100);
+  const [headerScrolled, setHeaderScrolled] = useState(false);
 
   const [navBarOpen, setNavBarOpen] = useState(false);
 
@@ -10,8 +10,8 @@ const Header = () => {
     // "About",
     "Speakers",
     "Schedule",
-    "Venue",
     "Gallery",
+    "Venue",
     "Sponsors",
     "Team",
     "FAQ",
@@ -19,6 +19,7 @@ const Header = () => {
   ];
 
   useEffect(() => {
+    setHeaderScrolled(window.scrollY > 100);
     const handleScroll = () => {
       const scrollY = window.scrollY;
       if (scrollY < window.innerHeight) {
@@ -65,19 +66,19 @@ const Header = () => {
     <header>
       {navBarOpen ? (
         <div
-          className="backdrop-blur header lg:hidden flex flex-col bg-[#000d] text-white w-screen h-full justify-evenly py-8"
+          className="backdrop-blur header lg:hidden flex flex-col bg-black/90 text-white w-screen h-full justify-evenly py-8"
           onClick={() => toggleNavBar()}
         >
           {sections.map((section) => (
             <div
               key={section}
-              className="py-4 mx-8 w-[-webkit-fill-available] px-8 text-lg font-medium"
+              className="py-4 mx-8 w-full px-8 font-medium"
               onClick={() => handleSectionClick(section)}
             >
               {section}
             </div>
           ))}
-          <button className="mx-14 px-4 py-3 w-fit rounded-full font-normal text-white bg-primary whitespace-nowrap">
+          <button className="mx-14 px-4 py-2 w-fit rounded-full font-normal text-white bg-primary whitespace-nowrap">
             Buy Tickets
           </button>
         </div>
@@ -85,7 +86,7 @@ const Header = () => {
         <div
           className={`lg:hidden flex items-center justify-between px-8 header duration-0 ${
             headerScrolled
-              ? "h-20 bg-[#fffa] backdrop-blur-lg text-black"
+              ? "h-20 bg-white/80 backdrop-blur-lg text-black"
               : "h-24 bg-transparent text-white"
           }`}
         >
@@ -103,7 +104,7 @@ const Header = () => {
       <div
         className={`lg:flex hidden justify-between w-full header px-16 ${
           headerScrolled
-            ? "h-20 bg-[#fffa] backdrop-blur-lg text-black"
+            ? "h-20 bg-white/80 backdrop-blur-lg text-black"
             : "h-24 bg-transparent text-white"
         }`}
       >

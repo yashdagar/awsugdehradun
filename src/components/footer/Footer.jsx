@@ -2,14 +2,12 @@ import Contact from "../../screens/Contact";
 
 const Footer = () => {
   return (
-    <div className="footer contact flex flex-col">
-      <Contact />
-      <div className="h-[-webkit-fill-available]" />
-      <footer
-        className="text-white font-normal flex justify-between px-8 py-4"
+    <footer className="footer flex flex-col text-white font-normal justify-end lg:bg-cover h-[50vw] md:h-[25vw]">
+      <div
+        className="flex justify-between px-8 py-4"
         // style={{ letterSpacing: 1 }}
       >
-        <div className="flex gap-2 sm:gap-4 w-1/2">
+        <div className="flex gap-2 sm:gap-4">
           <a href="https://www.instagram.com/awsugddn/">
             <img
               src="logos/instagram.svg"
@@ -25,7 +23,7 @@ const Footer = () => {
           <a href="https://x.com/awsugddn/" className="flex my-auto">
             <img
               src="logos/x.svg"
-              className="w-8 sm:w-11 aspect-square p-2 rounded-lg invert bg-black mix-blend-color-dodge"
+              className="w-7 sm:w-11 aspect-square p-1 sm:p-2 rounded-sm sm:rounded-lg invert bg-black mix-blend-color-dodge"
             />
           </a>
         </div>
@@ -33,8 +31,9 @@ const Footer = () => {
           Made with ❤️ by
           <a className="text-[#32ccff] font-medium ml-1">@yashdagar</a>
         </h4>
-      </footer>
-    </div>
+        <div />
+      </div>
+    </footer>
   );
 };
 

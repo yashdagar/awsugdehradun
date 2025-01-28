@@ -19,7 +19,7 @@ const Hero = () => {
           /> */}
         </button>
         <div className="flex justify-around items-stretch gap-8 md:gap-0">
-          <div className="flex flex-col content-center backdrop-blur-md px-8 py-4 sm:px-12 lg:py-12 lg:px-24 sm:py-8 text-whtie bg-[#4444] rounded-3xl border border-[#fff4] sm:gap-2">
+          <div className="flex flex-col content-center backdrop-blur-md px-8 py-4 sm:px-12 lg:py-12 lg:px-24 sm:py-8 text-whtie bg-[#4444] rounded-3xl border border-white/25 sm:gap-2">
             <h2 className="text-white m-0 after:content-none mx-0 text-nowrap">
               When?
             </h2>
@@ -34,7 +34,7 @@ const Hero = () => {
             /> */}
           </button>
           <a href="https://maps.google.com/" target="_blank">
-            <div className="flex flex-col backdrop-blur-md px-8 py-4 sm:px-12 lg:py-12 lg:px-16 sm:py-8 text-whtie bg-[#6664] rounded-3xl border border-[#fff4] sm:gap-2">
+            <div className="flex flex-col backdrop-blur-md px-8 py-4 sm:px-12 lg:py-12 lg:px-16 sm:py-8 text-whtie bg-[#6664] rounded-3xl border border-white/25 sm:gap-2">
               <h2 className="text-white m-0 after:content-none"> Where?</h2>
               <h5 className="text-gray-200 underline">
                 Saffron Leaf Hotel, Mussoorie

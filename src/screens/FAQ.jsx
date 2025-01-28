@@ -69,7 +69,7 @@ const FAQ = () => {
             return (
               <div
                 key={index}
-                className="flex-[50%] flex-grow-0 flex-shrink-0 mt-8"
+                className="flex-1 flex-grow-0 flex-shrink-0 mt-8"
               >
                 <div
                   className={`flex place-items-center transition-all duration-300 ${isOpen[index] ? "" : "mb-4"}`}
@@ -82,7 +82,7 @@ const FAQ = () => {
                       background:
                         "no-repeat center / 1rem url(logos/chevron-down.svg), #fff8",
                     }}
-                    className={`aspect-square bg-[#fff8] rounded-full w-6 transition-all duration-300 ${isOpen[index] ? "rotate-180" : ""}`}
+                    className={`aspect-square bg-white/50 rounded-full w-6 transition-all duration-300 cursor-pointer ${isOpen[index] ? "rotate-180" : ""}`}
                     onClick={() => toggleIsOpen(index)}
                   />
                 </div>
@@ -91,7 +91,7 @@ const FAQ = () => {
                 >
                   {item["answer"]}
                 </p>
-                <div className="border-b-[1px] border-b-[#0004]" />
+                <div className="border-b border-b-black/25" />
               </div>
             );
           })}
@@ -101,7 +101,7 @@ const FAQ = () => {
             return (
               <div
                 key={index}
-                className="mb-8 flex-[50%] flex-grow-0 flex-shrink-0 mt-8"
+                className="mb-8 flex-1 flex-grow-0 flex-shrink-0 mt-8"
               >
                 <div
                   className={`flex place-items-center transition-all duration-300 ${isOpen[index + half] ? "" : "mb-4"}`}
@@ -114,16 +114,17 @@ const FAQ = () => {
                       background:
                         "no-repeat center / 1rem url(logos/chevron-down.svg), #fff8",
                     }}
-                    className={`aspect-square bg-[#fff8] rounded-full w-6 transition-all duration-300 ${isOpen[index + half] ? "rotate-180" : ""}`}
+                    className={`aspect-square bg-white/50 rounded-full w-6 transition-all duration-300 cursor-pointer ${isOpen[index + half] ? "rotate-180" : ""}`}
                     onClick={() => toggleIsOpen(index + half)}
                   />
                 </div>
                 <p
-                  className={`${isOpen[index + half] ? "max-h-96 pb-8 opacity-100" : "max-h-0 opacity-0"} transition-all duration-300 overflow-hidden border-b-[1px] border-b-[#0004]`}
+                  className={`${isOpen[index + half] ? "max-h-96 pb-8 opacity-100" : "max-h-0 opacity-0"} transition-all duration-300 overflow-hidden`}
                 >
                   {item["answer"]}
                 </p>
-                <div className="border-b-[1px] border-b-[#0004]" />
+
+                <div className="border-b border-b-black/25" />
               </div>
             );
           })}

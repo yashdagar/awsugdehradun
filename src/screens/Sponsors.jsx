@@ -1,4 +1,4 @@
-import LinkIcon from "../../components/icons/link";
+import LinkIcon from "../components/icons/link";
 
 const Sponsors = () => {
   const sponsors = {

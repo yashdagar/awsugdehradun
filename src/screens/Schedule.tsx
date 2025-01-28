@@ -1,8 +1,19 @@
-import React, { useRef } from "react"
-import "./Schedule.css"
+import React from "react"
+
+interface Content {
+  heading: string,
+  description?: string,
+  time: string,
+  hue: string,
+  icon: string,
+  people?: {
+    img:string,
+    name: string
+  }[],
+}
 
 const Schedule = () => {
-  const content = [
+  const content: Content[] = [
     {
       heading: "Registration",
       description: "Registration and badge pickup starts at 07:30am",
@@ -101,14 +112,18 @@ const Schedule = () => {
 
   return (
     <section className="!px-2 md:!px-24 lg:!px-48 schedule">
-      <img src="logos/shape1.svg" className="absolute top-0 right-0" />
       <h2>Event Schedule</h2>
-      <h3 className="px-1 pb-4 ">23 March 2024</h3>
+      <h4 className="px-1 pb-4">23 March 2025</h4>
       <div
-        className="timeline w-full border border-[#0002] relative"
+        className="timeline w-full border border-[#bbb8] rounded-md overflow-clip relative"
       >
+        <div className="cloud1" />
+        <div className="cloud2" />
+        <div className="cloud3" />
+        <div className="cloud4" />
+        <div className="cloud5" />
         <div className="relative flex flex-col text-black">
-          {content.map((item, i) => {
+          {content.map((item: Content, i) => {
             const times = getDurationHours(item.time);
             return (
               <div className="flex">
@@ -117,9 +132,9 @@ const Schedule = () => {
                  times.map((t) =>
                   <div
                     key={t}
-                    className={`w-full h-[-webkit-fill-available] bg-[${i % 2 == 0 ? "#e4e4e4" : "#fafafa"}] flex`}
+                    className={`w-full h-full flex`}
                   >
-                    <div className="border-b border-b-[#0001] bg-white px-4 py-4 w-24 text-center text-sm text-[#888]">
+                    <div className="border-b border-b-gray-500/25 bg-white/50 px-4 py-4 w-24 font-normal text-center text-sm text-[#666]">
                        {t}
                     </div>
                   </div>
@@ -128,30 +143,30 @@ const Schedule = () => {
                 </div>
                 <div
                   key={i}
-                  className={`w-[calc(100vw-10rem)] sm:w-72 h-fit shadow-sm bg-white rounded-lg overflow-clip py-2 px-3 m-4 ${item.hue} border border-[#88f8]`}
+                  className={`w-full lg:w-2/3 xl:w-1/2 sm:mx-8 h-fit backdrop-blur-sm bg-white/50 rounded-lg overflow-clip py-3 px-4 m-4 border border-white/80 inset-shadow`}
                 >
-                  <div className="w-full bg-white flex items-center gap-2">
+                  <div className="w-full flex items-center gap-2">
                     <div
                       style={{
                         background: "no-repeat center #88f",
                         WebkitMask: `url("${item.icon}")`,
                       }}
-                      className="size-8 rounded-md p-1 border border-gray-200"
+                      className={`size-8 rounded-md ${item.hue}`}
                     />
                     <div className="flex flex-col">
                       <p className="font-medium text-lg text-gray-900 tracking-normal">
                         {item.heading}
                       </p>
                       <p
-                        className={`font-light text-sm tracking-tight text-[#888] ${item.description == null ? "leading-4" : "leading-3"}`}
+                        className={`font-light text-sm tracking-tight text-gray-500 ${item.description == null ? "leading-4" : "leading-3"}`}
                       >
                         {item.time}
                       </p>
                     </div>
                   </div>
                   {item.people != null ? (
-                    <div className="flex flex-col pt-2 gap-y-[.1rem]">
-                      {item.people.map((person) => (
+                    <div className="flex flex-col px-1 pt-2 gap-y-[.1rem]">
+                      {item.people.map((person: {img: string, name:string}) => (
                         <div
                           className="flex text-[#444] text-sm sm:text-base gap-2 items-center underline cursor-pointer"
                           onClick={() =>
@@ -172,7 +187,7 @@ const Schedule = () => {
                     </div>
                   ) : null}
                   <p
-                    className={`leading-4 tracking-wide text-sm text-[#666] font-normal ${item.description ? (item.people != null ? "pt-2 pb-1" : "pt-4 pb-1") : "pt-2"}`}
+                    className={`leading-4 tracking-wide text-sm text-[#666] font-normal px-1 ${item.description ? (item.people != null ? "pt-2 pb-1" : "pt-2 pb-1") : "pt-2"}`}
                   >
                     {item.description}
                   </p>
@@ -181,16 +196,6 @@ const Schedule = () => {
             )
           })}
         </div>
-        {/*time.map((t, i) => (
-          <div
-            key={i}
-            className={`w-full h-20 bg-[${i % 2 == 0 ? "#e4e4e4" : "#fafafa"}] flex`}
-          >
-            <div className="border-b border-b-[#0001] bg-white px-4 py-8 w-24 text-center text-sm text-[#888]">
-              {t}
-            </div>
-          </div>
-        ))*/}
       </div>
     </section>
   )

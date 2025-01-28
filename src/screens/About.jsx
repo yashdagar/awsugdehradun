@@ -17,13 +17,12 @@ const About = () => {
             that we are one of India's youngest and fastest-growing communities.{" "}
             <br />
             <br />
-            AWS Community Day events are community-led conferences where event
+            AWS Community Day event is a community-led conference where event
             logistics and content is planned, sourced, and delivered by
-            community leaders. They feature technical discussions, workshops,
-            and hands-on labs led by expert AWS users and industry leaders from
-            around the world. Community Day events deliver a peer-to-peer
-            learning experience, providing developers with a venue for them to
-            acquire AWS knowledge in their preferred way: from one another.
+            community leaders. It feature technical discussions, workshops,
+            and hands-on labs led by expert AWS users and industry leaders.
+            Community Day delivers a peer-to-peer learning experience,
+            providing developers with a venue for them to acquire AWS knowledge.
           </p>
         </div>
         <div className="flex flex-col gap-y-4">

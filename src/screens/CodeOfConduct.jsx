@@ -4,7 +4,7 @@ const CodeOfConduct = () => {
   return (
     <>
       <div>
-        <div className="bg-[url('https://doplrafkvxyec.cloudfront.net/assets/img/banner_bg.jpg')] h-72 md:h-[28rem] bg-contain bg-center bg-repeat -mt-5"></div>
+        <div className="bg-[url('https://doplrafkvxyec.cloudfront.net/assets/img/banner_bg.jpg')] h-72 md:h-224 bg-contain bg-center bg-repeat -mt-5"></div>
 
         <img
           className="absolute mx-auto w-48 md:w-96 top-14 left-1/2 -translate-x-1/2"

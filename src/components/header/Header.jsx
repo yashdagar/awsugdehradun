@@ -26,7 +26,7 @@ const Header = () => {
         const h = 150 - Math.round((scrollY * 50) / window.innerHeight);
         document
           .getElementsByClassName("hero")[0]
-          .style.setProperty("--size", `${h * 1.1 * 1.4}vh ${h * 1.1}vh`);
+          .style.setProperty("--size", `${h * 1.1 * 1.2}vh ${h * 1.1}vh`);
         document
           .getElementsByClassName("hero")[0]
           .style.setProperty("--brightness", `${(h - 70) / 100}`);
@@ -72,7 +72,7 @@ const Header = () => {
           {sections.map((section) => (
             <div
               key={section}
-              className="py-4 mx-8 w-full px-8 font-medium"
+              className="py-4 mx-8 w-full px-8"
               onClick={() => handleSectionClick(section)}
             >
               {section}

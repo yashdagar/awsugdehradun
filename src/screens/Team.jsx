@@ -76,7 +76,7 @@ const Team = () => {
       {
         name: "Yash Dagar",
         designation: "Member",
-        img: "members/yash_dagar.jpg",
+        img: "members/yash_dagar.jpeg",
         linkedin: "https://www.linkedin.com/in/yoursyash/",
       },
       {

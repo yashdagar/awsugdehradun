@@ -33,11 +33,11 @@ const Hero = () => {
               className="h-6 sm:h-8 brightness-100"
             /> */}
           </button>
-          <a href="https://maps.google.com/" target="_blank">
+          <a href="https://maps.app.goo.gl/SHecjXUPeVRqD4EV9" target="_blank">
             <div className="flex flex-col backdrop-blur-md px-8 py-4 sm:px-12 lg:py-12 lg:px-16 sm:py-8 text-whtie bg-[#6664] rounded-3xl border border-white/25 sm:gap-2">
               <h2 className="text-white m-0 after:content-none"> Where?</h2>
               <h5 className="text-gray-200 underline">
-                Saffron Leaf Hotel, Mussoorie
+                Hyatt Centric Dehradun
               </h5>
             </div>
           </a>

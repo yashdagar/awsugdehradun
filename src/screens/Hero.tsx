@@ -16,7 +16,7 @@ const Hero = () => {
             <LinkIcon color="#fff" />
         </button>
         </a>
-        <div className="flex justify-around items-stretch gap-8 md:gap-0 min-h-32">
+        <div className="hidden md:flex justify-around items-stretch gap-8 md:gap-0 min-h-32">
           {/* <div className="flex flex-col content-center backdrop-blur-md px-8 py-4 sm:px-12 lg:py-12 lg:px-24 sm:py-8 text-whtie bg-[#4444] rounded-3xl border border-white/25 sm:gap-2">
             <h2 className="text-white m-0 after:content-none mx-0 text-nowrap">
               When?

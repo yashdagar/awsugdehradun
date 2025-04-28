@@ -1,5 +1,6 @@
 const LinkIcon = ({ color = "#fff" }) => (
   <svg
+    className="w-[16px] md:w-[24px]"
     width="24"
     height="24"
     viewBox="0 0 24 24"

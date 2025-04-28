@@ -52,7 +52,7 @@ const FAQ = () => {
     Array.from({ length: questions.length }, () => false),
   );
 
-  const toggleIsOpen = (index) => {
+  const toggleIsOpen = (index: number) => {
     var items = [...isOpen];
     items[index] = !items[index];
     setIsOpen(items);

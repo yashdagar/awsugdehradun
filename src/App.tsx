@@ -27,7 +27,7 @@ function App() {
                 <Hero />
                 {/* <About /> */}
                 <Speakers />
-                <Schedule />
+                {/* <Schedule /> */}
                 <Gallery />
                 <Venue />
                 <Sponsors />

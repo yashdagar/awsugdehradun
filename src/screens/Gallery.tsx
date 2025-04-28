@@ -74,7 +74,6 @@ const Gallery = () => {
                   background: `no-repeat center / cover url(${item})`,
                 }}
                 className={`flex aspect-video w-full hover:scale-110 hover:brightness-75 transition-all duration-300`}
-                loading="lazy"
               />
             </div>
           ))}

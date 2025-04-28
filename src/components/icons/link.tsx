@@ -1,4 +1,4 @@
-const LinkIcon = ({ color = "#31a6fa" }) => (
+const LinkIcon = ({ color = "#fff" }) => (
   <svg
     width="24"
     height="24"

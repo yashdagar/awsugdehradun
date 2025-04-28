@@ -1,12 +1,31 @@
-import Contact from "../../screens/Contact";
+import LinkIcon from "../icons/link";
 
 const Footer = () => {
   return (
-    <footer className="footer flex flex-col text-white font-normal justify-end lg:bg-cover h-[50vw] md:h-[25vw]">
-      <div
-        className="flex justify-between px-8 py-4"
-        // style={{ letterSpacing: 1 }}
-      >
+    <footer className="footer flex flex-col text-white font-normal justify-end">
+      <div className="h-[50vw] md:h-[30vw] footer-first lg:bg-cover"></div>
+      <div className="flex gap-6">
+        <div className="pt-8 bg-[#41274e] flex flex-row w-full px-8 md:px-16 py-4 flex-wrap justify-between gap-4 self-end mt-auto">
+          <div className="flex flex-col gap-2">
+            <h3>Contact Us</h3>
+            <p>+91 98765 43210</p>
+            <p>+91 87654 32109</p>
+          </div>
+          <div className="flex flex-col gap-2 self-center place-items-end">
+            <h3>Join Us</h3>
+            <a
+              href="https://www.meetup.com/aws-user-group-dehradun/"
+              className="hover:text-[#32ccff] transition duration-300"
+            >
+              <div className="flex flex-row items-center link">
+              Become a member
+              <LinkIcon color="rgb(49, 166, 250)"/>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-between px-8 py-4 bg-[#41274e]">
         <div className="flex gap-2 sm:gap-4">
           <a href="https://www.instagram.com/awsugddn/">
             <img

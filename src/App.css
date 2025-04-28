@@ -57,6 +57,12 @@
         -ms-user-drag: none; /* Internet Explorer/Edge */
         user-drag: none;
     }
+    button{
+        @apply flex w-fit text-nowrap z-20 bg-primary pl-4 pr-2 py-2 sm:pl-8 sm:pr-6 sm:py-4 mx-auto rounded-full h-fit text-white items-center gap-2;
+        *{
+            @apply text-white;
+        }
+    }
     .navbar {
         * {
             @apply relative font-bold text-sm py-2 flex text-center whitespace-nowrap cursor-pointer;
@@ -134,9 +140,14 @@
     }
 
     .footer {
-        background:
+        .footer-first{
+            background:
+                no-repeat bottom / 400vh 100vw url("logos/footer_bg.svg"),
+                linear-gradient(#def, #cef);
+        }
+        /* background:
             no-repeat bottom / 400vh 100vw url("logos/footer_bg.svg"),
-            linear-gradient(#def, #cef);
+            linear-gradient(#def, #cef); */
     }
 
     .list-circle {

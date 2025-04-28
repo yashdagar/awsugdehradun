@@ -1,5 +1,12 @@
+interface Member{
+  name: string,
+  designation: string,
+  img: string,
+  linkedin: string
+}
+
 const Team = () => {
-  const memberGroups = [
+  const memberGroups: Member[][] = [
     [
       {
         name: "Aditya Pandey",
@@ -115,27 +122,30 @@ const Team = () => {
   ];
 
   return (
-    <section className="team">
+    <section className="team mb-0">
       <h2>Our Team</h2>
-      {memberGroups.map((memberList) => (
-        <div className={`w-max flex first:*:flex-[40%] flex-wrap justify-center gap-x-16 gap-y-4 place-self-center select-none mb-16`}>
+      {memberGroups.map((memberList, index) => (
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 md:gap-x-16 xl:grid-cols-4 place-self-center select-none mb-16`}
+          key={index}
+        >
           {memberList.map((member) => (
             <div
-              className="speaker relative w-fit flex-[20%] flex-col justify-center"
+              className="speaker relative w-full flex-[20%] flex-col justify-center"
               key={member["name"]}
             >
               <a href={member["linkedin"]} target="_blank">
                 <div
-                  className="person-img w-fit mx-auto rounded-full border border-black/10"
-                  loading="lazy"
-                >
+                  className="person-img w-fit mx-auto rounded-full border border-black/10"                >
                   <img
                     src={member["img"]}
-                    className="transition-all duration-500 aspect-square w-36 md:w-40 xl:w-48 object-cover"
+                    className="transition-all duration-500 aspect-square w-40 sm:w-32 md:w-40 xl:w-48 object-cover"
+                    loading="lazy"
                   />
                   <img
                     src="logos/linkedin_blue.svg"
                     className="absolute w-1/3 top-1/3 left-1/3 bg-white transition-all duration-300"
+                    loading="lazy"
                   />
                 </div>
               </a>
@@ -150,6 +160,55 @@ const Team = () => {
         </div>
       ))}
     </section>
+    // <section className="team w-full max-w-screen-xl mx-auto px-4 md:px-16 lg:px-16 xl:px-24 py-8">
+    //   <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
+
+    //   {memberGroups.map((memberList, groupIndex) => (
+    //     <div
+    //       key={groupIndex}
+    //       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16 place-items-center"
+    //     >
+    //       {memberList.map((member) => (
+    //         <div
+    //           key={member.name}
+    //           className="flex flex-col items-center group w-full max-w-xs"
+    //         >
+    //           <a
+    //             href={member.linkedin}
+    //             target="_blank"
+    //             rel="noopener noreferrer"
+    //             className="relative block overflow-hidden rounded-full border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 mx-auto"
+    //           >
+    //             <div className="relative">
+    //               <img
+    //                 src={member.img}
+    //                 alt={member.name}
+    //                 className="aspect-square w-32 sm:w-36 md:w-40 xl:w-48 object-cover transition-transform duration-300 group-hover:scale-105"
+    //                 loading="lazy"
+    //               />
+    //               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
+    //                 <img
+    //                   src="logos/linkedin_blue.svg"
+    //                   alt="LinkedIn"
+    //                   className="w-1/4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    //                   loading="lazy"
+    //                 />
+    //               </div>
+    //             </div>
+    //           </a>
+
+    //           <h4 className="mt-4 text-lg font-semibold text-center">
+    //             {member.name}
+    //           </h4>
+
+    //           <span className="mt-2 px-3 py-1 text-sm text-gray-500 bg-gray-50 rounded-full border border-gray-200">
+    //             {member.designation}
+    //           </span>
+    //         </div>
+    //       ))}
+    //     </div>
+    //   ))}
+    // </section>
   );
 };
 

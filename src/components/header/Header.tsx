@@ -1,5 +1,16 @@
 import React, { useEffect, useState } from "react";
 
+// WHEN, WHERE -> ANNOUNCING SOON ✅
+// JOIN US -> KONFHUB ✅
+// EVENT SCHEDULE -> COMMENT ✅
+// VENUE -> DEHRADUN ✅
+// SPONSORS -> EDIT TO CENTER BUTTON ✅
+//        -> DOWNLOAD BROCHURE
+// ABOUT ###AHHHH###
+// GALLERY -> MARQUEE
+// PROPER? FOOTER ✅
+//    CONTACT US -> PHONE NUMBERS -> UNNATI, ADITYA ✅
+//        -> JOIN US -> MEETUP LINK ✅
 const Header = () => {
   const [headerScrolled, setHeaderScrolled] = useState(false);
 
@@ -24,15 +35,10 @@ const Header = () => {
       const scrollY = window.scrollY;
       if (scrollY < window.innerHeight) {
         const h = 150 - Math.round((scrollY * 50) / window.innerHeight);
-        document
-          .getElementsByClassName("hero")[0]
-          .style.setProperty("--size", `${h * 1.1 * 1.2}vh ${h * 1.1}vh`);
-        document
-          .getElementsByClassName("hero")[0]
-          .style.setProperty("--brightness", `${(h - 70) / 100}`);
-        document
-          .getElementsByClassName("hero")[0]
-          .style.setProperty("--blur", `${Math.min((150 - h) / 5, 8)}px`);
+        const hero = document.getElementsByClassName('hero')[0] as HTMLElement;
+        hero.style.setProperty("--size", `${h * 1.1 * 1.2}vh ${h * 1.1}vh`);
+        hero.style.setProperty("--brightness", `${(h - 70) / 100}`);
+        hero.style.setProperty("--blur", `${Math.min((150 - h) / 5, 8)}px`);
       }
       if (scrollY > 100) {
         const width = Math.floor(
@@ -51,7 +57,7 @@ const Header = () => {
     };
   }, []);
 
-  const handleSectionClick = (name) => {
+  const handleSectionClick = (name: string) => {
     const section = document.getElementsByClassName(name.toLowerCase())[0];
     section.scrollIntoView({
       behavior: "smooth",

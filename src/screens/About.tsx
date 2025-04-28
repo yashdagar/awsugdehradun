@@ -59,7 +59,6 @@ const About = () => {
         <a href="/code-of-conduct" className="link">
           Code Of Conduct
           <LinkIcon />
-          {/* <img src="logos/arrow-up-right.svg" loading="lazy" /> */}
         </a>
       </div>
     </section>

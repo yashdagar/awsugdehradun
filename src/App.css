@@ -82,7 +82,7 @@
             z-index: 10;
         }
         background:
-            no-repeat top / cover url("logos/hero_bg.jpeg"),
+            no-repeat top / cover url("assets/logos/hero_bg.jpeg"),
             gray;
 
         background-size: var(--size);

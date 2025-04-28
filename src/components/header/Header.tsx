@@ -102,7 +102,7 @@ const Header = () => {
             loading="lazy"
           />
           <div
-            className={`bg-[url(logos/menu.svg)] size-8 ${headerScrolled ? "" : "inverted"} py-2`}
+            className={`bg-[url(/logos/menu.svg)] size-8 ${headerScrolled ? "" : "inverted"} py-2`}
             onClick={() => toggleNavBar()}
           />
         </div>
@@ -115,7 +115,7 @@ const Header = () => {
         }`}
       >
         <img
-          src="logos/logo.png"
+          src="/logos/logo.png"
           className={`transition-all ${headerScrolled ? "size-22 p-2" : "size-24 p-4"}`}
           loading="lazy"
         />

@@ -82,7 +82,7 @@
             z-index: 10;
         }
         background:
-            no-repeat top / cover url("logos/hero_bg.webp"),
+            no-repeat top / cover url("/logos/hero_bg.webp"),
             gray;
 
         background-size: var(--size);
@@ -142,11 +142,11 @@
     .footer {
         .footer-first{
             background:
-                no-repeat bottom / 400vh 100vw url("logos/footer_bg.svg"),
+                no-repeat bottom / 400vh 100vw url("/logos/footer_bg.svg"),
                 linear-gradient(#def, #cef);
         }
         /* background:
-            no-repeat bottom / 400vh 100vw url("logos/footer_bg.svg"),
+            no-repeat bottom / 400vh 100vw url("/logos/footer_bg.svg"),
             linear-gradient(#def, #cef); */
     }
 
@@ -156,20 +156,20 @@
     .about {
         @apply relative px-4 md:px-12 lg:px-24 py-16 flex justify-between pb-48;
         background:
-            no-repeat bottom / cover url("logos/sky.webp"),
+            no-repeat bottom / cover url("/logos/sky.webp"),
             #ebfdff;
     }
 
     .aws1 {
         @apply absolute w-21 h-20 md:w-44 md:h-40 top-0 right-0 -z-10;
         transform: rotate3d(0, 0, 1, 180deg);
-        background: no-repeat center / contain url("logos/aws_hexagon.png");
+        background: no-repeat center / contain url("/logos/aws_hexagon.png");
     }
 
     .aws2 {
         @apply absolute w-21 h-20 md:w-44 md:h-40 top-0 left-0 -z-10;
         transform: rotateX(180deg);
-        background: no-repeat center / contain url("logos/aws_hexagon.png");
+        background: no-repeat center / contain url("/logos/aws_hexagon.png");
     }
     .cloud1, .cloud2, .cloud3, .cloud4{
         @apply absolute w-96 h-32;
@@ -177,13 +177,13 @@
     .cloud1{
         will-change: left;
         @apply top-36 left-1/3 bottom-0;
-        background: no-repeat top / 30vw url("logos/cloud3.svg");
+        background: no-repeat top / 30vw url("/logos/cloud3.svg");
         animation: scrollLeft 50s linear infinite alternate;
     }
     .cloud2{
         will-change: right;
         @apply top-0 bottom-0 right-2/3;
-        background: no-repeat top / 20vw url("logos/cloud4.svg");
+        background: no-repeat top / 20vw url("/logos/cloud4.svg");
         animation: scrollRight 40s linear infinite alternate;
     }
     .cloud3{
@@ -195,7 +195,7 @@
     .cloud4{
         will-change: right;
         @apply right-1/3 bottom-16;
-        background: no-repeat top / 25vw url("logos/cloud2.svg");
+        background: no-repeat top / 25vw url("/logos/cloud2.svg");
         animation: scrollRight 70s linear infinite alternate;
     }
     @keyframes scrollRight{
@@ -278,12 +278,12 @@
         @apply max-w-40;
     }
     .about::before {
-        background: repeat-x bottom / contain url("logos/about_bg.png");
+        background: repeat-x bottom / contain url("/logos/about_bg.png");
         @apply content-[""] absolute left-0 bottom-0 w-full h-48;
     }
 
     .person-img::after {
         @apply content-[""] absolute -left-3 -bottom-3 -top-3 -right-3;
-        background: no-repeat center / cover url("logos/speaker_bg.png");
+        background: no-repeat center / cover url("/logos/speaker_bg.png");
     }
 }

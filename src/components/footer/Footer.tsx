@@ -29,19 +29,19 @@ const Footer = () => {
         <div className="flex gap-2 sm:gap-4">
           <a href="https://www.instagram.com/awsugddn/">
             <img
-              src="logos/instagram.svg"
+              src="/logos/instagram.svg"
               className="w-8 h-8 sm:w-12 sm:h-12 invert"
             />
           </a>
           <a href="https://www.linkedin.com/company/aws-user-group-dehradun/">
             <img
-              src="logos/linkedin.svg"
+              src="/logos/linkedin.svg"
               className="w-8 h-8 sm:w-12 sm:h-12 invert rounded-lg"
             />
           </a>
           <a href="https://x.com/awsugddn/" className="flex my-auto">
             <img
-              src="logos/x.svg"
+              src="/logos/x.svg"
               className="w-7 sm:w-11 aspect-square p-1 sm:p-2 rounded-sm sm:rounded-lg invert bg-black mix-blend-color-dodge"
             />
           </a>

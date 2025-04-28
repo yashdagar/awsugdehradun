@@ -26,7 +26,7 @@ const Venue = () => {
     //       allowFullScreen=""
     //       loading="lazy"
     //       referrerPolicy="no-referrer-when-downgrade" />
-    //     <div className="w-max sm:w-1/2 lg:w-2/5 md:py-auto pt-4 mx-auto md:px-8 flex flex-col justify-center items-center md:items-start before:bg-[url('logos/bg_venue.jpg')] before:bg-cover before:z-20 before:brightness-50 relative before:top-0 before:left-0 before:content=[''] before:w-full before:h-full before:absolute backdrop-blur-sm">
+    //     <div className="w-max sm:w-1/2 lg:w-2/5 md:py-auto pt-4 mx-auto md:px-8 flex flex-col justify-center items-center md:items-start before:bg-[url('/logos/bg_venue.jpg')] before:bg-cover before:z-20 before:brightness-50 relative before:top-0 before:left-0 before:content=[''] before:w-full before:h-full before:absolute backdrop-blur-sm">
     //       <h3 className="text-primary md:mb-2 lg:text-4xl">
     //         Hyatt Centric Dehradun
     //       </h3>

@@ -173,7 +173,7 @@ const Team = () => {
                     loading="lazy"
                   />
                   <img
-                    src="logos/linkedin_blue.svg"
+                    src="/logos/linkedin_blue.svg"
                     className="absolute w-1/3 top-1/3 left-1/3 bg-white transition-all duration-300"
                     loading="lazy"
                   />
@@ -218,7 +218,7 @@ const Team = () => {
     //               />
     //               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
     //                 <img
-    //                   src="logos/linkedin_blue.svg"
+    //                   src="/logos/linkedin_blue.svg"
     //                   alt="LinkedIn"
     //                   className="w-1/4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
     //                   loading="lazy"

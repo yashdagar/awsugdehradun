@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="hero home h-screen w-full flex flex-col items-center justify-between">
       <div className="h-64" />
       <img
-        src="logos/aws.png"
+        src="/logos/aws.png"
         className="w-full sm:w-4/5  lg:w-2/5 aws-logo"
         loading="lazy"
       />

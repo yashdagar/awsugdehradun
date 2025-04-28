@@ -80,7 +80,7 @@ const FAQ = () => {
                   <div
                     style={{
                       background:
-                        "no-repeat center / 1rem url(logos/chevron-down.svg), #fff8",
+                        "no-repeat center / 1rem url(/logos/chevron-down.svg), #fff8",
                     }}
                     className={`aspect-square bg-white/50 rounded-full w-6 transition-all duration-300 cursor-pointer ${isOpen[index] ? "rotate-180" : ""}`}
                     onClick={() => toggleIsOpen(index)}
@@ -112,7 +112,7 @@ const FAQ = () => {
                   <div
                     style={{
                       background:
-                        "no-repeat center / 1rem url(logos/chevron-down.svg), #fff8",
+                        "no-repeat center / 1rem url(/logos/chevron-down.svg), #fff8",
                     }}
                     className={`aspect-square bg-white/50 rounded-full w-6 transition-all duration-300 cursor-pointer ${isOpen[index + half] ? "rotate-180" : ""}`}
                     onClick={() => toggleIsOpen(index + half)}

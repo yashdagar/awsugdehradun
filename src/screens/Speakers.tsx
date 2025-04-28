@@ -80,7 +80,7 @@ const Speakers = () => {
                   className="transition-all duration-500 aspect-square w-36 md:w-40 xl:w-52 object-cover"
                 />
                 <img
-                  src="logos/linkedin_blue.svg"
+                  src="/logos/linkedin_blue.svg"
                   loading="lazy"
                   className="absolute w-1/3 top-1/3 left-1/3 bg-white transition-all duration-300"
                 />

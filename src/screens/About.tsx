@@ -4,58 +4,56 @@ const About = () => {
   return (
     <section className="about">
       <div className="flex flex-col gap-y-8 z-10 mb-36">
-        <div className="flex flex-col gap-y-4">
-          <h3 className="text-primary animate__slideInLeft">
-            About AWS User Group Dehradun
-          </h3>
-          <p>
-            AWS User Group Dehradun is a community of cloud enthusiasts focused
-            on bringing together AWS partners, customers, practitioners,
-            experts, and students to share ideas and knowledge. We aim to build
-            an environment connecting people through innovation, ideas, and
-            inspiration. It gives me immense pride to bring to your attention
-            that we are one of India's youngest and fastest-growing communities.{" "}
-            <br />
-            <br />
-            AWS Community Day event is a community-led conference where event
-            logistics and content is planned, sourced, and delivered by
-            community leaders. It feature technical discussions, workshops,
-            and hands-on labs led by expert AWS users and industry leaders.
-            Community Day delivers a peer-to-peer learning experience,
-            providing developers with a venue for them to acquire AWS knowledge.
-          </p>
-        </div>
-        <div className="flex flex-col gap-y-4">
-          <h3 className="text-primary">What can you expect</h3>
-          <ul className="list-circle">
-            <li>
-              Renew, revive & revitalize to exemplify your excitement about the
-              work you do
-            </li>
-            <li>
-              Learn industry trends and intricacies about innovative
-              implementations from AWS experts
-            </li>
-            <li>
-              Harness the power of networking with AWS users, DevOps, developers
-              & solutions architects
-            </li>
-            <li>Network with fellow AWS veterans & techies during breaks</li>
-            <li>
-              Novice to pioneer on relentless pursuit to learn can rejoice the
-              AWS offerings & success stories under one roof.
-            </li>
-            <li>Take helpful and valuable information back to business</li>
-            <li>
-              Gain visibility to get more publicity for your esteemed
-              organisation
-            </li>
-            <li>
-              Sporting chance for active participants to win AWS credits,
-              goodies and avail various certification vouchers
-            </li>
-          </ul>
-        </div>
+        <h2>About The Event</h2>
+        <p>
+        AWS User Group Dehradun (AWSUGDDN) is thrilled to present its flagship annual event — AWS Community Day Dehradun 2025 — a grand celebration of cloud innovation, collaboration, and community.
+        </p>
+        <p>
+        With a rich mix of technical deep-dives, real-world use cases, and inspiring success stories, this event is designed to bring together AWS enthusiasts, developers, architects, founders, students, and decision-makers under one roof to learn, network, and grow.
+        </p>
+        <h3>AWS USER GROUP DEHRADUN</h3>
+        <p>
+        AWSUG Dehradun is a passionate community of cloud professionals, developers, students, and innovators who are united by a shared love for building and sharing with Amazon Web Services.
+        </p>
+        <p>
+        Our group is committed to delivering community-led learning experiences, diving deep into modern tech stacks, including AWS cloud architecture, DevOps, AI/ML, Data Analytics, IoT, Serverless Computing, Generative AI, and more.
+        </p>
+        <p>
+        AWS Community Days are globally recognized, community-organized events that empower local talent and connect them with top-tier minds in tech. We bring together educational sessions, hands-on demos, and networking opportunities — all powered by the community, for the community.
+        </p>
+        <p>
+        Whether you're an early learner or a seasoned cloud architect, this event is your launchpad to new ideas, partnerships, and innovations.
+        </p>
+        <h3>WHAT TO EXPECT</h3>
+        <p>
+        🌟 Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
+        </p>
+        <p>
+        💡 <b>Learn</b>latest industry trends, use cases, and innovations from expert AWS professionals and community leaders.
+        </p>
+        <p>
+        🤝 <b>Connect</b> and network with 400+ AWS users, builders, developers, DevOps engineers, and solution architects.
+        </p>
+        <p>
+        🧠 Gain hands-on insights and experiences you can apply back at your organization or startup.
+        </p>
+        <p>
+        🌐 Meet AWS heroes, community leaders, and builders from across India.
+        </p>
+        <p>
+        🎯 Students can explore career paths, mentorship, and opportunities in cloud & emerging technologies.
+        </p>
+        <p>
+        📢 Companies and startups can showcase their work, gain visibility, and attract top tech talent.
+        </p>
+        <p>
+        🎁 Participate in fun activities and stand a chance to win exclusive AWS goodies.
+        </p>
+
+        <h3>EVENT DETAILS</h3>
+        📍 Venue: Dehradun<br />
+        🗓️ Date: Will be declared soon<br />
+        🕘 Time: 9:00 AM – 6:00 PM IST<br />
         <a href="/code-of-conduct" className="link">
           Code Of Conduct
           <LinkIcon />

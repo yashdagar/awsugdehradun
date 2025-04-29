@@ -24,25 +24,25 @@ const Team = () => {
     [
       {
         name: "Vaishnavi Srivastava",
-        designation: "Member",
+        designation: "Team Lead",
         img: "members/vaishnavi.webp",
         linkedin: "https://www.linkedin.com/in/vaishnavi7279/",
       },
       {
         name: "Pranav Aeron",
-        designation: "Member",
+        designation: "Team Lead",
         img: "members/pranav.webp",
         linkedin: "https://www.linkedin.com/in/pranavaeron/",
       },
       {
         name: "Yash Katiyar",
-        designation: "Member",
+        designation: "Team Lead",
         img: "members/yashk.webp",
         linkedin: "https://www.linkedin.com/in/yash-katiyar-4a222a21a/",
       },
       {
         name: "Unnati Agrawal",
-        designation: "Member",
+        designation: "Team Lead",
         img: "members/unnati.webp",
         linkedin: "https://www.linkedin.com/in/unnati-agarwal-22b95222b/",
       },
@@ -50,36 +50,36 @@ const Team = () => {
     [
       {
         name: "Shikhar Pathak",
-        designation: "Member",
+        designation: "Core Member",
         img: "members/shikhar.webp",
         linkedin: "https://www.linkedin.com/in/shikhar-pathak-ab3503259/",
       },
       {
         name: "Vinayak Sharma",
-        designation: "Member",
+        designation: "Core Member",
         img: "members/vinayak.webp",
         linkedin: "https://www.linkedin.com/in/vinayak-sharma-384936273/",
       },
       {
         name: "Yogesh Jain",
-        designation: "Member",
+        designation: "Core Member",
         img: "members/yogesh.webp",
         linkedin: "https://www.linkedin.com/in/yogesh-jainfive/",
       },
       {
         name: "Sahil Chauhan",
-        designation: "Member",
+        designation: "Core Member",
         img: "members/sahil.webp",
         linkedin: "https://www.linkedin.com/in/sahil-chauhan-aa6504286/",
       },
     ],
     [
-      {
-        name: "Yashpreet Singh",
-        designation: "Member",
-        img: "members/yashpreet.webp",
-        linkedin: "https://www.linkedin.com/in/yashpreet2707/",
-      },
+      // {
+      //   name: "Yashpreet Singh",
+      //   designation: "Member",
+      //   img: "members/yashpreet.webp",
+      //   linkedin: "https://www.linkedin.com/in/yashpreet2707/",
+      // },
       {
         name: "Yash Dagar",
         designation: "Member",

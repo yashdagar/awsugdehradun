@@ -13,6 +13,7 @@ import Team from "./screens/Team";
 import FAQ from "./screens/FAQ";
 // import Contact from "./screens/Contact";
 import Footer from "./components/footer/Footer";
+import About from "./screens/About";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
               <>
                 <Header />
                 <Hero />
-                {/* <About /> */}
+                <About />
                 <Speakers />
                 {/* <Schedule /> */}
                 <Gallery />

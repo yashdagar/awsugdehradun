@@ -51,6 +51,9 @@
     p {
         @apply flex items-center leading-6 tracking-wide text-sm sm:text-base;
     }
+    b{
+        @apply font-semibold;
+    }
     img {
         -webkit-user-drag: none; /* Safari and Chrome */
         -moz-user-drag: none; /* Firefox */

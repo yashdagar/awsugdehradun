@@ -24,35 +24,35 @@ const About = () => {
         <p>
         Whether you're an early learner or a seasoned cloud architect, this event is your launchpad to new ideas, partnerships, and innovations.
         </p><br />
-        <h3 className="font-semibold">WHAT TO EXPECT</h3>
+        <h2>WHAT TO EXPECT</h2>
         <p>
-        <h4 className="flex">🌟</h4> Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
+        Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
         </p>
         <p>
-        <h4 className="mr-2">💡</h4> <b>Learn</b>latest industry trends, use cases, and innovations from expert AWS professionals and community leaders.
+        <b>Learn</b>latest industry trends, use cases, and innovations from expert AWS professionals and community leaders.
         </p>
         <p>
-        <h4 className="mr-2">🤝</h4> <b>Connect</b> and network with 400+ AWS users, builders, developers, DevOps engineers, and solution architects.
+        <b>Connect</b> and network with 400+ AWS users, builders, developers, DevOps engineers, and solution architects.
         </p>
         <p>
-        <h4 className="mr-2">🧠</h4> Gain hands-on insights and experiences you can apply back at your organization or startup.
+        Gain hands-on insights and experiences you can apply back at your organization or startup.
         </p>
         <p>
-        <h4 className="mr-2">🌐</h4> Meet AWS heroes, community leaders, and builders from across India.
+        Meet AWS heroes, community leaders, and builders from across India.
         </p>
         <p>
-        <h4 className="mr-2">🎯</h4> Students can explore career paths, mentorship, and opportunities in cloud & emerging technologies.
+        Students can explore career paths, mentorship, and opportunities in cloud & emerging technologies.
         </p>
         <p>
-        <h4 className="mr-2">📢</h4> Companies and startups can showcase their work, gain visibility, and attract top tech talent.
+        Companies and startups can showcase their work, gain visibility, and attract top tech talent.
         </p>
         <p>
-        <h4 className="mr-2">🎁</h4> Participate in fun activities and stand a chance to win exclusive AWS goodies.
+        Participate in fun activities and stand a chance to win exclusive AWS goodies.
         </p><br />
         <h3 className="font-semibold">EVENT DETAILS</h3>
-        <p><h4 className="mr-2">📍</h4> <b>Venue:</b> Dehradun</p>
-        <p><h4 className="mr-2">🗓️</h4> <b>Date:</b> Will be declared soon</p> {/* TODO: EDIT AFTER REVEAL */}
-        <p><h4 className="mr-2">🕘</h4> <b>Time:</b> 9:00 AM – 6:00 PM IST</p>
+        <p><b>Venue:</b> Dehradun</p>
+        <p><b>Date:</b> Will be declared soon</p> {/* TODO: EDIT AFTER REVEAL */}
+        <p><b>Time:</b> 9:00 AM – 6:00 PM IST</p>
         <a href="/code-of-conduct" className="link">
           Code Of Conduct
           <LinkIcon />

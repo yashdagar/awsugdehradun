@@ -49,7 +49,7 @@
         @apply text-sm sm:text-base lg:text-xl font-medium;
     }
     p {
-        @apply leading-6 tracking-wide text-sm sm:text-base;
+        @apply flex items-center leading-6 tracking-wide text-sm sm:text-base;
     }
     img {
         -webkit-user-drag: none; /* Safari and Chrome */

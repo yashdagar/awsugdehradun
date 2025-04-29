@@ -26,7 +26,7 @@ const About = () => {
         </p>
         <h3 className="font-semibold">WHAT TO EXPECT</h3>
         <p>
-        <h4>🌟</h4> Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
+        <h4 className="flex">🌟</h4> Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
         </p>
         <p>
         <h4>💡</h4> <b>Learn</b>latest industry trends, use cases, and innovations from expert AWS professionals and community leaders.
@@ -51,9 +51,9 @@ const About = () => {
         </p>
 
         <h3 className="font-semibold">EVENT DETAILS</h3>
-        <h4>📍</h4> Venue: Dehradun<br />
-        <h4>🗓️</h4> Date: Will be declared soon<br />
-        <h4>🕘</h4> Time: 9:00 AM – 6:00 PM IST<br />
+        <h4>📍</h4> <b>Venue:</b> Dehradun<br />
+        <h4>🗓️</h4> <b>Date:</b> Will be declared soon<br /> //TODO: EDIT AFTER REVEAL
+        <h4>🕘</h4> <b>Time:</b> 9:00 AM – 6:00 PM IST<br />
         <a href="/code-of-conduct" className="link">
           Code Of Conduct
           <LinkIcon />

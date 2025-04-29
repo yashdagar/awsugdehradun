@@ -155,9 +155,6 @@
     }
     .about {
         @apply relative px-4 md:px-12 lg:px-24 py-16 flex justify-between pb-48;
-        background:
-            no-repeat bottom / cover url("/logos/sky.webp"),
-            #ebfdff;
     }
 
     .aws1 {
@@ -276,10 +273,6 @@
     }
     .navbar div:hover::after {
         @apply max-w-40;
-    }
-    .about::before {
-        background: repeat-x bottom / contain url("/logos/about_bg.png");
-        @apply content-[""] absolute left-0 bottom-0 w-full h-48;
     }
 
     .person-img::after {

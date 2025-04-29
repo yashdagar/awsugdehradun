@@ -11,7 +11,7 @@ const About = () => {
         <p>
         With a rich mix of technical deep-dives, real-world use cases, and inspiring success stories, this event is designed to bring together AWS enthusiasts, developers, architects, founders, students, and decision-makers under one roof to learn, network, and grow.
         </p>
-        <h3>AWS USER GROUP DEHRADUN</h3>
+        <h3 className="font-semibold">AWS USER GROUP DEHRADUN</h3>
         <p>
         AWSUG Dehradun is a passionate community of cloud professionals, developers, students, and innovators who are united by a shared love for building and sharing with Amazon Web Services.
         </p>
@@ -24,7 +24,7 @@ const About = () => {
         <p>
         Whether you're an early learner or a seasoned cloud architect, this event is your launchpad to new ideas, partnerships, and innovations.
         </p>
-        <h3>WHAT TO EXPECT</h3>
+        <h3 className="font-semibold">WHAT TO EXPECT</h3>
         <p>
         🌟 Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
         </p>
@@ -50,7 +50,7 @@ const About = () => {
         🎁 Participate in fun activities and stand a chance to win exclusive AWS goodies.
         </p>
 
-        <h3>EVENT DETAILS</h3>
+        <h3 className="font-semibold">EVENT DETAILS</h3>
         📍 Venue: Dehradun<br />
         🗓️ Date: Will be declared soon<br />
         🕘 Time: 9:00 AM – 6:00 PM IST<br />

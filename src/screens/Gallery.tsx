@@ -61,7 +61,7 @@ const Gallery = () => {
       <div className="flex items-center sm:gap-4">
         <div
           onClick={handleIndexDecrement}
-          className="w-12 aspect-square rounded-full bg-[url('/logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100"
+          className="w-12 border border-gray-500/20 aspect-square rounded-full bg-[url('/logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100"
         />
         <div className="flex overflow-x-scroll w-full transition-all ease-in-out gap-4">
           {content.map((item, curIndex) => (
@@ -80,7 +80,7 @@ const Gallery = () => {
         </div>
         <div
           onClick={handleIndexInceremnt}
-          className="w-12 aspect-square rounded-full bg-[url('/logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100 rotate-180"
+          className="w-12 border border-gray-500/20 aspect-square rounded-full bg-[url('/logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100/40 rotate-180"
         />
       </div>
     </section>

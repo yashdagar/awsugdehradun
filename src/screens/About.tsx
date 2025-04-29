@@ -51,7 +51,7 @@ const About = () => {
         </p><br />
         <h3 className="font-semibold">EVENT DETAILS</h3>
         <p><h4 className="mr-2">📍</h4> <b>Venue:</b> Dehradun</p><br />
-        <p><h4 className="mr-2">🗓️</h4> <b>Date:</b> Will be declared soon</p><br /> <!--TODO: EDIT AFTER REVEAL-->
+        <p><h4 className="mr-2">🗓️</h4> <b>Date:</b> Will be declared soon</p><br /> {/* TODO: EDIT AFTER REVEAL */}
         <p><h4 className="mr-2">🕘</h4> <b>Time:</b> 9:00 AM – 6:00 PM IST</p><br /><br />
         <a href="/code-of-conduct" className="link">
           Code Of Conduct

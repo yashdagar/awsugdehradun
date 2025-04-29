@@ -1,6 +1,5 @@
 import "./App.css";
 import Header from "./components/header/Header";
-// import About from "./screens/About";
 import CodeOfConduct from "./screens/CodeOfConduct";
 import Schedule from "./screens/Schedule";
 import Speakers from "./screens/Speakers";
@@ -11,7 +10,6 @@ import Gallery from "./screens/Gallery";
 import Sponsors from "./screens/Sponsors";
 import Team from "./screens/Team";
 import FAQ from "./screens/FAQ";
-// import Contact from "./screens/Contact";
 import Footer from "./components/footer/Footer";
 import About from "./screens/About";
 

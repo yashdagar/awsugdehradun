@@ -10,7 +10,7 @@ const Hero = () => {
         loading="lazy"
       />
       <div className="flex flex-col z-20 w-full mb-8 md:mb-16 px-4 gap-8 md:gap-0">
-        <a href="https://konfhub.com/aws-community-day-dehradun-2025">
+        <a href="https://konfhub.com/aws-community-day-dehradun-2025" className="hover:cursor-pointer">
         <button className="md:hidden">
           <h3>Join us</h3>
             <LinkIcon color="#fff" />
@@ -23,7 +23,7 @@ const Hero = () => {
             </h2>
             <h5 className="text-gray-200 text-nowrap">23 March 2024</h5>
           </div> */}
-          <a href="https://konfhub.com/aws-community-day-dehradun-2025">
+          <a href="https://konfhub.com/aws-community-day-dehradun-2025" className="hover:cursor-pointer">
           <button className="hidden md:flex bg-primary pl-4 pr-2 py-2 sm:pl-8 sm:pr-6 sm:py-4 h-fit my-auto rounded-full text-white items-center gap-2">
             <h3>Join us</h3>
             <LinkIcon color="#fff" />

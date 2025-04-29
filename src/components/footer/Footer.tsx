@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="pt-8 bg-[#41274e] flex flex-row w-full px-8 md:px-16 py-4 flex-wrap justify-between gap-4 mt-auto">
           <div className="flex flex-col gap-2">
             <h3>Contact Us</h3>
-            <p>+91 98765 43210</p>
-            <p>+91 87654 32109</p>
+            <p>+91 96344 83823</p>
+            <p>+91 99979 69951</p>
           </div>
           <div className="flex flex-col gap-2">
             <h3>Join Us</h3>

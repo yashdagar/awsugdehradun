@@ -29,30 +29,30 @@ const About = () => {
         <h4 className="flex">🌟</h4> Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
         </p>
         <p>
-        <h4>💡</h4> <b>Learn</b>latest industry trends, use cases, and innovations from expert AWS professionals and community leaders.
+        <h4 className="mr-2">💡</h4> <b>Learn</b>latest industry trends, use cases, and innovations from expert AWS professionals and community leaders.
         </p>
         <p>
-        <h4>🤝</h4> <b>Connect</b> and network with 400+ AWS users, builders, developers, DevOps engineers, and solution architects.
+        <h4 className="mr-2">🤝</h4> <b>Connect</b> and network with 400+ AWS users, builders, developers, DevOps engineers, and solution architects.
         </p>
         <p>
-        <h4>🧠</h4> Gain hands-on insights and experiences you can apply back at your organization or startup.
+        <h4 className="mr-2">🧠</h4> Gain hands-on insights and experiences you can apply back at your organization or startup.
         </p>
         <p>
-        <h4>🌐</h4> Meet AWS heroes, community leaders, and builders from across India.
+        <h4 className="mr-2">🌐</h4> Meet AWS heroes, community leaders, and builders from across India.
         </p>
         <p>
-        <h4>🎯</h4> Students can explore career paths, mentorship, and opportunities in cloud & emerging technologies.
+        <h4 className="mr-2">🎯</h4> Students can explore career paths, mentorship, and opportunities in cloud & emerging technologies.
         </p>
         <p>
-        <h4>📢</h4> Companies and startups can showcase their work, gain visibility, and attract top tech talent.
+        <h4 className="mr-2">📢</h4> Companies and startups can showcase their work, gain visibility, and attract top tech talent.
         </p>
         <p>
-        <h4>🎁</h4> Participate in fun activities and stand a chance to win exclusive AWS goodies.
+        <h4 className="mr-2">🎁</h4> Participate in fun activities and stand a chance to win exclusive AWS goodies.
         </p><br />
         <h3 className="font-semibold">EVENT DETAILS</h3>
-        <p><h4>📍</h4> <b>Venue:</b> Dehradun</p><br />
-        <p><h4>🗓️</h4> <b>Date:</b> Will be declared soon</p><br /> <!--TODO: EDIT AFTER REVEAL-->
-        <p><h4>🕘</h4> <b>Time:</b> 9:00 AM – 6:00 PM IST</p><br /><br />
+        <p><h4 className="mr-2">📍</h4> <b>Venue:</b> Dehradun</p><br />
+        <p><h4 className="mr-2">🗓️</h4> <b>Date:</b> Will be declared soon</p><br /> <!--TODO: EDIT AFTER REVEAL-->
+        <p><h4 className="mr-2">🕘</h4> <b>Time:</b> 9:00 AM – 6:00 PM IST</p><br /><br />
         <a href="/code-of-conduct" className="link">
           Code Of Conduct
           <LinkIcon />

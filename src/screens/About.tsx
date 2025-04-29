@@ -49,10 +49,6 @@ const About = () => {
         <p>
         Participate in fun activities and stand a chance to win exclusive AWS goodies.
         </p><br />
-        <h3 className="font-semibold">EVENT DETAILS</h3>
-        <p><b>Venue: </b> Dehradun</p>
-        <p><b>Date: </b> Will be declared soon</p> {/* TODO: EDIT AFTER REVEAL */}
-        <p><b>Time: </b> 9:00 AM – 6:00 PM IST</p>
         <a href="/code-of-conduct" className="link">
           Code Of Conduct
           <LinkIcon />

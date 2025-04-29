@@ -140,7 +140,7 @@ const Team = () => {
         name: "Daksh Sethi",
         designation: "Member",
         img: "members/daksh.webp",
-        linkedin: "https://www.linkedin.com/in/kushagra-bhardwaj-861503251/",
+        linkedin: "/#",
       },
       {
         name: "Hardik Raj Kapoor",

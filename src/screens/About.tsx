@@ -10,7 +10,7 @@ const About = () => {
         </p>
         <p>
         With a rich mix of technical deep-dives, real-world use cases, and inspiring success stories, this event is designed to bring together AWS enthusiasts, developers, architects, founders, students, and decision-makers under one roof to learn, network, and grow.
-        </p>
+        </p><br />
         <h3 className="font-semibold">AWS USER GROUP DEHRADUN</h3>
         <p>
         AWSUG Dehradun is a passionate community of cloud professionals, developers, students, and innovators who are united by a shared love for building and sharing with Amazon Web Services.
@@ -23,7 +23,7 @@ const About = () => {
         </p>
         <p>
         Whether you're an early learner or a seasoned cloud architect, this event is your launchpad to new ideas, partnerships, and innovations.
-        </p>
+        </p><br />
         <h3 className="font-semibold">WHAT TO EXPECT</h3>
         <p>
         <h4 className="flex">🌟</h4> Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
@@ -48,11 +48,10 @@ const About = () => {
         </p>
         <p>
         <h4>🎁</h4> Participate in fun activities and stand a chance to win exclusive AWS goodies.
-        </p>
-
+        </p><br />
         <h3 className="font-semibold">EVENT DETAILS</h3>
         <p><h4>📍</h4> <b>Venue:</b> Dehradun</p><br />
-        <p><h4>🗓️</h4> <b>Date:</b> Will be declared soon</p><br /> //TODO: EDIT AFTER REVEAL
+        <p><h4>🗓️</h4> <b>Date:</b> Will be declared soon</p><br /> <!--TODO: EDIT AFTER REVEAL-->
         <p><h4>🕘</h4> <b>Time:</b> 9:00 AM – 6:00 PM IST</p><br /><br />
         <a href="/code-of-conduct" className="link">
           Code Of Conduct

@@ -52,7 +52,7 @@
         @apply flex items-center leading-6 tracking-wide text-sm sm:text-base;
     }
     b{
-        @apply font-semibold;
+        @apply font-semibold mr-1;
     }
     img {
         -webkit-user-drag: none; /* Safari and Chrome */

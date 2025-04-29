@@ -51,9 +51,9 @@ const About = () => {
         </p>
 
         <h3 className="font-semibold">EVENT DETAILS</h3>
-        <h4>📍</h4> <b>Venue:</b> Dehradun<br />
-        <h4>🗓️</h4> <b>Date:</b> Will be declared soon<br /> //TODO: EDIT AFTER REVEAL
-        <h4>🕘</h4> <b>Time:</b> 9:00 AM – 6:00 PM IST<br />
+        <p><h4>📍</h4> <b>Venue:</b> Dehradun</p><br />
+        <p><h4>🗓️</h4> <b>Date:</b> Will be declared soon</p><br /> //TODO: EDIT AFTER REVEAL
+        <p><h4>🕘</h4> <b>Time:</b> 9:00 AM – 6:00 PM IST</p><br /><br />
         <a href="/code-of-conduct" className="link">
           Code Of Conduct
           <LinkIcon />

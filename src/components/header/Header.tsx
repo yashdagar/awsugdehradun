@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 // WHEN, WHERE -> ANNOUNCING SOON 🔄
 // EVENT SCHEDULE -> COMMENT 🔄
 // VENUE -> DEHRADUN 🔄
-// SPONSORS -> DOWNLOAD BROCHURE
+// ABOUT -> VENUE TO BE REVEALED 🔄
+// SPONSORS -> DOWNLOAD BROCHURE=
 // ABOUT
 // GALLERY -> MARQUEE
 const Header = () => {

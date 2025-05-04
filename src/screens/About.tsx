@@ -53,10 +53,10 @@ const About = () => {
             </li>
           </ul>
         </p><br />
-        <a href="/code-of-conduct" aria-label="See code of conduct" className="link">
+        {/* <a href="/code-of-conduct" aria-label="See code of conduct" className="link">
           Code Of Conduct
           <LinkIcon />
-        </a>
+        </a> */}
       </div>
     </section>
   );

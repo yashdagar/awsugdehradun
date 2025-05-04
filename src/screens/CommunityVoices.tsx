@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 interface YoutubeVideo {
   id: string;
@@ -56,6 +56,8 @@ const CommunityVoices: React.FC = () => {
 
   const [tolerance, setTolerance] = useState(2);
   const [selectedIndex, setIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const handleShouldShowYoutubeItem = () => {
     const width = window.innerWidth;
@@ -70,9 +72,34 @@ const CommunityVoices: React.FC = () => {
     }
   };
 
-  const handleIndexDecrement = () => setIndex(Math.max(selectedIndex - 1, 0));
-  const handleIndexIncrement = () =>
-    setIndex(Math.min(selectedIndex + 1, videos.length - tolerance - 1));
+  // Calculate item width based on container width and tolerance
+  const getItemWidth = () => {
+    if (!containerRef.current) return 0;
+    const containerWidth = containerRef.current.offsetWidth;
+    const gap = 16; // 1rem gap converted to pixels
+    const totalGapWidth = gap * tolerance;
+    return (containerWidth - totalGapWidth) / (tolerance + 1);
+  };
+
+  const handleIndexDecrement = () => {
+    if (isAnimating || selectedIndex <= 0) return;
+    setIsAnimating(true);
+    setIndex(prevIndex => Math.max(prevIndex - 1, 0));
+
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 500);
+  };
+
+  const handleIndexIncrement = () => {
+    if (isAnimating || selectedIndex >= videos.length - tolerance - 1) return;
+    setIsAnimating(true);
+    setIndex(prevIndex => Math.min(prevIndex + 1, videos.length - tolerance - 1));
+
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 500);
+  };
 
   useEffect(() => {
     handleShouldShowYoutubeItem();
@@ -87,42 +114,63 @@ const CommunityVoices: React.FC = () => {
       <h2 className="mb-8!">Community Voices</h2>
       <p className="justify-center text-lg font-normal tracking-wide mb-12">Hear from the rising stars of the cloud community!</p>
       <div className="flex items-center sm:gap-4">
-        <div
+        <button
           onClick={handleIndexDecrement}
-          className="w-12 border border-gray-500/20 aspect-square rounded-full bg-[url('/logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100 cursor-pointer"
+          disabled={isAnimating || selectedIndex <= 0}
+          className={`w-12 border border-gray-500/20 aspect-square rounded-full bg-[url('/logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100 cursor-pointer ${selectedIndex <= 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          aria-label="Previous videos"
         />
-        <div className="flex overflow-x-scroll w-full transition-all ease-in-out gap-4">
-          {videos.map((video, curIndex) => (
-            <div
-              className={`${
-                curIndex >= selectedIndex && curIndex <= selectedIndex + tolerance ? "" : "hidden"
-                } Youtube-item relative flex flex-col flex-1 items-center rounded-md overflow-clip`}
-              key={video.id}
-            >
-              <a href={video.url} aria-label={`See ${video["title"]} on Youtube`} target="_blank" rel="noopener noreferrer" className="w-full">
-                <div className="relative group">
-                  <div
-                    style={{
-                      background: `no-repeat center / cover url(${video.thumbnail})`,
-                    }}
-                    className="flex aspect-video w-full hover:scale-105 hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-16 h-16 bg-black/90 rounded-full flex items-center justify-center">
-                      <div className="w-4 h-4 ml-2 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent"></div>
+        <div className="relative flex-1 overflow-hidden" ref={containerRef}>
+          <div
+            className="flex transition-transform duration-700 ease-in-out w-full gap-8"
+            style={{
+              transform: `translateX(calc(-${selectedIndex} * (${getItemWidth()}px + 2.4rem)))`,
+              willChange: "transform"
+            }}
+          >
+            {videos.map((video, index) => {
+              // Calculate if this is the center item when tolerance is 2 (3 items showing)
+              const isCenterItem = tolerance === 2 && ((index - selectedIndex) === 1);
+
+              return (
+                <div
+                  className={`Youtube-item relative flex-shrink-0 flex flex-col items-center rounded-md overflow-clip ${
+                    isCenterItem ? 'scale-110 z-10' : ''
+                  }`}
+                  style={{
+                    width: `${100 / (tolerance + 1)}%`,
+                    transition: 'all 0.3s ease'
+                  }}
+                  key={video.id}
+                >
+                  <a href={video.url} aria-label={`See ${video.title} on Youtube`} rel="noopener noreferrer" className="w-full">
+                    <div className="relative group">
+                      <div
+                        style={{
+                          background: `no-repeat center / cover url(${video.thumbnail})`,
+                        }}
+                        className="flex aspect-video w-full hover:scale-105 hover:brightness-75 transition-all duration-300"
+                      />
+                      <div className="absolute inset-0 flex w-fit h-fit m-auto opacity-100 transition-opacity duration-300">
+                        <div className="w-16 h-12 bg-[#ff0000] rounded-xl flex items-center justify-center">
+                          <div className="w-4 h-4 ml-2 border-t-8 border-t-transparent border-l-[14px] border-l-white border-b-8 border-b-transparent"></div>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                        <h3 className="text-white font-medium text-[0px] sm:text-base">{video.title}</h3>
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                    <h3 className="text-white font-medium text-lg">{video.title}</h3>
-                  </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-          ))}
+              );
+            })}
+          </div>
         </div>
-        <div
+        <button
           onClick={handleIndexIncrement}
-          className="w-12 border border-gray-500/20 aspect-square rounded-full bg-[url('/logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100/40 rotate-180 cursor-pointer"
+          disabled={isAnimating || selectedIndex >= videos.length - tolerance - 1}
+          className={`w-12 border border-gray-500/20 aspect-square rounded-full bg-[url('/logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100/40 rotate-180 cursor-pointer ${selectedIndex >= videos.length - tolerance - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          aria-label="Next videos"
         />
       </div>
     </section>

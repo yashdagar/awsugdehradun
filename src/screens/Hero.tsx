@@ -3,11 +3,11 @@ import LinkIcon from "../components/icons/link";
 const Hero = () => {
   return (
     <section className="hero home h-screen w-full flex flex-col items-center justify-between">
-      <div className="h-64" />
+      <div className="sm:h-24 md:h-64" />
       <img
         alt="aws"
         src="/logos/aws.webp"
-        className="w-full sm:w-4/5  lg:w-2/5 aws-logo"
+        className="px-4 w-full sm:w-4/5  lg:w-2/5 aws-logo"
       />
       <div className="flex flex-col z-20 w-full mb-8 md:mb-16 px-4 gap-8 md:gap-0">
         <a href="https://konfhub.com/aws-community-day-dehradun-2025" aria-label="Visit Konfhub link" className="hover:cursor-pointer">

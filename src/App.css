@@ -20,6 +20,12 @@
     * {
         @apply m-0 p-0 box-border;
     }
+    ul li{
+        @apply list-disc leading-loose;
+    }
+    ul li::marker {
+        @apply text-primary;
+    }
     section:not(.hero) {
         scroll-margin-top: 5rem;
         @apply relative px-12 sm:px-16 lg:px-24 pt-16 pb-4 text-black;

@@ -1,19 +1,6 @@
 import { useEffect, useState } from "react";
 
-// Section named as "Community Voices"
-
-// Steal The Spotlight | Community Speaks
-// Hear from the rising stars of the cloud community!
-
-// We believe every voice matters—and some shine brighter when given the stage. Presenting handpicked video stories from our “Steal The Spotlight” winners—young, vibrant talents who wowed us with their unique take on tech, innovation, and community spirit.
-
-// From creative cloud experiments to real-world solutions and personal growth journeys, these videos highlight why the AWS Community Day Dehradun 2025 is more than just an event—it's a movement.
-
-// Inke insta video with their youtbe video links linked with that aur linkedin profile and name
-
-// https://docs.google.com/spreadsheets/d/1kOcyatR_7zdqwJh2uiMxsDrDiduy6XfJU_noyywSWYE/edit?usp=sharing
-
-interface InstagramVideo {
+interface YoutubeVideo {
   id: string;
   thumbnail: string;
   title: string;
@@ -21,49 +8,56 @@ interface InstagramVideo {
 }
 
 const CommunityVoices: React.FC = () => {
-  const videos: InstagramVideo[] = [
-    {
-      id: "video1",
-      thumbnail: "/instagram/thumbnail1.webp",
-      title: "AWS Day Highlights",
-      url: "https://instagram.com/awsday/video1"
-    },
-    {
-      id: "video2",
-      thumbnail: "/instagram/thumbnail2.webp",
-      title: "Behind the Scenes",
-      url: "https://instagram.com/awsday/video2"
-    },
-    {
-      id: "video3",
-      thumbnail: "/instagram/thumbnail3.webp",
-      title: "Cloud Innovation Talk",
-      url: "https://instagram.com/awsday/video3"
-    },
-    {
-      id: "video4",
-      thumbnail: "/instagram/thumbnail4.webp",
-      title: "Tech Demos",
-      url: "https://instagram.com/awsday/video4"
-    },
-    {
-      id: "video5",
-      thumbnail: "/instagram/thumbnail5.webp",
-      title: "Expert Panel",
-      url: "https://instagram.com/awsday/video5"
-    },
-    {
-      id: "video6",
-      thumbnail: "/instagram/thumbnail6.webp",
-      title: "Community Meetup",
-      url: "https://instagram.com/awsday/video6"
-    }
+  const videos: YoutubeVideo[] = [
+      {
+        id: "video1",
+        thumbnail: "/communityVoices/1.webp",
+        title: "Quickly Set Up a GraphQL API for DynamoDB CRUD operations with AWS AppSync",
+        url: "https://youtu.be/n4mxQP-1a3U"
+      },
+      {
+        id: "video2",
+        thumbnail: "/communityVoices/2.webp",
+        title: "How to Secure AWS API Gateway with Cognito User Pools",
+        url: "https://www.youtube.com/watch?v=mhS9EwUCOrc"
+      },
+      {
+        id: "video3",
+        thumbnail: "/communityVoices/3.webp",
+        title: "AWS Multi-Session Support",
+        url: "https://youtu.be/_5qahn-PzAI"
+      },
+      // Skipped Riddhi Ahuja as no yt video provided
+      {
+        id: "video4",
+        thumbnail: "/communityVoices/4.webp",
+        title: "Introduction to Amazon SageMaker AI",
+        url: "https://www.youtube.com/watch?v=nGEld_dt84A"
+      },
+      {
+        id: "video5",
+        thumbnail: "/communityVoices/5.webp",
+        title: "New Announcement on PartyRock",
+        url: "https://youtu.be/75lB__qnaZU"
+      },
+      {
+        id: "video6",
+        thumbnail: "/communityVoices/6.webp",
+        title: "AWS Global Network and Networking Concepts",
+        url: "https://youtu.be/KERrvCw8OqA"
+      },
+      {
+        id: "video7",
+        thumbnail: "/communityVoices/7.webp",
+        title: "S3 Lifecycle Management: From Basics to Best Practices",
+        url: "https://youtu.be/xKoCD5jaHeE?si=--gvf1VSj39IrdK1"
+      }
   ];
 
   const [tolerance, setTolerance] = useState(2);
   const [selectedIndex, setIndex] = useState(0);
 
-  const handleShouldShowInstagramItem = () => {
+  const handleShouldShowYoutubeItem = () => {
     const width = window.innerWidth;
     if (width >= 1280) {
       setTolerance(2);
@@ -81,16 +75,17 @@ const CommunityVoices: React.FC = () => {
     setIndex(Math.min(selectedIndex + 1, videos.length - tolerance - 1));
 
   useEffect(() => {
-    handleShouldShowInstagramItem();
-    window.addEventListener("resize", handleShouldShowInstagramItem);
+    handleShouldShowYoutubeItem();
+    window.addEventListener("resize", handleShouldShowYoutubeItem);
     return () => {
-      window.removeEventListener("resize", handleShouldShowInstagramItem);
+      window.removeEventListener("resize", handleShouldShowYoutubeItem);
     };
   }, []);
 
   return (
-    <section className="instagram py-16">
-      <h2>Instagram</h2>
+    <section className="youtube py-16">
+      <h2 className="mb-8!">Community Voices</h2>
+      <p className="justify-center text-lg font-normal tracking-wide mb-12">Hear from the rising stars of the cloud community!</p>
       <div className="flex items-center sm:gap-4">
         <div
           onClick={handleIndexDecrement}
@@ -101,23 +96,23 @@ const CommunityVoices: React.FC = () => {
             <div
               className={`${
                 curIndex >= selectedIndex && curIndex <= selectedIndex + tolerance ? "" : "hidden"
-                } instagram-item relative flex flex-col flex-1 items-center rounded-md overflow-clip`}
+                } Youtube-item relative flex flex-col flex-1 items-center rounded-md overflow-clip`}
               key={video.id}
             >
-              <a href={video.url} aria-label="Visit on Instagram" target="_blank" rel="noopener noreferrer" className="w-full">
+              <a href={video.url} aria-label={`See ${video["title"]} on Youtube`} target="_blank" rel="noopener noreferrer" className="w-full">
                 <div className="relative group">
                   <div
                     style={{
                       background: `no-repeat center / cover url(${video.thumbnail})`,
                     }}
-                    className="flex aspect-5/4 w-full hover:scale-105 hover:brightness-75 transition-all duration-300"
+                    className="flex aspect-video w-full hover:scale-105 hover:brightness-75 transition-all duration-300"
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center">
-                      <div className="w-4 h-4 border-t-8 border-t-transparent border-l-8 border-l-black border-b-8 border-b-transparent ml-1"></div>
+                    <div className="w-16 h-16 bg-black/90 rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 ml-2 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent"></div>
                     </div>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                     <h3 className="text-white font-medium text-lg">{video.title}</h3>
                   </div>
                 </div>

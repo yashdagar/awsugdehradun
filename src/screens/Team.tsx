@@ -179,9 +179,9 @@ const Team = () => {
                   />
                 </div>
               </a>
-              <h4 className="text-center text-black text-lg font-semibold capitalize leading-6">
+              <div className="text-center text-black text-lg font-semibold capitalize leading-6">
                 {member["name"]}
-              </h4>
+              </div>
               <div className="mx-auto text-center text-gray-500 text-sm font-medium backdrop-blur-sm border border-black/10 rounded-full px-2 w-fit self-center">
                 {member["designation"]}
               </div>

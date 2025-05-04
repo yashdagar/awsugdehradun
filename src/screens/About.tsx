@@ -26,28 +26,32 @@ const About = () => {
         </p><br />
         <h2>WHAT TO EXPECT</h2>
         <p>
-        Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
-        </p>
-        <p>
-        Learn latest industry trends, use cases, and innovations from expert AWS professionals and community leaders.
-        </p>
-        <p>
-        Connect and network with 400+ AWS users, builders, developers, DevOps engineers, and solution architects.
-        </p>
-        <p>
-        Gain hands-on insights and experiences you can apply back at your organization or startup.
-        </p>
-        <p>
-        Meet AWS heroes, community leaders, and builders from across India.
-        </p>
-        <p>
-        Students can explore career paths, mentorship, and opportunities in cloud & emerging technologies.
-        </p>
-        <p>
-        Companies and startups can showcase their work, gain visibility, and attract top tech talent.
-        </p>
-        <p>
-        Participate in fun activities and stand a chance to win exclusive AWS goodies.
+          <ul>
+            <li>
+          Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
+            </li>
+            <li>
+              Learn latest industry trends, use cases, and innovations from expert AWS professionals and community leaders.
+            </li>
+            <li>
+              Connect and network with 400+ AWS users, builders, developers, DevOps engineers, and solution architects.
+            </li>
+            <li>
+              Gain hands-on insights and experiences you can apply back at your organization or startup.
+            </li>
+            <li>
+              Meet AWS heroes, community leaders, and builders from across India.
+            </li>
+            <li>
+              Students can explore career paths, mentorship, and opportunities in cloud & emerging technologies.
+            </li>
+            <li>
+              Companies and startups can showcase their work, gain visibility, and attract top tech talent.
+            </li>
+            <li>
+              Participate in fun activities and stand a chance to win exclusive AWS goodies.
+            </li>
+          </ul>
         </p><br />
         <a href="/code-of-conduct" aria-label="See code of conduct" className="link">
           Code Of Conduct

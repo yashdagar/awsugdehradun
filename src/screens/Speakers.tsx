@@ -6,58 +6,9 @@ interface Speaker{
 }
 
 const Speakers = () => {
-  const speakers: Speaker[] = [
-    {
-      name: "Johnni Welch",
-      designation: "CTO & Founder",
-      img: "https://thispersondoesnotexist.com/",
-      linkedin: "",
-    },
-    {
-      name: "Florence Jackson",
-      designation: "CTO & Founder",
-      img: "https://thispersondoesnotexist.com/",
-      linkedin: "",
-    },
-    {
-      name: "Brandie Palmer",
-      designation: "CTO & Founder",
-      img: "https://thispersondoesnotexist.com/",
-      linkedin: "",
-    },
-    {
-      name: "Deanna Little",
-      designation: "CTO & Founder",
-      img: "https://thispersondoesnotexist.com/",
-      linkedin: "",
-    },
-    {
-      name: "Jim Grant",
-      designation: "CTO & Founder",
-      img: "https://thispersondoesnotexist.com/",
-      linkedin: "",
-    },
-    {
-      name: "Logan Fernandez",
-      designation: "CTO & Founder",
-      img: "https://thispersondoesnotexist.com/",
-      linkedin: "",
-    },
-    {
-      name: "Jonathan Lucas",
-      designation: "CTO & Founder",
-      img: "https://thispersondoesnotexist.com/",
-      linkedin: "",
-    },
-    {
-      name: "Johni Welch",
-      designation: "CTO & Founder",
-      img: "https://thispersondoesnotexist.com/",
-      linkedin: "",
-    },
-  ];
+  const speakers: Speaker[] = [];
 
-  const shouldAnnounce = false;
+  const shouldAnnounce = speakers.length ;
 
   return (
     <section className="speakers">
@@ -73,7 +24,7 @@ const Speakers = () => {
           >
             <a href={speaker["linkedin"]} aria-label={`Visit ${speaker["name"]} on Linkedin`} target="_blank" className="">
               <div
-                className="person-img w-fit mx-auto rounded-full border border-black/10"              >
+                className="person-img w-fit mx-auto rounded-full border border-black/10">
                 <img
                   alt={speaker["name"]}
                   src={speaker["img"]}
@@ -98,8 +49,10 @@ const Speakers = () => {
         ))}
         </div>:
         <div className="flex h-full items-center relative">
-          <h1 className="text-primary uppercase font-bold before:text-black h-32 md:h-96 flex items-center">
-            Announcing Soon
+
+          <h1 className="text-primary text-center uppercase font-bold h-32 md:h-96 flex items-center">
+            Announcing <br />
+            Soon
           </h1>
         </div>
       }

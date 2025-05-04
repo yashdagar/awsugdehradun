@@ -163,13 +163,13 @@
     .aws1 {
         @apply absolute w-21 h-20 md:w-44 md:h-40 top-0 right-0 -z-10;
         transform: rotate3d(0, 0, 1, 180deg);
-        background: no-repeat center / contain url("/logos/aws_hexagon.png");
+        background: no-repeat center / contain url("/logos/aws_hexagon.webp");
     }
 
     .aws2 {
         @apply absolute w-21 h-20 md:w-44 md:h-40 top-0 left-0 -z-10;
         transform: rotateX(180deg);
-        background: no-repeat center / contain url("/logos/aws_hexagon.png");
+        background: no-repeat center / contain url("/logos/aws_hexagon.webp");
     }
     .cloud1, .cloud2, .cloud3, .cloud4{
         @apply absolute w-96 h-32;
@@ -280,6 +280,6 @@
 
     .person-img::after {
         @apply content-[""] absolute -left-3 -bottom-3 -top-3 -right-3;
-        background: no-repeat center / cover url("/logos/speaker_bg.png");
+        background: no-repeat center / cover url("/logos/speaker_bg.webp");
     }
 }

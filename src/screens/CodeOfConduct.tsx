@@ -8,7 +8,7 @@ const CodeOfConduct = () => {
 
         <img
           className="absolute mx-auto w-48 md:w-96 top-14 left-1/2 -translate-x-1/2"
-          src="/logos/aws.png"
+          src="/logos/aws.webp"
           alt=""
           loading="lazy"
         />

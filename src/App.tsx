@@ -12,6 +12,7 @@ import Team from "./screens/Team";
 import FAQ from "./screens/FAQ";
 import Footer from "./components/footer/Footer";
 import About from "./screens/About";
+import CommunityVoices from "./screens/CommunityVoices";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                 <Hero />
                 <About />
                 <Speakers />
+                <CommunityVoices />
                 {/* <Schedule /> */}
                 <Gallery />
                 <Venue />

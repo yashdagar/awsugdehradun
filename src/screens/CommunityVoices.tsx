@@ -20,7 +20,7 @@ interface InstagramVideo {
   url: string;
 }
 
-const InstagramSection: React.FC = () => {
+const CommunityVoices: React.FC = () => {
   const videos: InstagramVideo[] = [
     {
       id: "video1",
@@ -60,48 +60,48 @@ const InstagramSection: React.FC = () => {
     }
   ];
 
-  // const [tolerance, setTolerance] = useState(2);
-  // const [selectedIndex, setIndex] = useState(0);
+  const [tolerance, setTolerance] = useState(2);
+  const [selectedIndex, setIndex] = useState(0);
 
-  // const handleShouldShowInstagramItem = () => {
-  //   const width = window.innerWidth;
-  //   if (width >= 1280) {
-  //     setTolerance(2);
-  //   } else if (width >= 1024) {
-  //     setTolerance(1);
-  //   } else if (width >= 640) {
-  //     setTolerance(0);
-  //   } else {
-  //     setTolerance(0);
-  //   }
-  // };
+  const handleShouldShowInstagramItem = () => {
+    const width = window.innerWidth;
+    if (width >= 1280) {
+      setTolerance(2);
+    } else if (width >= 1024) {
+      setTolerance(1);
+    } else if (width >= 640) {
+      setTolerance(0);
+    } else {
+      setTolerance(0);
+    }
+  };
 
-  // const handleIndexDecrement = () => setIndex(Math.max(selectedIndex - 1, 0));
-  // const handleIndexIncrement = () =>
-  //   setIndex(Math.min(selectedIndex + 1, videos.length - tolerance - 1));
+  const handleIndexDecrement = () => setIndex(Math.max(selectedIndex - 1, 0));
+  const handleIndexIncrement = () =>
+    setIndex(Math.min(selectedIndex + 1, videos.length - tolerance - 1));
 
-  // useEffect(() => {
-  //   handleShouldShowInstagramItem();
-  //   window.addEventListener("resize", handleShouldShowInstagramItem);
-  //   return () => {
-  //     window.removeEventListener("resize", handleShouldShowInstagramItem);
-  //   };
-  // }, []);
+  useEffect(() => {
+    handleShouldShowInstagramItem();
+    window.addEventListener("resize", handleShouldShowInstagramItem);
+    return () => {
+      window.removeEventListener("resize", handleShouldShowInstagramItem);
+    };
+  }, []);
 
   return (
     <section className="instagram py-16">
       <h2>Instagram</h2>
       <div className="flex items-center sm:gap-4">
-        {/* <div
+        <div
           onClick={handleIndexDecrement}
           className="w-12 border border-gray-500/20 aspect-square rounded-full bg-[url('/logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100 cursor-pointer"
-        /> */}
+        />
         <div className="flex overflow-x-scroll w-full transition-all ease-in-out gap-4">
           {videos.map((video, curIndex) => (
             <div
-              className={`${/*
+              className={`${
                 curIndex >= selectedIndex && curIndex <= selectedIndex + tolerance ? "" : "hidden"
-                */''} instagram-item relative flex flex-col flex-1 items-center rounded-md overflow-clip`}
+                } instagram-item relative flex flex-col flex-1 items-center rounded-md overflow-clip`}
               key={video.id}
             >
               <a href={video.url} target="_blank" rel="noopener noreferrer" className="w-full">
@@ -125,13 +125,13 @@ const InstagramSection: React.FC = () => {
             </div>
           ))}
         </div>
-        {/* <div
+        <div
           onClick={handleIndexIncrement}
           className="w-12 border border-gray-500/20 aspect-square rounded-full bg-[url('/logos/arrow-left.svg')] transition-all duration-300 bg-white bg-no-repeat bg-center hover:bg-gray-100/40 rotate-180 cursor-pointer"
-        /> */}
+        />
       </div>
     </section>
   );
 };
 
-export default InstagramSection;
+export default CommunityVoices;

@@ -163,7 +163,7 @@ const Gallery = () => {
           className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
           onClick={() => setMaximizedImage(null)}
         >
-          <div className="relative max-w-6xl max-h-full w-full">
+          <div className="relative max-w-2xl max-h-full w-full">
             <button
               className="absolute top-4 right-4 bg-white/20 hover:bg-white/40 rounded-full p-2 z-10 transition-all duration-300"
               onClick={(e) => {

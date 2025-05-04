@@ -14,7 +14,7 @@ const Header = () => {
 
   const sections: string[] = [
     "Home",
-    // "About",
+    "About",
     "Speakers",
     "Schedule",
     "Gallery",

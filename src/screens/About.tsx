@@ -96,14 +96,14 @@ const About: FC = () => {
 
         <p
           ref={itemRefs.para1}
-          className={`${getAnimationClass('para1')}`}
+          className={`${getAnimationClass('para1')} !font-normal !text-gray-900`}
         >
           AWS User Group Dehradun (AWSUGDDN) is thrilled to present its flagship annual event — AWS Community Day Dehradun 2025 — a grand celebration of cloud innovation, collaboration, and community.
         </p>
 
         <p
           ref={itemRefs.para2}
-          className={`${getAnimationClass('para2')}`}
+          className={`${getAnimationClass('para2')} !font-normal !text-gray-900`}
         >
           With a rich mix of technical deep-dives, real-world use cases, and inspiring success stories, this event is designed to bring together AWS enthusiasts, developers, architects, founders, students, and decision-makers under one roof to learn, network, and grow.
         </p>
@@ -156,7 +156,7 @@ const About: FC = () => {
 
         <div
           ref={itemRefs.listItems}
-          className={`${getAnimationClass('listItems')}`}
+          className={`${getAnimationClass('listItems')} ml-4`}
         >
           <ul>
             <li className="transition-all duration-700 delay-100">

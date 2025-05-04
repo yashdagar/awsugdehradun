@@ -162,15 +162,17 @@ const Team = () => {
               className="speaker relative w-full flex-[20%] flex-col justify-center"
               key={member["name"]}
             >
-              <a href={member["linkedin"]} target="_blank">
+              <a href={member["linkedin"]} target="_blank" aria-label={`Visit ${member["name"]} on linkedin`}>
                 <div
                   className="person-img w-fit mx-auto rounded-full border border-black/10"                >
                   <img
+                    alt={member["name"]}
                     src={member["img"]}
                     className="transition-all duration-500 aspect-square w-40 sm:w-32 md:w-40 xl:w-48 object-cover"
                     loading="lazy"
                   />
                   <img
+                    alt="linkedin"
                     src="/logos/linkedin_blue.svg"
                     className="absolute w-1/3 top-1/3 left-1/3 bg-white transition-all duration-300"
                     loading="lazy"

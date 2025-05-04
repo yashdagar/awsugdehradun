@@ -104,7 +104,7 @@ const CommunityVoices: React.FC = () => {
                 } instagram-item relative flex flex-col flex-1 items-center rounded-md overflow-clip`}
               key={video.id}
             >
-              <a href={video.url} target="_blank" rel="noopener noreferrer" className="w-full">
+              <a href={video.url} aria-label="Visit on Instagram" target="_blank" rel="noopener noreferrer" className="w-full">
                 <div className="relative group">
                   <div
                     style={{

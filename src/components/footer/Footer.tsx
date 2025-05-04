@@ -15,6 +15,7 @@ const Footer = () => {
             <h3>Join Us</h3>
             <a
               href="https://www.meetup.com/aws-user-group-dehradun/"
+              aria-label="See on Meetup"
               className="hover:text-[#32ccff] transition duration-300"
             >
               <div className="flex flex-row items-center link">
@@ -27,20 +28,23 @@ const Footer = () => {
       </div>
       <div className="flex justify-between px-8 py-4 bg-[#41274e]">
         <div className="flex gap-2 sm:gap-4">
-          <a href="https://www.instagram.com/awsugddn/">
+          <a href="https://www.instagram.com/awsugddn/" aria-label="Visit on Instagram">
             <img
+            alt="instagram"
               src="/logos/instagram.svg"
               className="w-8 h-8 sm:w-12 sm:h-12 invert"
             />
           </a>
-          <a href="https://www.linkedin.com/company/aws-user-group-dehradun/">
+          <a href="https://www.linkedin.com/company/aws-user-group-dehradun/" aria-label="Visit on Instagram">
             <img
+            alt="linkedin"
               src="/logos/linkedin.svg"
               className="w-8 h-8 sm:w-12 sm:h-12 invert rounded-lg"
             />
           </a>
-          <a href="https://x.com/awsugddn/" className="flex my-auto">
+          <a href="https://x.com/awsugddn/" className="flex my-auto" aria-label="Visit on X">
             <img
+            alt="x"
               src="/logos/x.svg"
               className="w-7 sm:w-11 aspect-square p-1 sm:p-2 rounded-sm sm:rounded-lg invert bg-black mix-blend-color-dodge"
             />
@@ -48,7 +52,11 @@ const Footer = () => {
         </div>
         <h4 className="ml-4 text-nowrap flex my-auto font-light">
           Made with ❤️ by
-          <a className="text-[#32ccff] font-medium ml-1 cursor-pointer" href="https://www.linkedin.com/in/yoursyash/">@yashdagar</a>
+          <a
+            className="text-[#32ccff] font-medium ml-1 cursor-pointer"
+            href="https://www.linkedin.com/in/yoursyash/"
+             aria-label="Visit Yash on Linkedin"
+          >@yashdagar</a>
         </h4>
         <div />
       </div>

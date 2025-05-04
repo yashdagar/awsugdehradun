@@ -4,12 +4,12 @@ const CodeOfConduct = () => {
   return (
     <>
       <div>
-        <div className="bg-[url('https://doplrafkvxyec.cloudfront.net/assets/img/banner_bg.jpg')] h-72 md:h-224 bg-contain bg-center bg-repeat -mt-5"></div>
+        <div className="bg-[url('/logos/banner_bg.webp')] h-64 md:h-96 bg-contain bg-center bg-repeat -mt-5"></div>
 
         <img
+          alt="aws"
           className="absolute mx-auto w-48 md:w-96 top-14 left-1/2 -translate-x-1/2"
           src="/logos/aws.webp"
-          alt=""
           loading="lazy"
         />
       </div>
@@ -87,7 +87,7 @@ const CodeOfConduct = () => {
               If you witness or are subjected to inappropriate behavior, or have
               concerns related to this Code of Conduct, please promptly contact
               at{" "}
-              <a className="text-blue" href="mailto:support@awsugddn.in">
+              <a className="text-blue" aria-label="Compose a mail" href="mailto:support@awsugddn.in">
                 support@awsugddn.in
               </a>
             </p>

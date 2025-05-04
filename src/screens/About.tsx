@@ -49,7 +49,7 @@ const About = () => {
         <p>
         Participate in fun activities and stand a chance to win exclusive AWS goodies.
         </p><br />
-        <a href="/code-of-conduct" className="link">
+        <a href="/code-of-conduct" aria-label="See code of conduct" className="link">
           Code Of Conduct
           <LinkIcon />
         </a>

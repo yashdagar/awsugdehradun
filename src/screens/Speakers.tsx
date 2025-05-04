@@ -71,15 +71,17 @@ const Speakers = () => {
             className="speaker relative mx-auto flex flex-col"
             key={speaker["name"]}
           >
-            <a href={speaker["linkedin"]} target="_blank" className="">
+            <a href={speaker["linkedin"]} aria-label={`Visit ${speaker["name"]} on Linkedin`} target="_blank" className="">
               <div
                 className="person-img w-fit mx-auto rounded-full border border-black/10"              >
                 <img
+                  alt={speaker["name"]}
                   src={speaker["img"]}
                   loading="lazy"
                   className="transition-all duration-500 aspect-square w-36 md:w-40 xl:w-52 object-cover"
                 />
                 <img
+                  alt="linkedin"
                   src="/logos/linkedin_blue.svg"
                   loading="lazy"
                   className="absolute w-1/3 top-1/3 left-1/3 bg-white transition-all duration-300"

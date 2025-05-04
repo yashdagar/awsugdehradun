@@ -93,6 +93,7 @@ const Header = () => {
           }`}
         >
           <img
+          alt="logo"
             src="logos/logo.webp"
             className={`p-4 ${headerScrolled ? "size-20" : "size-24"}`}
             loading="lazy"
@@ -111,6 +112,7 @@ const Header = () => {
         }`}
       >
         <img
+        alt="logo"
           src="/logos/logo.webp"
           className={`transition-all ${headerScrolled ? "size-22 p-2" : "size-24 p-4"}`}
           loading="lazy"

@@ -55,10 +55,10 @@ const Sponsors = () => {
                       >
                         <div />
                         <img
+                          alt={item.name} // Added alt attribute for accessibility
                           src={item.icon}
                           loading="lazy"
                           className="rounded-lg max-h-24"
-                          alt={item.name} // Added alt attribute for accessibility
                         />
                         <h5 className="text-gray-500">{item.name}</h5>
                       </div>
@@ -68,15 +68,15 @@ const Sponsors = () => {
               );
             })}
           </div>
-          <a href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal" className="link">
+          <a href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal" aria-label="Mail to awsugddn@gmail.com" className="link">
             Become a sponsor <LinkIcon color="rgb(49, 166, 250)" />
           </a>
         </div>
       ) : (
         <div className="h-40 content-center">
-          <a href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal">
+          <a href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal" aria-label="Mail to awsugddn@gmail.com">
           <button>
-            <h4>Become a sponsor</h4> <LinkIcon />
+            <div className="text-xl font-bold">Become a sponsor</div> <LinkIcon />
           </button>
           </a>
         </div>

@@ -7,7 +7,7 @@ interface Content {
   hue: string,
   icon: string,
   people?: {
-    img:string,
+    img: string,
     name: string
   }[],
 }
@@ -81,7 +81,7 @@ const Schedule = () => {
       icon: "/logos/registration.svg",
     },
   ]
-  const time = [
+  const time: string[] = [
       "9:00 am",
       "9:30 am",
       "10:00 am",

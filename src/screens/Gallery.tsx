@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const Gallery = () => {
-  const content = [
+  const content: string[] = [
     "gallery/1.webp",
     "gallery/2.webp",
     "gallery/9.webp",

@@ -12,7 +12,7 @@ const Header = () => {
 
   const [navBarOpen, setNavBarOpen] = useState(false);
 
-  const sections = [
+  const sections: string[] = [
     "Home",
     // "About",
     "Speakers",

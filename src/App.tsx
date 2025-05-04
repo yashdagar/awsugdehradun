@@ -32,7 +32,6 @@ function App() {
                 <Sponsors />
                 <Team />
                 <FAQ />
-                {/* <Contact /> */}
                 <Footer />
               </>
             }

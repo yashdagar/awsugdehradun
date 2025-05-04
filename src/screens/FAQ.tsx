@@ -1,7 +1,12 @@
 import { useState } from "react";
 
+interface FAQ{
+  question: string,
+  answer: string,
+}
+
 const FAQ = () => {
-  const questions = [
+  const questions: FAQ[] = [
     {
       question: "What is AWS Community Day Dehradun?",
       answer:

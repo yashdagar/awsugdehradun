@@ -98,8 +98,6 @@ const Team = () => {
         img: "members/vedant.webp",
         linkedin: "https://www.linkedin.com/in/vedant-kalla-a529a6276/",
       },
-    ],
-    [
       {
         name: "Aditi Bansal",
         designation: "Member",
@@ -134,13 +132,13 @@ const Team = () => {
         name: "Angel Garg",
         designation: "Member",
         img: "members/angel.webp",
-        linkedin: "https://www.linkedin.com/in/angelgarg",
+        linkedin: "https://www.linkedin.com/in/angelgarg/",
       },
       {
         name: "Daksh Sethi",
         designation: "Member",
         img: "members/daksh.webp",
-        linkedin: "/#",
+        linkedin: "https://www.linkedin.com/in/daksh-sethi-47a483363/",
       },
       {
         name: "Hardik Raj Kapoor",
@@ -156,7 +154,7 @@ const Team = () => {
       <h2>Our Team</h2>
       {memberGroups.map((memberList, index) => (
         <div
-          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 md:gap-x-16 xl:grid-cols-4 place-self-center select-none mb-16`}
+          className={`sm:px-12 md:px-16 lg:px-32 xl:px-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 md:gap-x-16 xl:grid-cols-4 place-self-center select-none mb-16`}
           key={index}
         >
           {memberList.map((member) => (
@@ -190,55 +188,6 @@ const Team = () => {
         </div>
       ))}
     </section>
-    // <section className="team w-full max-w-screen-xl mx-auto px-4 md:px-16 lg:px-16 xl:px-24 py-8">
-    //   <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
-
-    //   {memberGroups.map((memberList, groupIndex) => (
-    //     <div
-    //       key={groupIndex}
-    //       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16 place-items-center"
-    //     >
-    //       {memberList.map((member) => (
-    //         <div
-    //           key={member.name}
-    //           className="flex flex-col items-center group w-full max-w-xs"
-    //         >
-    //           <a
-    //             href={member.linkedin}
-    //             target="_blank"
-    //             rel="noopener noreferrer"
-    //             className="relative block overflow-hidden rounded-full border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 mx-auto"
-    //           >
-    //             <div className="relative">
-    //               <img
-    //                 src={member.img}
-    //                 alt={member.name}
-    //                 className="aspect-square w-32 sm:w-36 md:w-40 xl:w-48 object-cover transition-transform duration-300 group-hover:scale-105"
-    //                 loading="lazy"
-    //               />
-    //               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
-    //                 <img
-    //                   src="/logos/linkedin_blue.svg"
-    //                   alt="LinkedIn"
-    //                   className="w-1/4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-    //                   loading="lazy"
-    //                 />
-    //               </div>
-    //             </div>
-    //           </a>
-
-    //           <h4 className="mt-4 text-lg font-semibold text-center">
-    //             {member.name}
-    //           </h4>
-
-    //           <span className="mt-2 px-3 py-1 text-sm text-gray-500 bg-gray-50 rounded-full border border-gray-200">
-    //             {member.designation}
-    //           </span>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   ))}
-    // </section>
   );
 };
 

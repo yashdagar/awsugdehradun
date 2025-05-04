@@ -2,7 +2,7 @@ import LinkIcon from "../icons/link";
 
 const Footer = () => {
   return (
-    <footer className="footer flex flex-col text-white font-normal justify-end">
+    <footer className="footer flex flex-col text-white font-normal justify-start sm:justify-end">
       <div className="h-[50vw] md:h-[30vw] footer-first lg:bg-cover"></div>
       <div className="flex gap-6 px-8 md:px-16 bg-[#41274e]">
         <div className="pt-8 flex flex-row w-full py-4 flex-wrap justify-between gap-4 mt-auto">
@@ -23,19 +23,19 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col gap-2 jusify-end">
-            <h3 className="text-3xl font-medium mb-2 ml-auto border-b-secondary border-b-4">Join Us</h3>
+          <div className="flex flex-col gap-2 justify-start sm:justify-end">
+            <h3 className="text-3xl font-medium mb-2 sm:ml-auto border-b-secondary border-b-4">Join Us</h3>
             <a
               href="https://www.meetup.com/aws-user-group-dehradun/"
               aria-label="See on Meetup"
-              className="hover:text-[#32ccff] transition duration-300 justify-end"
+              className="hover:text-[#32ccff] transition duration-300 justify-start sm:justify-end"
             >
               <div className="flex flex-row items-center link">
                 Become a member
                 <LinkIcon color="rgb(49, 166, 250)"/>
               </div>
             </a>
-            <div className="flex justify-end py-4 bg-[#41274e]">
+            <div className="flex sm:justify-end py-4 bg-[#41274e]">
               <div className="flex gap-2 sm:gap-4">
                 <a href="https://www.instagram.com/awsugddn/" aria-label="Visit on Instagram">
                   <img

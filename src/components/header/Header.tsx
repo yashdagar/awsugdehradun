@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 // WHEN, WHERE -> ANNOUNCING SOON 🔄
+// HEADER ADD SCHEDULE BACK
 // EVENT SCHEDULE -> COMMENT 🔄
 // VENUE -> DEHRADUN 🔄
 // ABOUT -> VENUE TO BE REVEALED 🔄
@@ -16,13 +17,12 @@ const Header = () => {
     "Home",
     "About",
     "Speakers",
-    "Schedule",
+    // "Schedule", //TODO
     "Gallery",
     "Venue",
     "Sponsors",
     "Team",
     "FAQ",
-    // "Contact",
   ];
 
   useEffect(() => {

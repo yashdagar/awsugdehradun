@@ -85,7 +85,7 @@ const About: FC = () => {
   };
 
   return (
-    <section className="!mb-8" ref={sectionRef as RefObject<HTMLElement>}>
+    <section className="!mb-8 about" ref={sectionRef as RefObject<HTMLElement>}>
       <div className="flex flex-col gap-y-8 z-10">
         <h2
           ref={itemRefs.heading1}
@@ -96,14 +96,14 @@ const About: FC = () => {
 
         <p
           ref={itemRefs.para1}
-          className={`${getAnimationClass('para1')} !font-normal !text-gray-900`}
+          className={`${getAnimationClass('para1')} !text-gray-900 !font-normal`}
         >
           AWS User Group Dehradun (AWSUGDDN) is thrilled to present its flagship annual event — AWS Community Day Dehradun 2025 — a grand celebration of cloud innovation, collaboration, and community.
         </p>
 
         <p
           ref={itemRefs.para2}
-          className={`${getAnimationClass('para2')} !font-normal !text-gray-900`}
+          className={`${getAnimationClass('para2')} !text-gray-900 !font-normal`}
         >
           With a rich mix of technical deep-dives, real-world use cases, and inspiring success stories, this event is designed to bring together AWS enthusiasts, developers, architects, founders, students, and decision-makers under one roof to learn, network, and grow.
         </p>
@@ -119,28 +119,28 @@ const About: FC = () => {
 
         <p
           ref={itemRefs.para3}
-          className={`${getAnimationClass('para3')}`}
+          className={`${getAnimationClass('para3')} !font-normal`}
         >
           AWSUG Dehradun is a passionate community of cloud professionals, developers, students, and innovators who are united by a shared love for building and sharing with Amazon Web Services.
         </p>
 
         <p
           ref={itemRefs.para4}
-          className={`${getAnimationClass('para4')}`}
+          className={`${getAnimationClass('para4')} !font-normal`}
         >
           Our group is committed to delivering community-led learning experiences, diving deep into modern tech stacks, including AWS cloud architecture, DevOps, AI/ML, Data Analytics, IoT, Serverless Computing, Generative AI, and more.
         </p>
 
         <p
           ref={itemRefs.para5}
-          className={`${getAnimationClass('para5')}`}
+          className={`${getAnimationClass('para5')} !font-normal`}
         >
           AWS Community Days are globally recognized, community-organized events that empower local talent and connect them with top-tier minds in tech. We bring together educational sessions, hands-on demos, and networking opportunities — all powered by the community, for the community.
         </p>
 
         <p
           ref={itemRefs.para6}
-          className={`${getAnimationClass('para6')}`}
+          className={`${getAnimationClass('para6')} !font-normal`}
         >
           Whether you're an early learner or a seasoned cloud architect, this event is your launchpad to new ideas, partnerships, and innovations.
         </p>

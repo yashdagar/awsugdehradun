@@ -149,7 +149,7 @@ const CommunityVoices: React.FC = () => {
                         style={{
                           background: `no-repeat center / cover url(${video.thumbnail})`,
                         }}
-                        className="flex aspect-video w-full hover:scale-105 hover:brightness-75 transition-all duration-300"
+                        className="flex aspect-video w-full hover:scale-105 brightness-75 hover:brightness-50 transition-all duration-300"
                       />
                       <div className="absolute inset-0 flex w-fit h-fit m-auto opacity-100 transition-opacity duration-300">
                         <div className="w-16 h-12 bg-[#ff0000] rounded-xl flex items-center justify-center">

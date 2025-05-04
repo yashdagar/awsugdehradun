@@ -149,44 +149,56 @@ const Team = () => {
     ],
   ];
 
+  // Function to generate the correct grid classes based on member count
+  const getGridClasses = (memberCount: number) => {
+    let classes = "flex flex-wrap justify-center gap-y-8";
+
+    // Add appropriate gap between items based on screen size
+    classes += " gap-x-8 md:gap-x-16";
+
+    return classes;
+  };
+
   return (
     <section className="team mb-0">
       <h2>Our Team</h2>
       {memberGroups.map((memberList, index) => (
         <div
-          className={`sm:px-12 md:px-16 lg:px-32 xl:px-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 md:gap-x-16 xl:grid-cols-4 place-self-center select-none mb-16`}
+          className="sm:px-12 md:px-16 lg:px-32 xl:px-40 mb-16"
           key={index}
         >
-          {memberList.map((member) => (
-            <div
-              className="speaker relative w-full flex-[20%] flex-col justify-center"
-              key={member["name"]}
-            >
-              <a href={member["linkedin"]} target="_blank" aria-label={`Visit ${member["name"]} on linkedin`}>
-                <div
-                  className="person-img w-fit mx-auto rounded-full border border-black/10"                >
-                  <img
-                    alt={member["name"]}
-                    src={member["img"]}
-                    className="transition-all duration-500 aspect-square w-40 sm:w-32 md:w-40 xl:w-48 object-cover"
-                    loading="lazy"
-                  />
-                  <img
-                    alt="linkedin"
-                    src="/logos/linkedin_blue.svg"
-                    className="absolute w-1/3 top-1/3 left-1/3 bg-white transition-all duration-300"
-                    loading="lazy"
-                  />
+          <div className={getGridClasses(memberList.length)}>
+            {memberList.map((member) => (
+              <div
+                className="speaker relative w-full sm:w-5/12 lg:w-3/10 xl:w-1/5 flex-col justify-center"
+                key={member["name"]}
+              >
+                <a href={member["linkedin"]} target="_blank" aria-label={`Visit ${member["name"]} on linkedin`}>
+                  <div
+                    className="person-img w-fit mx-auto rounded-full border border-black/10">
+                    <img
+                      alt={member["name"]}
+                      src={member["img"]}
+                      className="transition-all duration-500 aspect-square w-40 sm:w-32 md:w-40 xl:w-48 object-cover"
+                      loading="lazy"
+                    />
+                    <img
+                      alt="linkedin"
+                      src="/logos/linkedin_blue.svg"
+                      className="absolute w-1/3 top-1/3 left-1/3 bg-white transition-all duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                </a>
+                <div className="text-center text-black text-lg font-semibold capitalize leading-6">
+                  {member["name"]}
                 </div>
-              </a>
-              <div className="text-center text-black text-lg font-semibold capitalize leading-6">
-                {member["name"]}
+                <div className="mx-auto text-center text-gray-500 text-sm font-medium backdrop-blur-sm border border-black/10 rounded-full px-2 w-fit self-center">
+                  {member["designation"]}
+                </div>
               </div>
-              <div className="mx-auto text-center text-gray-500 text-sm font-medium backdrop-blur-sm border border-black/10 rounded-full px-2 w-fit self-center">
-                {member["designation"]}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       ))}
     </section>

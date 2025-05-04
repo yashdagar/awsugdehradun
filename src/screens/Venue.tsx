@@ -8,7 +8,7 @@ const Venue = () => {
           allowFullScreen={false}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade" />
-        <div className="w-full sm:w-1/2 lg:w-1/2 md:py-auto pt-4 mx-auto md:px-8 flex flex-col justify-center items-center md:items-start before:bg-[url('https://t3.ftcdn.net/jpg/03/32/64/88/360_F_332648821_KISx3jLU0fuYlZNi8yLqmHY4Hfv0U1ce.jpg')] before:bg-cover before:z-20 before:brightness-50 relative before:top-0 before:left-0 before:content=[''] before:w-full before:h-full before:absolute backdrop-blur-sm">
+        <div className="w-full sm:w-1/2 lg:w-1/2 md:py-auto pt-4 mx-auto md:px-8 flex flex-col justify-center items-center md:items-start before:bg-[url('/logos/dehradun.webp')] before:bg-cover before:z-20 before:brightness-50 relative before:top-0 before:left-0 before:content=[''] before:w-full before:h-full before:absolute backdrop-blur-sm">
           <h2 className="text-primary md:mb-2 lg:text-4xl">
             Dehradun
           </h2>

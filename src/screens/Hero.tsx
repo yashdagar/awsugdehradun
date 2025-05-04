@@ -7,7 +7,6 @@ const Hero = () => {
       <img
         src="/logos/aws.webp"
         className="w-full sm:w-4/5  lg:w-2/5 aws-logo"
-        loading="lazy"
       />
       <div className="flex flex-col z-20 w-full mb-8 md:mb-16 px-4 gap-8 md:gap-0">
         <a href="https://konfhub.com/aws-community-day-dehradun-2025" className="hover:cursor-pointer">

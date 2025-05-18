@@ -18,7 +18,7 @@ const CodeOfConduct = () => {
         <div className="w-[80vw] mx-auto mb-20">
           <div>
             <h3 className="my-2">Importance</h3>
-            <p>
+            <p className="!text-gray-900 !font-normal">
               We firmly believe in the value and importance of an environment
               where all AWS community members and event participants feel
               welcome and safe. This Code of Conduct explains what type of
@@ -58,7 +58,7 @@ const CodeOfConduct = () => {
 
           <div className="mt-5">
             <h3 className="my-2">Scope</h3>
-            <p>
+            <p className="!text-gray-900 !font-normal">
               We expect all event participants (including AWS employees,
               attendees, vendors, sponsors, speakers, volunteers, and guests) to
               uphold the principles of this Code of Conduct. This Code of
@@ -69,7 +69,7 @@ const CodeOfConduct = () => {
 
           <div className="mt-5">
             <h3 className="my-2">Consequences</h3>
-            <p>
+            <p className="!text-gray-900 !font-normal">
               If we believe that you are not complying with this Code of
               Conduct, we may deny you entry or require you to leave all event
               venue(s). All determinations are at our sole discretion. We will
@@ -83,7 +83,7 @@ const CodeOfConduct = () => {
 
           <div className="mt-5">
             <h3 className="my-2">Contact</h3>
-            <p>
+            <p className="!text-gray-900 !font-normal">
               If you witness or are subjected to inappropriate behavior, or have
               concerns related to this Code of Conduct, please promptly contact
               at &nbsp;

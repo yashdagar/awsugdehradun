@@ -86,9 +86,9 @@ const CodeOfConduct = () => {
             <p>
               If you witness or are subjected to inappropriate behavior, or have
               concerns related to this Code of Conduct, please promptly contact
-              at{" "}
-              <a target="_blank" className="text-blue" aria-label="Compose a mail" href="mailto:support@awsugddn.in">
-                support@awsugddn.in
+              at &nbsp;
+              <a target="_blank" className="text-blue" aria-label="Compose a mail" href="mailto:awsugdehradun@gmail.in">
+                awsugdehradun@gmail.in
               </a>
             </p>
           </div>

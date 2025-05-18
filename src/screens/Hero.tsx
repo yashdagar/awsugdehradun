@@ -10,7 +10,7 @@ const Hero = () => {
         className="px-4 w-full sm:w-4/5  lg:w-2/5 aws-logo"
       />
       <div className="flex flex-col z-20 w-full mb-8 md:mb-16 px-4 gap-8 md:gap-0">
-        <a href="https://konfhub.com/aws-community-day-dehradun-2025" aria-label="Visit Konfhub link" className="hover:cursor-pointer">
+        <a target="_blank" href="https://konfhub.com/aws-community-day-dehradun-2025" aria-label="Visit Konfhub link" className="hover:cursor-pointer">
         <button className="md:hidden">
           <h3>Join us</h3>
             <LinkIcon color="#fff" />
@@ -23,7 +23,7 @@ const Hero = () => {
             </h2>
             <h5 className="text-gray-200 text-nowrap">6th September, 2025</h5>
           </div> */}
-          <a href="https://konfhub.com/aws-community-day-dehradun-2025" aria-label="Visit Konfhub link" className="hover:cursor-pointer">
+          <a target="_blank" href="https://konfhub.com/aws-community-day-dehradun-2025" aria-label="Visit Konfhub link" className="hover:cursor-pointer">
           <button className="hidden md:flex bg-primary pl-4 pr-2 py-2 sm:pl-8 sm:pr-6 sm:py-4 h-fit my-auto rounded-full text-white items-center gap-2">
             <h3>Join us</h3>
             <LinkIcon color="#fff" />

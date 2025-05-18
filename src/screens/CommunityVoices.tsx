@@ -143,7 +143,7 @@ const CommunityVoices: React.FC = () => {
                   }}
                   key={video.id}
                 >
-                  <a href={video.url} aria-label={`See ${video.title} on Youtube`} rel="noopener noreferrer" className="w-full">
+                  <a target="_blank" href={video.url} aria-label={`See ${video.title} on Youtube`} rel="noopener noreferrer" className="w-full">
                     <div className="relative group">
                       <div
                         style={{

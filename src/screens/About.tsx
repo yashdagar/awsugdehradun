@@ -176,7 +176,7 @@ const About: FC = () => {
             </li>
           </ul>
         </div>
-        <a href="/code-of-conduct" aria-label="See code of conduct" className="link">
+        <a target="_blank" href="/code-of-conduct" aria-label="See code of conduct" className="link">
           Code Of Conduct
           <LinkIcon />
         </a>

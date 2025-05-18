@@ -26,6 +26,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2 justify-start sm:justify-end">
             <h3 className="text-3xl font-medium mb-2 sm:ml-auto border-b-secondary border-b-4">Join Us</h3>
             <a
+              target="_blank"
               href="https://www.meetup.com/aws-user-group-dehradun/"
               aria-label="See on Meetup"
               className="hover:text-[#32ccff] transition duration-300 justify-start sm:justify-end"
@@ -37,21 +38,21 @@ const Footer = () => {
             </a>
             <div className="flex sm:justify-end py-4 bg-[#41274e]">
               <div className="flex gap-2 sm:gap-4">
-                <a href="https://www.instagram.com/awsugddn/" aria-label="Visit on Instagram">
+                <a target="_blank" href="https://www.instagram.com/awsugddn/" aria-label="Visit on Instagram">
                   <img
                     alt="instagram"
                     src="/logos/instagram.svg"
                     className="w-8 sm:w-10 aspect-square invert"
                   />
                 </a>
-                <a href="https://www.linkedin.com/company/aws-user-group-dehradun/" aria-label="Visit on LinkedIn">
+                <a target="_blank" href="https://www.linkedin.com/company/aws-user-group-dehradun/" aria-label="Visit on LinkedIn">
                   <img
                     alt="linkedin"
                     src="/logos/linkedin.svg"
                     className="w-8 sm:w-10 aspect-square invert rounded-lg"
                   />
                 </a>
-                <a href="https://x.com/awsugddn/" className="flex my-auto" aria-label="Visit on X">
+                <a target="_blank" href="https://x.com/awsugddn/" className="flex my-auto" aria-label="Visit on X">
                   <img
                     alt="x"
                     src="/logos/x.svg"
@@ -66,6 +67,7 @@ const Footer = () => {
       <h4 className="lg:mr-8 xl:mr-16 text-nowrap flex my-auto font-light w-full justify-center bg-[#31173e] py-4">
         Made with ❤️ by
         <a
+          target="_blank"
           className="text-[#32ccff] font-medium ml-1 cursor-pointer"
           href="https://www.linkedin.com/in/yoursyash/"
           aria-label="Visit Yash on LinkedIn"

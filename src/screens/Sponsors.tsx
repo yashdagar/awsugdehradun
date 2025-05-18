@@ -68,7 +68,7 @@ const Sponsors = () => {
               );
             })}
           </div>
-          <a href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal" aria-label="Mail to awsugddn@gmail.com" className="link">
+          <a target="_blank" href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal" aria-label="Mail to awsugddn@gmail.com" className="link">
             Become a sponsor <LinkIcon color="rgb(49, 166, 250)" />
           </a>
         </div>

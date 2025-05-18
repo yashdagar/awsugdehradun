@@ -5,7 +5,8 @@ import React, { useEffect, useState } from "react";
 // EVENT SCHEDULE -> COMMENT 🔄
 // VENUE -> DEHRADUN 🔄
 // ABOUT -> VENUE TO BE REVEALED 🔄
-// SPONSORS -> DOWNLOAD BROCHURE=
+// FAQ -> DATE AND VENUE 🔄
+// SPONSORS -> DOWNLOAD BROCHURE
 // ABOUT
 // GALLERY -> MARQUEE
 const Header = () => {

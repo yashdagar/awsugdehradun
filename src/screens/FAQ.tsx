@@ -12,11 +12,11 @@ const FAQ = () => {
       answer:
         "AWS Community Day Dehradun is a community-led event organized by AWS User Group Dehradun. It brings together cloud enthusiasts, industry experts, and developers to share knowledge, discuss innovative solutions, and network with peers.",
     },
-    {
-      question: "When and where will AWS Community Day 2025 be held?",
-      answer:
-        "AWS Community Day 2025 is scheduled to take place on 23 March 2025, at [insert venue], Dehradun. Stay tuned for updates on the official website or social media channels.",
-    },
+    // {
+    //   question: "When and where will AWS Community Day 2025 be held?",
+    //   answer:
+    //     "AWS Community Day 2025 is scheduled to take place on 6 September 2025, at [DECIDE VENUE], Dehradun. Stay tuned for updates on the official website or social media channels.",
+    // },
     {
       question: "Who can attend AWS Community Day 2025?",
       answer:

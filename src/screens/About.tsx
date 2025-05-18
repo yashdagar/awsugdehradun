@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState, FC, RefObject } from "react";
 import LinkIcon from "../components/icons/link";
 
-// Type definitions
 interface ItemRefs {
   heading1: RefObject<HTMLHeadingElement>,
   para1: RefObject<HTMLParagraphElement>,
@@ -20,10 +19,8 @@ interface VisibilityState {
 }
 
 const About: FC = () => {
-  // Create refs for sections we want to animate
   const sectionRef = useRef<HTMLElement>(null);
 
-  // Define typed refs for all animated elements
   const itemRefs: ItemRefs = {
     heading1: useRef<HTMLHeadingElement>(null),
     para1: useRef<HTMLParagraphElement>(null),
@@ -37,30 +34,26 @@ const About: FC = () => {
     listItems: useRef<HTMLDivElement>(null)
   };
 
-  // State to track if items are visible
   const [isVisible, setIsVisible] = useState<VisibilityState>({});
 
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
-      root: null, // use viewport as root
+      root: null,
       rootMargin: '0px',
-      threshold: 0.1 // trigger when 10% of element is visible
+      threshold: 0.1 // 10% visiblity
     };
 
-    // Create observers for each element
     const observers: IntersectionObserver[] = [];
 
-    // Function to handle when an element becomes visible
     const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver): void => {
       entries.forEach(entry => {
         if (entry.isIntersecting && (entry.target as HTMLElement).dataset.ref) {
           setIsVisible(prev => ({ ...prev, [(entry.target as HTMLElement).dataset.ref ?? ""]: true }));
-          observer.unobserve(entry.target); // Stop observing once visible
+          observer.unobserve(entry.target);
         }
       });
     };
 
-    // Create an observer and observe each element
     Object.entries(itemRefs).forEach(([key, ref]) => {
       if (ref.current) {
         const observer = new IntersectionObserver(handleIntersection, observerOptions);
@@ -70,13 +63,11 @@ const About: FC = () => {
       }
     });
 
-    // Cleanup
     return () => {
       observers.forEach(observer => observer.disconnect());
     };
   }, []);
 
-  // Animation classes based on visibility
   const getAnimationClass = (refKey: string): string => {
     if (isVisible[refKey]) {
       return "opacity-100 translate-y-0 transition-all duration-700";
@@ -187,10 +178,10 @@ const About: FC = () => {
         </div>
 
         <br />
-        {/* <a href="/code-of-conduct" aria-label="See code of conduct" className="link">
+        <a href="/code-of-conduct" aria-label="See code of conduct" className="link">
           Code Of Conduct
           <LinkIcon />
-        </a> */}
+        </a>
       </div>
     </section>
   );

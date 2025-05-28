@@ -79,6 +79,9 @@ const Sponsors = () => {
             <div className="text-xl font-bold">Become a sponsor</div> <LinkIcon />
           </button>
           </a>
+          <a href="/brochure.pdf" download="brochure.pdf">
+            <div className="link mt-8">Download brochure <LinkIcon color="rgb(49, 166, 250)"/></div>
+          </a>
         </div>
       )}
     </section>

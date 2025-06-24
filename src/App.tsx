@@ -1,18 +1,20 @@
 import "./App.css";
-import Header from "./components/header/Header";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 import CodeOfConduct from "./screens/CodeOfConduct";
-import Schedule from "./screens/Schedule";
-import Speakers from "./screens/Speakers";
-import Hero from "./screens/Hero";
+// import Schedule from "./components/sections/Schedule";
+import Speakers from "./components/sections/Speakers";
+import Hero from "./components/sections/Hero";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Venue from "./screens/Venue";
-import Gallery from "./screens/Gallery";
-import Sponsors from "./screens/Sponsors";
-import Team from "./screens/Team";
-import FAQ from "./screens/FAQ";
-import Footer from "./components/footer/Footer";
-import About from "./screens/About";
-import CommunityVoices from "./screens/CommunityVoices";
+import Venue from "./components/sections/Venue";
+import Gallery from "./components/sections/Gallery";
+import Sponsors from "./components/sections/Sponsors";
+import Team from "./components/sections/Team";
+import FAQ from "./components/sections/FAQ";
+import About from "./components/sections/About";
+import CommunityVoices from "./components/sections/CommunityVoices";
+import EmailWriteUp from "./screens/EmailWriteUp";
+import WelcomeEmail from "./screens/Welcome";
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
             }
           />
           <Route path="/code-of-conduct" element={<CodeOfConduct />} />
+          <Route path="/email/general-write-up" element={<EmailWriteUp />} />
+          <Route path="/email/welcome" element={<WelcomeEmail />} />
         </Routes>
       </Router>
     </>

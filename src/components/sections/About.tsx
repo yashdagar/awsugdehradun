@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, FC, RefObject } from "react";
-import LinkIcon from "../components/icons/link";
+import LinkIcon from "../icons/link";
 
 interface ItemRefs {
   heading1: RefObject<HTMLHeadingElement>,

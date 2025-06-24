@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // WHEN, WHERE -> ANNOUNCING SOON 🔄
 // HEADER ADD SCHEDULE BACK

@@ -123,12 +123,6 @@ const Team = () => {
         linkedin: "https://www.linkedin.com/in/ishikaaa-verma/",
       },
       {
-        name: "Kushagra Bhardwaj",
-        designation: "Member",
-        img: "members/kushagra.webp",
-        linkedin: "https://www.linkedin.com/in/kushagra-bhardwaj-861503251/",
-      },
-      {
         name: "Angel Garg",
         designation: "Member",
         img: "members/angel.webp",

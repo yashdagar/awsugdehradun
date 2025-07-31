@@ -81,9 +81,11 @@ const Header = () => {
               {section}
             </div>
           ))}
-          <button className="mx-14 px-4 py-2 w-fit rounded-full font-normal text-white bg-primary whitespace-nowrap">
-            Buy Tickets
-          </button>
+          <a className="group cursor-pointer" href="https://konfhub.com/aws-community-day-dehradun-2025" aria-label="Buy Tickets">
+            <button className="mx-14 px-4 py-2 w-fit rounded-full font-normal text-white bg-primary whitespace-nowrap">
+              Buy Tickets
+            </button>
+          </a>
         </div>
       ) : (
         <div
@@ -124,9 +126,11 @@ const Header = () => {
               {section}
             </div>
           ))}
+          <a className="group cursor-pointer" href="https://konfhub.com/aws-community-day-dehradun-2025" aria-label="Buy Tickets">
           <button className="px-4 py-3 rounded-full font-normal text-white bg-primary whitespace-nowrap">
             Buy Tickets
           </button>
+          </a>
         </div>
       </div>
     </header>

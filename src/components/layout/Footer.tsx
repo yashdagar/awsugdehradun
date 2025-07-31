@@ -1,4 +1,4 @@
-import { SiInstagram } from "@icons-pack/react-simple-icons";
+import { SiInstagram, SiX } from "@icons-pack/react-simple-icons";
 import { ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
@@ -34,27 +34,28 @@ const Footer = () => {
             >
               <div className="flex flex-row items-center link font-medium!">
                 Become a member
-                <ArrowUpRight className="group-hover:-translate-y-0.5 group-hover:translate-x-1 transition-transform" />
+                <ArrowUpRight className="size-4 sm:size-6 group-hover:-translate-y-0.5 group-hover:translate-x-1 transition-transform" />
               </div>
             </a>
             <div className="flex sm:justify-end py-4 bg-[#41274e]">
               <div className="flex gap-2 sm:gap-4">
                 <a target="_blank" href="https://www.instagram.com/awsugddn/" aria-label="Visit on Instagram">
-                  <SiInstagram />
+                  <SiInstagram className="size-8 sm:size-10 translate-y-0.5 sm:translate-y-0.15"/>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/company/aws-user-group-dehradun/" aria-label="Visit on LinkedIn">
                   <img
                     alt="linkedin"
                     src="/logos/linkedin.svg"
-                    className="w-8 sm:w-10 aspect-square invert rounded-lg"
+                    className="w-9 sm:w-11 aspect-square invert rounded-lg"
                   />
                 </a>
                 <a target="_blank" href="https://x.com/awsugddn/" className="flex my-auto" aria-label="Visit on X">
-                  <img
+                  {/* <img
                     alt="x"
                     src="/logos/x.svg"
                     className="w-7 sm:w-9 aspect-square p-1 sm:p-2 rounded-sm sm:rounded-lg invert bg-black mix-blend-color-dodge"
-                  />
+                  /> */}
+                  <SiX className="size-8 sm:size-10"/>
                 </a>
               </ div>
             </div>

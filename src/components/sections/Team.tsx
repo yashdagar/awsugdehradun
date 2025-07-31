@@ -74,12 +74,6 @@ const Team = () => {
       },
     ],
     [
-      // {
-      //   name: "Yashpreet Singh",
-      //   designation: "Member",
-      //   img: "members/yashpreet.webp",
-      //   linkedin: "https://www.linkedin.com/in/yashpreet2707/",
-      // },
       {
         name: "Yash Dagar",
         designation: "Member",
@@ -139,6 +133,12 @@ const Team = () => {
         designation: "Member",
         img: "members/hardik.webp",
         linkedin: "https://www.linkedin.com/in/hardik-raj-kapoor-03a680183/",
+      },
+      {
+        name: "Dheeraj Kumar Shah",
+        designation: "Member",
+        img: "members/dheeraj.jpg",
+        linkedin: "https://www.linkedin.com/in/dheeraj-kumar-sah-692887249/",
       },
     ],
   ];

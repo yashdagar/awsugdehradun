@@ -37,13 +37,13 @@
         @apply w-full fixed top-0 left-0 z-50 transition-all duration-300 ease-in-out;
     }
     body {
-        @apply w-full font-light bg-white text-black text-sm sm:text-base lg:text-xl;
+        @apply w-full font-light bg-[#f8f8f9] text-black text-sm sm:text-base lg:text-xl;
     }
     h1 {
         @apply relative w-fit transition-all mx-auto tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black font-thin;
     }
     h2 {
-        @apply relative w-fit mb-12 transition-all sm:mb-16 mx-auto tracking-tight text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-medium;
+        @apply relative w-fit mb-12 transition-all sm:mb-16 mx-auto tracking-tight text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-semibold;
     }
     h3 {
         @apply text-xl sm:text-2xl md:text-3xl font-medium tracking-tight max-w-fit;
@@ -145,7 +145,7 @@
     }
 
     .faq {
-        background: linear-gradient(#fff 50%, #def);
+        background: linear-gradient(#f8f8f9 50%, #def);
     }
 
     .footer {
@@ -273,7 +273,7 @@
 @layer components {
     section {
         h2::after {
-            @apply content-[""] absolute left-1/4 w-2/4 -bottom-4 h-1 bg-primary bg-repeat-x;
+            /* @apply content-[""] absolute left-1/4 w-2/4 -bottom-4 h-1 bg-primary bg-repeat-x; */
         }
     }
     .hero::before {

@@ -148,7 +148,7 @@ const Team = () => {
     let classes = "flex flex-wrap justify-center gap-y-8";
 
     // Add appropriate gap between items based on screen size
-    classes += " gap-x-8 md:gap-x-16";
+    classes += "gap-x-8 md:gap-x-16";
 
     return classes;
   };
@@ -158,13 +158,13 @@ const Team = () => {
       <h2>Our Team</h2>
       {memberGroups.map((memberList, index) => (
         <div
-          className="sm:px-12 md:px-16 lg:px-32 xl:px-40 mb-16"
+          className="sm:px-12 md:px-16 lg:px-24 xl:px-28 mb-16"
           key={index}
         >
           <div className={getGridClasses(memberList.length)}>
             {memberList.map((member) => (
               <div
-                className="speaker relative w-full sm:w-5/12 lg:w-3/10 xl:w-1/5 flex-col justify-center"
+                className="speaker relative w-full sm:w-5/12 lg:w-3/10 xl:w-1/5 flex-col pb-4 justify-center"
                 key={member["name"]}
               >
                 <a href={member["linkedin"]} target="_blank" aria-label={`Visit ${member["name"]} on linkedin`}>
@@ -187,7 +187,7 @@ const Team = () => {
                 <div className="text-center text-black text-lg font-semibold capitalize leading-6">
                   {member["name"]}
                 </div>
-                <div className="mx-auto text-center text-gray-500 text-sm font-medium backdrop-blur-sm border border-black/10 rounded-full px-2 w-fit self-center">
+                <div className="mx-auto text-center text-gray-500 text-sm font-medium bg-[#fefeff]/50 backdrop-blur-sm border border-black/10 rounded-full px-2 w-fit self-center">
                   {member["designation"]}
                 </div>
               </div>

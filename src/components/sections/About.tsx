@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, FC, RefObject } from "react";
-import LinkIcon from "../icons/link";
+import { ArrowUpRight } from "lucide-react";
 
 interface ItemRefs {
   heading1: RefObject<HTMLHeadingElement>,
@@ -176,9 +176,9 @@ const About: FC = () => {
             </li>
           </ul>
         </div>
-        <a target="_blank" href="/code-of-conduct" aria-label="See code of conduct" className="link">
+        <a target="_blank" href="/code-of-conduct" aria-label="See code of conduct" className="text-[rgb(49,166,250)] font-medium flex group">
           Code Of Conduct
-          <LinkIcon color="rgb(49, 166, 250)" />
+          <ArrowUpRight className="group-hover:-translate-y-0.5 group-hover:translate-x-1 transition-transform" />
         </a>
       </div>
     </section>

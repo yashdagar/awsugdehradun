@@ -1,8 +1,9 @@
-import LinkIcon from "../icons/link";
+import { IconType, SiGithub } from "@icons-pack/react-simple-icons";
+import { ArrowUpRight } from "lucide-react";
 
 interface Sponsor {
   name: string;
-  icon: string;
+  icon: IconType | string;
   url?: string; // Optional URL property
 }
 
@@ -24,7 +25,13 @@ const Sponsors = () => {
       // },
     ],
     gold: [],
-    silver: [],
+    silver: [
+      {
+        name: "Github",
+        icon: SiGithub,
+        url: "https://kanan.co",
+      },
+    ],
     bronze: [],
   };
 
@@ -54,12 +61,16 @@ const Sponsors = () => {
                         className="flex flex-col text-center gap-4 justify-between align-middle items-center capitalize px-12 py-4 rounded-3xl border border-gray-100 w-auto1"
                       >
                         <div />
-                        <img
+                        {item.icon && (
+                          <item.icon size={64}/>
+                        )}
+
+                        {item.icon instanceof String && ( <img
                           alt={item.name} // Added alt attribute for accessibility
-                          src={item.icon}
+                          src={item.icon as string}
                           loading="lazy"
                           className="rounded-lg max-h-24"
-                        />
+                        /> )}
                         <h5 className="text-gray-500">{item.name}</h5>
                       </div>
                     ))}
@@ -68,19 +79,24 @@ const Sponsors = () => {
               );
             })}
           </div>
-          <a target="_blank" href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal" aria-label="Mail to awsugddn@gmail.com" className="link">
-            Become a sponsor <LinkIcon color="rgb(49, 166, 250)" />
+          <a target="_blank" href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal" aria-label="Mail to awsugddn@gmail.com" className="link group">
+            Become a sponsor 
+            <ArrowUpRight size={28} className="group-hover:-translate-y-0.5 group-hover:translate-x-1 transition-transform text-[rgb(49,166,250]" />
           </a>
         </div>
       ) : (
         <div className="h-40 content-center">
           <a href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal" aria-label="Mail to awsugddn@gmail.com">
-          <button>
-            <div className="text-xl font-bold">Become a sponsor</div> <LinkIcon />
+          <button className="group">
+            <div className="text-xl font-bold">Become a sponsor</div> 
+            <ArrowUpRight size={28} className="group-hover:-translate-y-0.5 group-hover:translate-x-1 transition-transform text-[rgb(49,166,250]" />
           </button>
           </a>
-          <a href="/brochure.pdf" download="brochure.pdf">
-            <div className="link mt-8">Download brochure <LinkIcon color="rgb(49, 166, 250)"/></div>
+          <a href="/brochure.pdf" download="brochure.pdf" className="group">
+            <div className="font-semibold! flex text-[rgb(49,166,250)] mt-8">
+              Download brochure
+              <ArrowUpRight size={28} className="group-hover:-translate-y-0.5 group-hover:translate-x-1 transition-transform" />
+            </div>
           </a>
         </div>
       )}

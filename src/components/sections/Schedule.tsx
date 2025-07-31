@@ -113,7 +113,7 @@ const Schedule = () => {
   return (
     <section className="!px-2 md:!px-24 lg:!px-48 schedule">
       <h2>Event Schedule</h2>
-      <h4 className="px-1 pb-4">23 March 2025</h4>
+      <h4 className="px-1 pb-4">10 September 2025</h4>
       <div
         className="timeline w-full border border-[#bbb8] rounded-md overflow-clip relative"
       >

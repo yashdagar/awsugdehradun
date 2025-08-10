@@ -129,12 +129,6 @@ const Team = () => {
         linkedin: "https://www.linkedin.com/in/daksh-sethi-47a483363/",
       },
       {
-        name: "Hardik Raj Kapoor",
-        designation: "Member",
-        img: "members/hardik.webp",
-        linkedin: "https://www.linkedin.com/in/hardik-raj-kapoor-03a680183/",
-      },
-      {
         name: "Dheeraj Kumar Shah",
         designation: "Member",
         img: "members/dheeraj.jpg",

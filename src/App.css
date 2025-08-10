@@ -55,7 +55,7 @@
         @apply text-sm sm:text-base lg:text-xl font-medium;
     }
     p {
-        @apply flex items-center leading-6 tracking-wide text-sm sm:text-base;
+        @apply flex items-center leading-5 tracking-wide text-sm sm:text-base;
     }
     b{
         @apply font-semibold mr-1;

@@ -77,109 +77,111 @@ const About: FC = () => {
 
   return (
     <section className="!mb-8 about" ref={sectionRef as RefObject<HTMLElement>}>
-      <div className="flex flex-col gap-y-8 z-10">
+      <div className="flex flex-col gap-y-12 z-10">
         <h2
           ref={itemRefs.heading1}
-          className={`${getAnimationClass('heading1')} mb-8`}
+          className={`${getAnimationClass('heading1')} mb-0!`}
         >
           About The Event
         </h2>
 
-        <p
-          ref={itemRefs.para1}
-          className={`${getAnimationClass('para1')} !text-gray-900 !font-normal`}
-        >
-          AWS User Group Dehradun (AWSUGDDN) is thrilled to present its flagship annual event — AWS Community Day Dehradun 2025 — a grand celebration of cloud innovation, collaboration, and community.
-        </p>
+        <div className="flex flex-col gap-y-4">
+          <p
+            ref={itemRefs.para1}
+            className={`${getAnimationClass('para1')} !text-gray-900 !font-normal`}
+          >
+            AWS User Group Dehradun (AWSUGDDN) is thrilled to present its flagship annual event — AWS Community Day Dehradun 2025 — a grand celebration of cloud innovation, collaboration, and community.
+          </p>
 
-        <p
-          ref={itemRefs.para2}
-          className={`${getAnimationClass('para2')} !text-gray-900 !font-normal`}
-        >
-          With a rich mix of technical deep-dives, real-world use cases, and inspiring success stories, this event is designed to bring together AWS enthusiasts, developers, architects, founders, students, and decision-makers under one roof to learn, network, and grow.
-        </p>
-
-        <br />
-
-        <h3
-          ref={itemRefs.heading2}
-          className={`font-semibold ${getAnimationClass('heading2')}`}
-        >
-          AWS USER GROUP DEHRADUN
-        </h3>
-
-        <p
-          ref={itemRefs.para3}
-          className={`${getAnimationClass('para3')} !font-normal`}
-        >
-          AWSUG Dehradun is a passionate community of cloud professionals, developers, students, and innovators who are united by a shared love for building and sharing with Amazon Web Services.
-        </p>
-
-        <p
-          ref={itemRefs.para4}
-          className={`${getAnimationClass('para4')} !font-normal`}
-        >
-          Our group is committed to delivering community-led learning experiences, diving deep into modern tech stacks, including AWS cloud architecture, DevOps, AI/ML, Data Analytics, IoT, Serverless Computing, Generative AI, and more.
-        </p>
-
-        <p
-          ref={itemRefs.para5}
-          className={`${getAnimationClass('para5')} !font-normal`}
-        >
-          AWS Community Days are globally recognized, community-organized events that empower local talent and connect them with top-tier minds in tech. We bring together educational sessions, hands-on demos, and networking opportunities — all powered by the community, for the community.
-        </p>
-
-        <p
-          ref={itemRefs.para6}
-          className={`${getAnimationClass('para6')} !font-normal`}
-        >
-          Whether you're an early learner or a seasoned cloud architect, this event is your launchpad to new ideas, partnerships, and innovations.
-        </p>
-
-        <br />
-
-        <h3
-          ref={itemRefs.heading3}
-          className={`${getAnimationClass('heading3')} font-semibold`}
-        >
-          WHAT TO EXPECT
-        </h3>
-
-        <div
-          ref={itemRefs.listItems}
-          className={`${getAnimationClass('listItems')} ml-4`}
-        >
-          <ul>
-            <li className="transition-all duration-700 delay-100">
-              Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
-            </li>
-            <li className="transition-all duration-700 delay-200">
-              Learn latest industry trends, use cases, and innovations from expert AWS professionals and community leaders.
-            </li>
-            <li className="transition-all duration-700 delay-300">
-              Connect and network with 400+ AWS users, builders, developers, DevOps engineers, and solution architects.
-            </li>
-            <li className="transition-all duration-700 delay-400">
-              Gain hands-on insights and experiences you can apply back at your organization or startup.
-            </li>
-            <li className="transition-all duration-700 delay-500">
-              Meet AWS heroes, community leaders, and builders from across India.
-            </li>
-            <li className="transition-all duration-700 delay-600">
-              Students can explore career paths, mentorship, and opportunities in cloud & emerging technologies.
-            </li>
-            <li className="transition-all duration-700 delay-700">
-              Companies and startups can showcase their work, gain visibility, and attract top tech talent.
-            </li>
-            <li className="transition-all duration-700 delay-800">
-              Participate in fun activities and stand a chance to win exclusive AWS goodies.
-            </li>
-          </ul>
+          <p
+            ref={itemRefs.para2}
+            className={`${getAnimationClass('para2')} !text-gray-900 !font-normal`}
+          >
+            With a rich mix of technical deep-dives, real-world use cases, and inspiring success stories, this event is designed to bring together AWS enthusiasts, developers, architects, founders, students, and decision-makers under one roof to learn, network, and grow.
+          </p>
         </div>
-        <a target="_blank" href="/code-of-conduct" aria-label="See code of conduct" className="text-[rgb(49,166,250)] font-medium flex group">
-          Code Of Conduct
-          <ArrowUpRight className="group-hover:-translate-y-0.5 group-hover:translate-x-1 transition-transform" />
-        </a>
+
+        <div className="flex flex-col gap-y-4">
+          <h3
+            ref={itemRefs.heading2}
+            className={`font-semibold ${getAnimationClass('heading2')}`}
+          >
+            AWS USER GROUP DEHRADUN
+          </h3>
+
+          <p
+            ref={itemRefs.para3}
+            className={`${getAnimationClass('para3')} !font-normal`}
+          >
+            AWSUG Dehradun is a passionate community of cloud professionals, developers, students, and innovators who are united by a shared love for building and sharing with Amazon Web Services.
+          </p>
+
+          <p
+            ref={itemRefs.para4}
+            className={`${getAnimationClass('para4')} !font-normal`}
+          >
+            Our group is committed to delivering community-led learning experiences, diving deep into modern tech stacks, including AWS cloud architecture, DevOps, AI/ML, Data Analytics, IoT, Serverless Computing, Generative AI, and more.
+          </p>
+
+          <p
+            ref={itemRefs.para5}
+            className={`${getAnimationClass('para5')} !font-normal`}
+          >
+            AWS Community Days are globally recognized, community-organized events that empower local talent and connect them with top-tier minds in tech. We bring together educational sessions, hands-on demos, and networking opportunities — all powered by the community, for the community.
+          </p>
+
+          <p
+            ref={itemRefs.para6}
+            className={`${getAnimationClass('para6')} !font-normal`}
+          >
+            Whether you're an early learner or a seasoned cloud architect, this event is your launchpad to new ideas, partnerships, and innovations.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-y-4">
+          <h3
+            ref={itemRefs.heading3}
+            className={`${getAnimationClass('heading3')} font-semibold mb-0!`}
+          >
+            WHAT TO EXPECT
+          </h3>
+
+          <div
+            ref={itemRefs.listItems}
+            className={`${getAnimationClass('listItems')} ml-4`}
+          >
+            <ul>
+              <li className="transition-all duration-700 delay-100">
+                Energize & elevate your passion for tech with sessions that spark ideas and drive real impact.
+              </li>
+              <li className="transition-all duration-700 delay-200">
+                Learn latest industry trends, use cases, and innovations from expert AWS professionals and community leaders.
+              </li>
+              <li className="transition-all duration-700 delay-300">
+                Connect and network with 400+ AWS users, builders, developers, DevOps engineers, and solution architects.
+              </li>
+              <li className="transition-all duration-700 delay-400">
+                Gain hands-on insights and experiences you can apply back at your organization or startup.
+              </li>
+              <li className="transition-all duration-700 delay-500">
+                Meet AWS heroes, community leaders, and builders from across India.
+              </li>
+              <li className="transition-all duration-700 delay-600">
+                Students can explore career paths, mentorship, and opportunities in cloud & emerging technologies.
+              </li>
+              <li className="transition-all duration-700 delay-700">
+                Companies and startups can showcase their work, gain visibility, and attract top tech talent.
+              </li>
+              <li className="transition-all duration-700 delay-800">
+                Participate in fun activities and stand a chance to win exclusive AWS goodies.
+              </li>
+            </ul>
+          </div>
+          <a target="_blank" href="/code-of-conduct" aria-label="See code of conduct" className="text-[rgb(49,166,250)] font-medium! flex group">
+            Code Of Conduct
+            <ArrowUpRight className="translate-y-0.5 group-hover:translate-y-0 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -17,27 +17,26 @@ const Hero = () => {
         </button>
         </a>
         <div className="hidden md:flex justify-around items-stretch gap-8 md:gap-0 min-h-32">
-          {/* <div className="flex flex-col content-center backdrop-blur-sm px-8 py-4 sm:px-12 lg:py-12 lg:px-16 sm:py-8 text-whtie bg-[#2224] rounded-3xl border border-white/25 sm:gap-2">
+          <div className="flex flex-col content-center backdrop-blur-sm px-8 py-4 sm:px-12 lg:py-12 lg:px-16 sm:py-8 text-whtie bg-[#2224] rounded-3xl border border-white/25 sm:gap-2">
             <h2 className="text-white m-0 after:content-none mx-0 text-nowrap">
               When?
             </h2>
-            <h5 className="text-gray-200 text-nowrap">6th September, 2025</h5>
-          </div> */}
+            <h5 className="text-gray-200 text-nowrap">10th September, 2025</h5>
+          </div>
           <a target="_blank" href="https://konfhub.com/aws-community-day-dehradun-2025" aria-label="Visit Konfhub link" className="hover:cursor-pointer">
           <button className="hidden md:flex bg-primary pl-4 pr-2 py-2 sm:pl-8 sm:pr-6 sm:py-4 h-fit my-auto rounded-full text-white items-center gap-2 group">
             <h3>Join us</h3>
             <ArrowUpRight size={28} className="group-hover:-translate-y-0.5 group-hover:translate-x-1 transition-transform" />
           </button>
           </a>
-          {/* <a href="https://maps.app.goo.gl/SHecjXUPeVRqD4EV9" aria-label="See on maps" target="_blank">
+          <a href="https://maps.app.goo.gl/pKt7eyTeANYieoS49" aria-label="See on maps" target="_blank">
             <div className="flex flex-col backdrop-blur-sm px-8 py-4 sm:px-12 lg:py-12 lg:px-16 sm:py-8 text-whtie bg-[#2224] rounded-3xl border border-white/25 sm:gap-2">
               <h2 className="text-white m-0 after:content-none"> Where?</h2>
               <h5 className={`text-gray-200 underline`}>
-                Hyatt Centric Dehradun
-                Dehradun
+                UPES, Dehradun
               </h5>
             </div>
-          </a> */}
+          </a>
         </div>
       </div>
     </section>

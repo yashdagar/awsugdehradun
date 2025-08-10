@@ -15,6 +15,7 @@ import About from "./components/sections/About";
 import CommunityVoices from "./components/sections/CommunityVoices";
 import EmailWriteUp from "./screens/EmailWriteUp";
 import WelcomeEmail from "./screens/Welcome";
+import CommunityPartners from "./components/sections/CommunityPartners";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
                 <Gallery />
                 <Venue />
                 <Sponsors />
+                <CommunityPartners /> 
                 <Team />
                 <FAQ />
                 <Footer />

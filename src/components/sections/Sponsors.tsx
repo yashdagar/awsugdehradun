@@ -12,7 +12,6 @@ interface Sponsors {
   "Gold": Sponsor[];
   "Silver": Sponsor[];
   "Bronze": Sponsor[];
-  "Community Partners": Sponsor[];
 }
 
 const Sponsors = () => {
@@ -23,18 +22,10 @@ const Sponsors = () => {
       {
         name: "Github",
         icon: SiGithub,
-        url: "https://kanan.co",
+        url: "https://github.com",
       },
     ],
-    "Bronze": [],
-    "Community Partners": [
-      {
-        name: "UPES CSA",
-        icon: "/sponsors/upescsa.png",
-        url: "https://www.upescsa.in",
-      },
-
-    ]
+    "Bronze": []
   };
 
 
@@ -52,23 +43,25 @@ const Sponsors = () => {
                 </h3>
                 <div className="mt-4 mb-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                   {items.map((item) => (
-                    <div
-                      key={item.name}
-                      className="flex flex-col text-center gap-4 justify-between align-middle items-center capitalize px-12 py-4 rounded-3xl border border-gray-100 w-auto1"
-                    >
-                      <div />
-                      {typeof item.icon === "string"? (( 
-                        <img
-                          alt={item.name} // Added alt attribute for accessibility
-                          src={item.icon as string}
-                          loading="lazy"
-                          className="rounded-lg max-h-24"
-                        /> 
-                      )): (
-                        <item.icon size={64}/>
-                      )}
-                      <h5 className="text-gray-500">{item.name}</h5>
-                    </div>
+                    <a href={item.url} className="group">
+                      <div
+                        key={item.name}
+                        className="flex flex-col text-center gap-4 justify-between align-middle items-center capitalize px-12 py-4 rounded-3xl border border-gray-100 w-auto1"
+                      >
+                        <div />
+                        {typeof item.icon === "string"? (( 
+                          <img
+                            alt={item.name} // Added alt attribute for accessibility
+                            src={item.icon as string}
+                            loading="lazy"
+                            className="rounded-lg max-h-24"
+                          /> 
+                        )): (
+                          <item.icon size={64} className="group-hover:scale-105 transition-transform duration-300"/>
+                        )}
+                        <h5 className="text-gray-500">{item.name}</h5>
+                      </div>
+                    </a>
                   ))}
                 </div>
               </div>

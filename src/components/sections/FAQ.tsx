@@ -92,7 +92,7 @@ const FAQ = () => {
                   />
                 </div>
                 <p
-                  className={`${isOpen[index] ? "max-h-96 pb-8 opacity-100" : "max-h-0 opacity-0"} overflow-hidden transition-all duration-300`}
+                  className={`${isOpen[index] ? "max-h-28 pb-8 opacity-100" : "max-h-0 opacity-0"} origin-top overflow-hidden transition-all duration-300`}
                 >
                   {item["answer"]}
                 </p>

@@ -2,11 +2,6 @@ import { useEffect, useState } from "react";
 
 // HEADER ADD SCHEDULE BACK
 // EVENT SCHEDULE -> COMMENT 🔄
-// ABOUT -> VENUE TO BE REVEALED 🔄
-// FAQ -> DATE AND VENUE 🔄
-// SPONSORS -> DOWNLOAD BROCHURE
-// ABOUT
-// GALLERY -> MARQUEE
 const Header = () => {
   const [headerScrolled, setHeaderScrolled] = useState(false);
 

@@ -49,12 +49,6 @@ const Team = () => {
     ],
     [
       {
-        name: "Shikhar Pathak",
-        designation: "Core Member",
-        img: "members/shikhar.webp",
-        linkedin: "https://www.linkedin.com/in/shikhar-pathak-ab3503259/",
-      },
-      {
         name: "Vinayak Sharma",
         designation: "Core Member",
         img: "members/vinayak.webp",

@@ -27,11 +27,11 @@ const Venue = () => {
           allowFullScreen={false}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade" />
-        <div className="w-max sm:w-1/2 lg:w-1/2 md:py-auto pt-4 mx-auto md:px-8 flex flex-col justify-center items-center md:items-start before:bg-[url('/logos/upes.jpg')] before:bg-cover before:z-20 before:brightness-50 relative before:top-0 before:left-0 before:content=[''] before:w-full before:h-full before:absolute backdrop-blur-sm">
-          <h3 className="text-primary md:mb-2 lg:text-4xl">
+        <div className="w-max sm:w-1/2 lg:w-1/2 md:py-auto py-4 mx-auto px-4 md:px-8 flex flex-col justify-center items-center md:items-start before:bg-[url('/logos/upes.jpg')] before:bg-cover before:z-20 before:brightness-50 relative before:top-0 before:left-0 before:content=[''] before:w-full before:h-full before:absolute backdrop-blur-sm">
+          <h3 className="text-primary md:mb-2 text-2xl lg:text-4xl">
             UPES Dehradun
           </h3>
-          <h4 className="text-white font-light!">ENERGY ACRES, UPES, BIDHOLI, via, Prem Nagar, Uttarakhand 248007</h4>
+          <h4 className="text-white font-light! text-sm lg:text-xl">ENERGY ACRES, UPES, BIDHOLI, via, Prem Nagar, Uttarakhand 248007</h4>
         </div>
       </div>
     </section>

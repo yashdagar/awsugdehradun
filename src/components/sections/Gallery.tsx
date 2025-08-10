@@ -113,7 +113,7 @@ const Gallery = () => {
   }, [maximizedImage, content]);
 
   return (
-    <section className="gallery">
+    <section className="py-8 gallery">
       <h2>Gallery</h2>
       <div className="flex items-center sm:gap-4">
         <button

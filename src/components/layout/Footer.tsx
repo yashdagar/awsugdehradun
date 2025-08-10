@@ -11,8 +11,12 @@ const Footer = () => {
             <h3 className="text-3xl font-medium mb-2 border-b-secondary border-b-2">Contact Us</h3>
             <div className="flex flex-col gap-1">
               <h4 className="text-xl font-medium">Phone Numbers</h4>
-              <p className="text-gray-100">+91 96344 83823</p>
-              <p className="text-gray-100">+91 99979 69951</p>
+              <a href="tel:+919634483823" className="hover:*:text-[#32ccff]">
+                <p className="text-gray-100">+91 96344 83823</p>
+              </a>
+              <a href="tel:+919997969951" className="hover:*:text-[#32ccff]">
+                <p className="text-gray-100">+91 99979 69951</p>
+              </a>
             </div>
             <div className="flex flex-col gap-1 mt-2">
               <h4 className="text-xl font-medium">Email</h4>

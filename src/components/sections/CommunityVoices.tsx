@@ -76,7 +76,7 @@ const CommunityVoices: React.FC = () => {
   const getItemWidth = () => {
     if (!containerRef.current) return 0;
     const containerWidth = containerRef.current.offsetWidth;
-    const gap = 16; // 1rem gap converted to pixels
+    const gap = 32; // 2rem (gap-8) converted to pixels
     const totalGapWidth = gap * tolerance;
     return (containerWidth - totalGapWidth) / (tolerance + 1);
   };
@@ -110,7 +110,7 @@ const CommunityVoices: React.FC = () => {
   }, []);
 
   return (
-    <section className="youtube py-16">
+    <section className="youtube py-16 px-4 sm:px-16">
       <h2 className="mb-8!">Community Voices</h2>
       <p className="justify-center text-lg font-normal tracking-wide mb-12">Hear from the rising stars of the cloud community!</p>
       <div className="flex items-center sm:gap-4">
@@ -124,7 +124,7 @@ const CommunityVoices: React.FC = () => {
           <div
             className="flex transition-transform duration-700 ease-in-out w-full gap-8"
             style={{
-              transform: `translateX(calc(-${selectedIndex} * (${getItemWidth()}px + 2.4rem)))`,
+              transform: `translateX(calc(-${selectedIndex} * (${getItemWidth()}px + 2rem)))`,
               willChange: "transform"
             }}
           >

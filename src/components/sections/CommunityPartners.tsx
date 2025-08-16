@@ -29,7 +29,7 @@ const CommunityPartners = () => {
                         <a href={item.url} className="group">
                             <div
                             key={item.name}
-                            className="flex flex-col text-center gap-4 justify-between align-middle items-center capitalize px-12 py-4 rounded-3xl border border-gray-100 w-auto1"
+                            className="flex flex-col h-[100%] text-center gap-4 justify-between align-middle items-center capitalize px-12 py-4 rounded-3xl border border-gray-100 w-auto1"
                             >
                             <div />
                             <img

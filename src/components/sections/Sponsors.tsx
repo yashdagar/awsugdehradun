@@ -17,17 +17,21 @@ interface Sponsors {
 const Sponsors = () => {
   const sponsors : Sponsors = {
     "Platinum": [],
-    "Gold": [],
-    "Silver": [
+    "Gold": [
+      {
+        name: "AWS",
+        icon: "/sponsors/aws.png",
+        url: "https://aws.amazon.com",
+      },
       {
         name: "Github",
         icon: SiGithub,
         url: "https://github.com",
       },
     ],
+    "Silver": [],
     "Bronze": []
   };
-
 
   return (
     <section className="sponsors">
@@ -46,7 +50,7 @@ const Sponsors = () => {
                     <a href={item.url} className="group">
                       <div
                         key={item.name}
-                        className="flex flex-col text-center gap-4 justify-between align-middle items-center capitalize px-12 py-4 rounded-3xl border border-gray-100 w-auto1"
+                        className="flex flex-col text-center h-[100%] gap-4 justify-between align-middle items-center capitalize px-12 py-4 rounded-3xl border border-gray-100 w-auto1"
                       >
                         <div />
                         {typeof item.icon === "string"? (( 

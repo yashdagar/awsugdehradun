@@ -1,8 +1,10 @@
 interface Speaker{
   name: string,
   designation: string,
+  company: string,
+  companyImage?: string,
   img: string,
-  linkedin: string
+  linkedin: string,
 }
 
 const Speakers = () => {
@@ -10,24 +12,32 @@ const Speakers = () => {
     {
       name: "Ridhima Kapoor",
       designation: "Senior Community Manager",
+      company: "Amazon Web Services",
+      companyImage: "/sponsors/aws.png",
       img: "/speakers/ridhima.png",
       linkedin: "https://www.linkedin.com/in/kapoor-ridhima/",
     },
     {
       name: "Ameya Vaidya",
       designation: "Principle Architect",
+      company: "DreamWorld Tech",
+      companyImage: "/speakers/dream_world_tech.png",
       img: "/speakers/ameya.png",
       linkedin: "https://www.linkedin.com/in/kapoor-ridhima/",
     },
     {
       name: "Shubham Londhe",
       designation: "Developer Advocate",
+      company: "Amazon Web Services",
+      companyImage: "/sponsors/aws.png",
       img: "/speakers/shubham.png",
       linkedin: "https://www.linkedin.com/in/kapoor-ridhima/",
     },
     {
       name: "Kushal Nagrani",
       designation: "Data Solutions Achitect",
+      company: "EPAM Systems",
+      companyImage: "/speakers/epam.png",
       img: "/speakers/kushal.png",
       linkedin: "https://www.linkedin.com/in/kapoor-ridhima/",
     },
@@ -67,7 +77,8 @@ const Speakers = () => {
             <h4 className="text-center text-lg font-semibold capitalize">
               {speaker["name"]}
             </h4>
-            <div className="text-center text-gray-500 text-sm font-medium backdrop-blur-sm border border-black/10 rounded-full px-2 w-fit self-center">
+            <p className="flex mx-auto mb-2">{speaker["companyImage"] && (<img src={speaker["companyImage"]} className="h-4 mr-2 rounded-sm" />)}{speaker["company"]}</p>
+            <div className="text-center text-gray-500 bg-white text-sm font-medium backdrop-blur-sm border border-black/10 rounded-full px-3 w-fit self-center">
               {speaker["designation"]}
             </div>
           </div>

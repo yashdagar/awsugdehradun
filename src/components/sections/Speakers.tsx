@@ -6,7 +6,32 @@ interface Speaker{
 }
 
 const Speakers = () => {
-  const speakers: Speaker[] = [];
+  const speakers: Speaker[] = [
+    {
+      name: "Ridhima Kapoor",
+      designation: "Senior Community Manager",
+      img: "/speakers/ridhima.png",
+      linkedin: "https://www.linkedin.com/in/kapoor-ridhima/",
+    },
+    {
+      name: "Ameya Vaidya",
+      designation: "Principle Architect",
+      img: "/speakers/ameya.png",
+      linkedin: "https://www.linkedin.com/in/kapoor-ridhima/",
+    },
+    {
+      name: "Shubham Londhe",
+      designation: "Developer Advocate",
+      img: "/speakers/shubham.png",
+      linkedin: "https://www.linkedin.com/in/kapoor-ridhima/",
+    },
+    {
+      name: "Kushal Nagrani",
+      designation: "Data Solutions Achitect",
+      img: "/speakers/kushal.png",
+      linkedin: "https://www.linkedin.com/in/kapoor-ridhima/",
+    },
+  ];
 
   const shouldAnnounce = speakers.length ;
 
@@ -14,7 +39,7 @@ const Speakers = () => {
     <section className="speakers">
       <div className="aws1" />
       <div className="aws2" />
-      <h2 className="mb-0">Speakers</h2>
+      <h2 className="mb-24">Speakers</h2>
       {shouldAnnounce ?
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 select-none">
           {speakers.map((speaker) => (

@@ -16,13 +16,14 @@ interface Sponsors {
 
 const Sponsors = () => {
   const sponsors : Sponsors = {
-    "Platinum": [],
-    "Gold": [
+    "Platinum": [
       {
         name: "AWS",
         icon: "/sponsors/aws.png",
         url: "https://aws.amazon.com",
       },
+    ],
+    "Gold": [
       {
         name: "Github",
         icon: SiGithub,

@@ -133,7 +133,7 @@ const Team = () => {
       {
         name: "Rudransh Sogani",
         designation: "Volunteer",
-        img: "/volunteers/rudransh.png",
+        img: "/volunteers/rudransh.jpeg",
         linkedin: "https://www.linkedin.com/in/rudransh-sogani-7211a6276/",
       },
       // {

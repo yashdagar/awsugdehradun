@@ -14,7 +14,7 @@ const Speakers = () => {
       designation: "Senior Community Manager",
       company: "Amazon Web Services",
       companyImage: "/sponsors/aws.png",
-      img: "/speakers/ridhima.png",
+      img: "/speakers/ridhima.webp",
       linkedin: "https://www.linkedin.com/in/kapoor-ridhima/",
     },
     {
@@ -22,7 +22,7 @@ const Speakers = () => {
       designation: "Developer Advocate",
       company: "Amazon Web Services",
       companyImage: "/sponsors/aws.png",
-      img: "/speakers/shubham.png",
+      img: "/speakers/shubham.webp",
       linkedin: "https://www.linkedin.com/in/shubhamlondhe1996/",
     },
     {
@@ -30,7 +30,7 @@ const Speakers = () => {
       designation: "Senior Account Manager",
       company: "Amazon Web Services",
       companyImage: "/sponsors/aws.png",
-      img: "/speakers/purnesh.jpeg",
+      img: "/speakers/purnesh.webp",
       linkedin: "https://www.linkedin.com/in/purneshtripathi/",
     },
     {
@@ -38,7 +38,7 @@ const Speakers = () => {
       designation: "Senior Account Manager",
       company: "Amazon Web Services",
       companyImage: "/sponsors/aws.png",
-      img: "/speakers/shikha.jpeg",
+      img: "/speakers/shikha.webp",
       linkedin: "https://www.linkedin.com/in/shikhanautiyal/",
     },
     {
@@ -46,7 +46,7 @@ const Speakers = () => {
       designation: "Principle Architect",
       company: "DreamWorld Tech",
       companyImage: "/speakers/dream_world_tech.png",
-      img: "/speakers/ameya.png",
+      img: "/speakers/ameya.webp",
       linkedin: "https://www.linkedin.com/in/ameya-vaidya-9a164317/",
     },
     {
@@ -54,7 +54,7 @@ const Speakers = () => {
       designation: "Data Solutions Achitect",
       company: "EPAM Systems",
       companyImage: "/speakers/epam.png",
-      img: "/speakers/kushal.png",
+      img: "/speakers/kushal.webp",
       linkedin: "https://in.linkedin.com/in/kushal-nagrani/",
     },
     {
@@ -62,7 +62,7 @@ const Speakers = () => {
       designation: "Devops Engineer",
       company: "Ciena",
       companyImage: "/speakers/ciena.jpeg",
-      img: "/speakers/himank.jpeg",
+      img: "/speakers/himank.webp",
       linkedin: "https://www.linkedin.com/in/varhimank/",
     },
   ];

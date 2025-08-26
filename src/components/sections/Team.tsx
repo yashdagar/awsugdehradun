@@ -129,6 +129,32 @@ const Team = () => {
         linkedin: "https://www.linkedin.com/in/dheeraj-kumar-sah-692887249/",
       },
     ],
+    [
+      {
+        name: "Rudransh Sogani",
+        designation: "Volunteer",
+        img: "/volunteers/rudransh.png",
+        linkedin: "https://www.linkedin.com/in/rudransh-sogani-7211a6276/",
+      },
+      // {
+      //   name: "Fardeen",
+      //   designation: "Volunteer",
+      //   img: "volunteers/rudransh.png",
+      //   linkedin: "https://www.linkedin.com/in/rudransh-sogani-7211a6276/",
+      // },
+      {
+        name: "Angela Paul",
+        designation: "Volunteer",
+        img: "/volunteers/angela.jpeg",
+        linkedin: "https://www.linkedin.com/in/angela-paul-7b4557254/",
+      },
+      {
+        name: "Rudraksh Gupta",
+        designation: "Volunteer",
+        img: "/volunteers/rudraksh.jpeg",
+        linkedin: "https://www.linkedin.com/in/rudraksh-gupta-664b591b2/",
+      },
+    ]
   ];
 
   // Function to generate the correct grid classes based on member count

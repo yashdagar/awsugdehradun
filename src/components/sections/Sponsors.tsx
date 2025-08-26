@@ -30,7 +30,13 @@ const Sponsors = () => {
         url: "https://github.com",
       },
     ],
-    "Silver": [],
+    "Silver": [
+      {
+        name: "Monster",
+        icon: "/sponsors/monster.png",
+        url: "https://www.monsterenergy.com/en-in/",
+      },
+    ],
     "Bronze": []
   };
 

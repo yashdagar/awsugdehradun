@@ -13,101 +13,288 @@ interface Content {
 }
 
 const Schedule = () => {
+  const generateTimeArray = (startTime: string, endTime: string): string[] => {
+    const times: string[] = [];
+
+    const parseTime = (timeStr: string): Date => {
+        const date = new Date();
+        let [time, ampm] = timeStr.split(" ");
+        let [hours, minutes] = time.split(":").map(Number);
+
+        if (ampm === "pm" && hours < 12) {
+            hours += 12;
+        }
+        if (ampm === "am" && hours === 12) { // 12am is 0 hours
+            hours = 0;
+        }
+
+        date.setHours(hours, minutes, 0, 0);
+        return date;
+    };
+
+    const start = parseTime(startTime);
+    const end = parseTime(endTime);
+    let current = start;
+
+    while (current <= end) {
+        let hour = current.getHours();
+        let minute = current.getMinutes();
+        let ampm = hour >= 12 ? "pm" : "am";
+        
+        // Convert to 12-hour format
+        hour = hour % 12;
+        hour = hour === 0 ? 12 : hour; // The hour '0' should be '12'
+
+        const timeString = `${hour}:${minute.toString().padStart(2, '0')} ${ampm}`;
+        times.push(timeString);
+
+        // Add 15 minutes for the next interval
+        current.setMinutes(current.getMinutes() + 15);
+    }
+
+    return times;
+  };
+
+  // Function to snap time to nearest 15-minute interval
+  const snapToNearestInterval = (timeStr: string): string => {
+    const parseTime = (timeStr: string): Date => {
+        const date = new Date();
+        let [time, ampm] = timeStr.split(" ");
+        let [hours, minutes] = time.split(":").map(Number);
+
+        if (ampm === "pm" && hours < 12) {
+            hours += 12;
+        }
+        if (ampm === "am" && hours === 12) {
+            hours = 0;
+        }
+
+        date.setHours(hours, minutes, 0, 0);
+        return date;
+    };
+
+    const formatTime = (date: Date): string => {
+        let hour = date.getHours();
+        let minute = date.getMinutes();
+        let ampm = hour >= 12 ? "pm" : "am";
+        
+        hour = hour % 12;
+        hour = hour === 0 ? 12 : hour;
+
+        return `${hour}:${minute.toString().padStart(2, '0')} ${ampm}`;
+    };
+
+    const time = parseTime(timeStr);
+    const minutes = time.getMinutes();
+    
+    // Round to nearest 15-minute interval
+    const roundedMinutes = Math.round(minutes / 15) * 15;
+    
+    if (roundedMinutes === 60) {
+        time.setHours(time.getHours() + 1);
+        time.setMinutes(0);
+    } else {
+        time.setMinutes(roundedMinutes);
+    }
+
+    return formatTime(time);
+  };
+
   const content: Content[] = [
     {
       heading: "Registration",
-      description: "Registration and badge pickup starts at 07:30am",
-      time: "9:00 am - 10:00 am",
+      description: "Get yourself registered and collect your badges",
+      time: "8:00 am - 9:30 am",
       hue: "hue-rotate-30",
       icon: "/logos/registration.svg",
     },
     {
       heading: "Welcome Note",
-      // description: "Welcome to AWS Community Day Dehradun 2024",
-      time: "10:00 am - 11:00 am",
+      description: "Lamp lighting, cultural video and welcome note",
+      time: "9:30 am - 10:00 am",
       hue: "hue-rotate-90",
       icon: "/logos/welcome.svg",
     },
     {
-      heading: "Sponsor Talk",
-      description: "Registration and badge pickup starts at 07:30am",
-      time: "11:00 am - 12:00 pm",
+      heading: "Keynote Session",
+      description: "Keynote session by Ridhima Kapoor",
+      time: "10:00 am - 10:30 am",
       hue: "-hue-rotate-30",
       icon: "/logos/mic.svg",
       people: [
         {
-          img: "members/yogesh.jpg",
-          name: "Yogesh Jain",
-        },
-        {
-          img: "members/vedant.jpg",
-          name: "Vedant",
-        },
+          img: "/speakers/ridhima.png",
+          name: "Ridhima Kapoor",
+        }
       ],
     },
     {
-      heading: "Coffee Break",
-      description: "Registration and badge pickup starts at 07:30am",
-      time: "12:00 pm - 1:00 pm",
+      heading: "Prompt Engineering",
+      description: "Session 2 on Prompt Engineering by Ameya Vaidya",
+      time: "10:30 am - 11:00 am",
       hue: "hue-rotate-60",
+      icon: "/logos/mic.svg",
+      people: [
+        {
+          img: "/speakers/ameya.png",
+          name: "Ameya Vaidya",
+        }
+      ],
+    },
+    {
+      heading: "Morning High Tea",
+      description: "Morning High Tea / Networking break",
+      time: "11:00 am - 11:30 am",
+      hue: "-hue-rotate-90",
       icon: "/logos/coffee.svg",
     },
     {
-      heading: "Speaker Session",
-      description: "Registration and badge pickup starts at 07:30am",
-      time: "1:00 pm - 2:00 pm",
-      hue: "-hue-rotate-90",
-      icon: "/logos/registration.svg",
-    },
-    {
-      heading: "Lunch",
-      description: "Registration and badge pickup starts at 07:30am",
-      time: "2:00 pm - 3:00 pm",
+      heading: "Quiz",
+      description: "Quiz 1",
+      time: "11:30 am - 12:00 pm",
       hue: "hue-rotate-30",
       icon: "/logos/registration.svg",
     },
     {
-      heading: "Speaker Session 2",
-      description: "Registration and badge pickup starts at 07:30am",
-      time: "3:00 pm - 4:00 pm",
+      heading: "Data Engineering",
+      description: "Session 3 on Data Engineering by Kaushal Nagrani",
+      time: "12:00 pm - 12:30 pm",
       hue: "-hue-rotate-60",
-      icon: "/logos/registration.svg",
+      icon: "/logos/mic.svg",
+      people: [
+        {
+          img: "/speakers/kushal.png",
+          name: "Kushal Nagrani",
+        }
+      ],
     },
     {
-      heading: "Closing Note",
-      description: "Registration and badge pickup starts at 07:30am",
-      time: "4:00 pm - 5:00 pm",
+      heading: "Panel Discussion",
+      description: "Panel Discussion by Avita Ma'am & others",
+      time: "12:30 pm - 1:00 pm",
+      hue: "hue-rotate-180",
+      icon: "/logos/mic.svg",
+    },
+    {
+      heading: "Github Actions",
+      description: "Github Sponsor Talk by Himank Varshney on Github Actions",
+      time: "1:00 pm - 1:20 pm",
+      hue: "hue-rotate-30",
+      icon: "/logos/mic.svg",
+      people: [
+        {
+          img: "/speakers/himank.jpeg",
+          name: "Himank",
+        }
+      ],
+    },
+    {
+      heading: "Interaction Window",
+      description: "Interaction window",
+      time: "1:20 pm - 1:45 pm",
+      hue: "hue-rotate-90",
+      icon: "/logos/welcome.svg",
+    },
+    {
+      heading: "Lunch",
+      description: "Lunch",
+      time: "1:45 pm - 2:45 pm",
+      hue: "-hue-rotate-30",
+      icon: "/logos/coffee.svg",
+    },
+    {
+      heading: "Agentic AI",
+      description: "Session 4 on Agentic AI by Shubham",
+      time: "3:00 pm - 3:30 pm",
+      hue: "hue-rotate-60",
+      icon: "/logos/mic.svg",
+      people: [
+        {
+          img: "/speakers/shubham.png",
+          name: "Shubham Londhe",
+        }
+      ],
+    },
+    {
+      heading: "Cloud Security / Enterprenuership",
+      description: "Session 5 / Hands on",
+      time: "3:30 pm - 4:00 pm",
+      hue: "-hue-rotate-90",
+      icon: "/logos/mic.svg",
+      people: [],
+    },
+    {
+      heading: "Cultural Activity",
+      description: "Cultural Activity / Drama etc",
+      time: "4:00 pm - 4:30 pm",
+      hue: "hue-rotate-30",
+      icon: "/logos/welcome.svg",
+    },
+    {
+      heading: "Felicitation & Closing Note",
+      description: "Felicitation & Closing Note",
+      time: "4:30 pm - 5:00 pm",
+      hue: "-hue-rotate-60",
+      icon: "/logos/welcome.svg",
+    },
+    {
+      heading: "Goodies distribution",
+      description: "Goodies distribution",
+      time: "5:00 pm - 5:30 pm",
       hue: "hue-rotate-180",
       icon: "/logos/registration.svg",
     },
-  ]
-  const time: string[] = [
-      "9:00 am",
-      "9:30 am",
-      "10:00 am",
-      "10:30 am",
-      "11:00 am",
-      "11:30 am",
-      "12:00 pm",
-      "12:30 pm",
-      "1:00 pm",
-      "1:30 pm",
-      "2:00 pm",
-      "2:30 pm",
-      "3:00 pm",
-      "3:30 pm",
-      "4:00 pm",
-      "4:30 pm",
-      "5:00 pm",
-      "5:30 pm",
-      "6:00 pm",
-    ]
+  ];
+
+  const time: string[] = generateTimeArray("8:00 am", "5:30 pm");
 
   const getDurationHours = (s: String) => {
     const items = s.split(" ")
-    const start = time.indexOf(`${items[0]} ${items[1]}`)
-    const end = time.indexOf(`${items[3]} ${items[4]}`)
-    return time.slice(start, end)
+    const startTime = `${items[0]} ${items[1]}`
+    const endTime = `${items[3]} ${items[4]}`
+    
+    // Snap times to nearest 15-minute intervals
+    const snappedStart = snapToNearestInterval(startTime)
+    const snappedEnd = snapToNearestInterval(endTime)
+    
+    const start = time.indexOf(snappedStart)
+    const end = time.indexOf(snappedEnd)
+    
+    // If end time is not found, find the closest time before it
+    let actualEnd = end
+    if (end === -1) {
+      // Find the last time slot that is before or equal to the original end time
+      for (let i = time.length - 1; i >= 0; i--) {
+        const currentTime = time[i]
+        if (isTimeBefore(currentTime, endTime) || currentTime === snappedEnd) {
+          actualEnd = i
+          break
+        }
+      }
+    }
+    
+    return start !== -1 && actualEnd !== -1 ? time.slice(start, actualEnd + 1) : [snappedStart]
+  }
+
+  // Helper function to check if time1 is before time2
+  const isTimeBefore = (time1: string, time2: string): boolean => {
+    const parseTime = (timeStr: string): Date => {
+      const date = new Date();
+      let [time, ampm] = timeStr.split(" ");
+      let [hours, minutes] = time.split(":").map(Number);
+
+      if (ampm === "pm" && hours < 12) {
+          hours += 12;
+      }
+      if (ampm === "am" && hours === 12) {
+          hours = 0;
+      }
+
+      date.setHours(hours, minutes, 0, 0);
+      return date;
+    };
+
+    return parseTime(time1) < parseTime(time2);
   }
 
   return (
@@ -126,7 +313,7 @@ const Schedule = () => {
           {content.map((item: Content, i) => {
             const times = getDurationHours(item.time);
             return (
-              <div className="flex">
+              <div className="flex" key={i}>
                 <div className="flex flex-col h-auto">
                 {
                  times.map((t) =>
@@ -142,8 +329,7 @@ const Schedule = () => {
                 }
                 </div>
                 <div
-                  key={i}
-                  className={`w-full lg:w-2/3 xl:w-1/2 sm:mx-8 h-fit backdrop-blur-sm bg-white/50 rounded-lg overflow-clip py-3 px-4 m-4 border border-white/80 inset-shadow`}
+                  className={`w-full lg:w-2/3 xl:w-1/2 sm:mx-8 h-auto backdrop-blur-sm bg-white/50 rounded-lg overflow-clip py-3 px-4 m-4 border border-white/80 inset-shadow`}
                 >
                   <div className="w-full flex items-center gap-2">
                     <div

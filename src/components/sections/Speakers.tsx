@@ -65,14 +65,14 @@ const Speakers = () => {
       img: "/speakers/himank.webp",
       linkedin: "https://www.linkedin.com/in/varhimank/",
     },
-    // {
-    //   name: "Deepankar Anand",
-    //   designation: "Devops Engineer",
-    //   company: "Absolutdata Analytics",
-    //   companyImage: "/speakers/absolut_data.jpeg",
-    //   img: "/speakers/deepankar.webp",
-    //   linkedin: "https://www.linkedin.com/in/deepankaranand/",
-    // },
+    {
+      name: "Deepankar Anand",
+      designation: "Senior Manager - Data Science & Analytics",
+      company: "Tredence Analytics",
+      companyImage: "/speakers/tredence.jpeg",
+      img: "/speakers/deepankar.jpeg",
+      linkedin: "https://www.linkedin.com/in/deepankaranand/",
+    },
   ];
 
   const shouldAnnounce = speakers.length ;

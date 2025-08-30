@@ -31,11 +31,6 @@ const Sponsors = () => {
       },
     ],
     "Silver": [
-      {
-        name: "Monster",
-        icon: "/sponsors/monster.png",
-        url: "https://www.monsterenergy.com/en-in/",
-      },
     ],
     "Bronze": []
   };

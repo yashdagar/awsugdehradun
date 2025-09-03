@@ -32,7 +32,19 @@ const Sponsors = () => {
     ],
     "Silver": [
     ],
-    "Bronze": []
+    "Bronze": [
+      {
+        name: "Vamnaya",
+        icon: "/sponsors/vamnaya.png",
+        url: "https://vamnaya.com/",
+      },
+      {
+        name: "Keploy",
+        icon: "/sponsors/keploy.png",
+        url: "https://keploy.io/",
+      },
+
+    ]
   };
 
   return (
@@ -52,7 +64,7 @@ const Sponsors = () => {
                     <a href={item.url} className="group">
                       <div
                         key={item.name}
-                        className="flex flex-col text-center h-[100%] gap-4 justify-between align-middle items-center capitalize px-12 py-4 rounded-3xl border border-gray-100 w-auto1"
+                        className="flex flex-col text-center h-[100%] gap-4 justify-between align-middle items-center capitalize px-12 py-4 rounded-3xl border border-gray-100 bg-white/50 w-auto1"
                       >
                         <div />
                         {typeof item.icon === "string"? (( 

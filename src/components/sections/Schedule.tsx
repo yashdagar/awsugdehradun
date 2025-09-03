@@ -1,5 +1,3 @@
-import React from "react"
-
 interface Content {
   heading: string,
   description?: string,
@@ -49,7 +47,7 @@ const Schedule = () => {
         times.push(timeString);
 
         // Add 15 minutes for the next interval
-        current.setMinutes(current.getMinutes() + 15);
+        current.setMinutes(current.getMinutes() + 30);
     }
 
     return times;
@@ -102,146 +100,164 @@ const Schedule = () => {
 
   const content: Content[] = [
     {
-      heading: "Registration",
-      description: "Get yourself registered and collect your badges",
-      time: "8:00 am - 9:30 am",
+      heading: "Registration & Networking",
+      description: "Attendee arrival, ID card collection, networking with background music",
+      time: "8:00 AM - 9:30 AM",
       hue: "hue-rotate-30",
       icon: "/logos/registration.svg",
     },
     {
-      heading: "Welcome Note",
-      description: "Lamp lighting, cultural video and welcome note",
-      time: "9:30 am - 10:00 am",
+      heading: "Lamp Lighting & Welcome Note",
+      description: "Lamp lighting ceremony and welcome note",
+      time: "9:30 AM - 10:00 AM",
       hue: "hue-rotate-90",
       icon: "/logos/welcome.svg",
     },
     {
-      heading: "Keynote Session",
+      heading: "Keynote Address",
       description: "Keynote session by Ridhima Kapoor",
-      time: "10:00 am - 10:30 am",
+      time: "10:00 AM - 10:30 AM",
       hue: "-hue-rotate-30",
       icon: "/logos/mic.svg",
       people: [
         {
-          img: "/speakers/ridhima.png",
+          img: "/speakers/ridhima.webp",
           name: "Ridhima Kapoor",
         }
       ],
     },
     {
-      heading: "Prompt Engineering",
-      description: "Session 2 on Prompt Engineering by Ameya Vaidya",
-      time: "10:30 am - 11:00 am",
+      heading: "Session 1 - Agentic AI",
+      description: "Session on Agentic AI by Shubham Londhe",
+      time: "10:30 AM - 11:15 AM",
       hue: "hue-rotate-60",
       icon: "/logos/mic.svg",
       people: [
         {
-          img: "/speakers/ameya.png",
-          name: "Ameya Vaidya",
-        }
-      ],
-    },
-    {
-      heading: "Morning High Tea",
-      description: "Morning High Tea / Networking break",
-      time: "11:00 am - 11:30 am",
-      hue: "-hue-rotate-90",
-      icon: "/logos/coffee.svg",
-    },
-    {
-      heading: "Quiz",
-      description: "Quiz 1",
-      time: "11:30 am - 12:00 pm",
-      hue: "hue-rotate-30",
-      icon: "/logos/registration.svg",
-    },
-    {
-      heading: "Data Engineering",
-      description: "Session 3 on Data Engineering by Kaushal Nagrani",
-      time: "12:00 pm - 12:30 pm",
-      hue: "-hue-rotate-60",
-      icon: "/logos/mic.svg",
-      people: [
-        {
-          img: "/speakers/kushal.png",
-          name: "Kushal Nagrani",
-        }
-      ],
-    },
-    {
-      heading: "Panel Discussion",
-      description: "Panel Discussion by Avita Ma'am & others",
-      time: "12:30 pm - 1:00 pm",
-      hue: "hue-rotate-180",
-      icon: "/logos/mic.svg",
-    },
-    {
-      heading: "Github Actions",
-      description: "Github Sponsor Talk by Himank Varshney on Github Actions",
-      time: "1:00 pm - 1:20 pm",
-      hue: "hue-rotate-30",
-      icon: "/logos/mic.svg",
-      people: [
-        {
-          img: "/speakers/himank.jpeg",
-          name: "Himank",
-        }
-      ],
-    },
-    {
-      heading: "Interaction Window",
-      description: "Interaction window",
-      time: "1:20 pm - 1:45 pm",
-      hue: "hue-rotate-90",
-      icon: "/logos/welcome.svg",
-    },
-    {
-      heading: "Lunch",
-      description: "Lunch",
-      time: "1:45 pm - 2:45 pm",
-      hue: "-hue-rotate-30",
-      icon: "/logos/coffee.svg",
-    },
-    {
-      heading: "Agentic AI",
-      description: "Session 4 on Agentic AI by Shubham",
-      time: "3:00 pm - 3:30 pm",
-      hue: "hue-rotate-60",
-      icon: "/logos/mic.svg",
-      people: [
-        {
-          img: "/speakers/shubham.png",
+          img: "/speakers/shubham.webp",
           name: "Shubham Londhe",
         }
       ],
     },
     {
-      heading: "Cloud Security / Enterprenuership",
-      description: "Session 5 / Hands on",
-      time: "3:30 pm - 4:00 pm",
+      heading: "Morning High Tea & Networking Break",
+      description: "30 minute tea and networking break",
+      time: "11:15 AM - 11:45 AM",
       hue: "-hue-rotate-90",
-      icon: "/logos/mic.svg",
-      people: [],
+      icon: "/logos/coffee.svg",
     },
     {
-      heading: "Cultural Activity",
-      description: "Cultural Activity / Drama etc",
-      time: "4:00 pm - 4:30 pm",
+      heading: "Session 2 - AWS Certifications",
+      description: "Session on AWS Certifications by Shikha Nautiyal",
+      time: "11:45 AM - 12:15 PM",
       hue: "hue-rotate-30",
+      icon: "/logos/mic.svg",
+      people: [
+        {
+          img: "/speakers/shikha.webp",
+          name: "Shikha Nautiyal",
+        }
+      ],
+    },
+    {
+      heading: "Session 3 - Cloud Security",
+      description: "Session on Cloud Security by Purnesh Tripathi",
+      time: "12:15 PM - 1:00 PM",
+      hue: "-hue-rotate-60",
+      icon: "/logos/mic.svg",
+      people: [
+        {
+          img: "/speakers/purnesh.webp",
+          name: "Purnesh Tripathi",
+        }
+      ],
+    },
+    {
+      heading: "Interaction & Networking Activity",
+      description: "Audience engagement, Q&A, and games",
+      time: "1:00 PM - 1:25 PM",
+      hue: "hue-rotate-180",
       icon: "/logos/welcome.svg",
     },
     {
-      heading: "Felicitation & Closing Note",
-      description: "Felicitation & Closing Note",
-      time: "4:30 pm - 5:00 pm",
+      heading: "Lunch Break",
+      description: "Networking lunch for 400 participants",
+      time: "1:25 PM - 2:25 PM",
+      hue: "hue-rotate-30",
+      icon: "/logos/coffee.svg",
+    },
+    {
+      heading: "Panel Discussion",
+      description: "Panel discussion with Deepankar Anand, Hitesh Sir and others",
+      time: "2:25 PM - 2:55 PM",
+      hue: "hue-rotate-90",
+      icon: "/logos/mic.svg",
+    },
+    {
+      heading: "Session 4 - Prompt Engineering",
+      description: "Session on Prompt Engineering by Ameya Vaidya",
+      time: "2:55 PM - 3:35 PM",
+      hue: "-hue-rotate-30",
+      icon: "/logos/mic.svg",
+      people: [
+        {
+          img: "/speakers/ameya.webp",
+          name: "Ameya Vaidya",
+        }
+      ],
+    },
+    {
+      heading: "Session 5 - Data Engineering",
+      description: "Session on Data Engineering by Kushal Nagrani",
+      time: "3:35 PM - 4:15 PM",
+      hue: "hue-rotate-60",
+      icon: "/logos/mic.svg",
+      people: [
+        {
+          img: "/speakers/kushal.webp",
+          name: "Kushal Nagrani",
+        }
+      ],
+    },
+    {
+      heading: "Audience Quiz & Interaction",
+      description: "Fun, interactive quiz with prizes for winners",
+      time: "4:15 PM - 4:35 PM",
+      hue: "-hue-rotate-90",
+      icon: "/logos/registration.svg",
+    },
+    {
+      heading: "Session 6 - GitHub Actions",
+      description: "GitHub Actions session by Himank Varshney",
+      time: "4:35 PM - 4:55 PM",
+      hue: "hue-rotate-30",
+      icon: "/logos/mic.svg",
+      people: [
+        {
+          img: "/speakers/himank.webp",
+          name: "Himank Varshney",
+        }
+      ],
+    },
+    {
+      heading: "Cultural Performance",
+      description: "15-minute cultural dance performance",
+      time: "4:55 PM - 5:10 PM",
       hue: "-hue-rotate-60",
       icon: "/logos/welcome.svg",
     },
     {
-      heading: "Goodies distribution",
-      description: "Goodies distribution",
-      time: "5:00 pm - 5:30 pm",
+      heading: "Felicitation Ceremony",
+      description: "Honoring speakers, guests and quiz winners",
+      time: "5:10 PM - 5:20 PM",
       hue: "hue-rotate-180",
+      icon: "/logos/welcome.svg",
+    },
+    {
+      heading: "Goodies Distribution & Closing Note",
+      description: "Swags distribution, thank you note, and group photos",
+      time: "5:20 PM - 5:30 PM",
+      hue: "hue-rotate-30",
       icon: "/logos/registration.svg",
     },
   ];
@@ -365,7 +381,7 @@ const Schedule = () => {
                             style={{
                               background: `no-repeat center / cover url(${person.img})`,
                             }}
-                            className="size-4 rounded-full"
+                            className="size-6 rounded-full"
                           />
                           {person.name}
                         </div>

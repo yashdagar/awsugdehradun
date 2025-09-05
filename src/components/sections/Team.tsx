@@ -48,12 +48,6 @@ const Team = () => {
       },
     ],
     [
-      // {
-      //   name: "Vinayak Sharma",
-      //   designation: "Core Member",
-      //   img: "members/vinayak.webp",
-      //   linkedin: "https://www.linkedin.com/in/vinayak-sharma-384936273/",
-      // },
       {
         name: "Yogesh Jain",
         designation: "Core Member",
@@ -110,12 +104,6 @@ const Team = () => {
         img: "members/ishika.webp",
         linkedin: "https://www.linkedin.com/in/ishikaaa-verma/",
       },
-      // {
-      //   name: "Angel Garg",
-      //   designation: "Member",
-      //   img: "members/angel.webp",
-      //   linkedin: "https://www.linkedin.com/in/angelgarg/",
-      // },
       {
         name: "Daksh Sethi",
         designation: "Member",

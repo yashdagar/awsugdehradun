@@ -12,6 +12,7 @@ interface Sponsors {
   "Gold": Sponsor[];
   "Silver": Sponsor[];
   "Bronze": Sponsor[];
+  "Ticket Sponsor": Sponsor[];
 }
 
 const Sponsors = () => {
@@ -44,6 +45,13 @@ const Sponsors = () => {
         url: "https://keploy.io/",
       },
 
+    ],
+    "Ticket Sponsor": [
+      {
+        name: "Konfhub",
+        icon: "/sponsors/konfhub.png",
+        url: "https://konfhub.com/",
+      },
     ]
   };
 

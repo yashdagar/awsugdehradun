@@ -12,7 +12,7 @@ interface Sponsors {
   "Gold": Sponsor[];
   "Silver": Sponsor[];
   "Bronze": Sponsor[];
-  "Ticket Sponsor": Sponsor[];
+  "Ticketing Partner": Sponsor[];
 }
 
 const Sponsors = () => {
@@ -46,7 +46,7 @@ const Sponsors = () => {
       },
 
     ],
-    "Ticket Sponsor": [
+    "Ticketing Partner": [
       {
         name: "Konfhub",
         icon: "/sponsors/konfhub.png",

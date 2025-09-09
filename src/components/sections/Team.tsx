@@ -150,7 +150,7 @@ const Team = () => {
     let classes = "flex flex-wrap justify-center gap-y-8";
 
     // Add appropriate gap between items based on screen size
-    classes += "gap-x-8 md:gap-x-16";
+    classes += " gap-x-8 md:gap-x-16";
 
     return classes;
   };
@@ -166,7 +166,7 @@ const Team = () => {
           <div className={getGridClasses(memberList.length)}>
             {memberList.map((member) => (
               <div
-                className="speaker relative w-full sm:w-5/12 lg:w-3/10 xl:w-1/5 flex-col pb-4 justify-center"
+                className="speaker relative w-2/5 sm:w-5/12 lg:w-3/10 xl:w-1/5 flex-col pb-4 justify-center"
                 key={member["name"]}
               >
                 <a href={member["linkedin"]} target="_blank" aria-label={`Visit ${member["name"]} on linkedin`}>

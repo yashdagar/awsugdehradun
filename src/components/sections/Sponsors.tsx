@@ -96,7 +96,7 @@ const Sponsors = () => {
         </div>
         <a target="_blank" href="mailto:awsugdehradun@gmail.com?subject=[Your Company Name] - Sponsorship Proposal" aria-label="Mail to awsugdehradun@gmail.com" className="link font-medium! group flex items-center">
           Become a sponsor 
-          <ArrowUpRight className="size-4 lg:size-6 group-hover:-translate-y-0.5 group-hover:translate-x-1 transition-transform text-[rgb(49,166,250]" />
+          <ArrowUpRight strokeWidth={2.5} className="size-4 lg:size-6 group-hover:-translate-y-0.5 group-hover:translate-x-1 transition-transform text-[rgb(49,166,250]" />
         </a>
       </div>
     </section>

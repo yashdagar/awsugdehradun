@@ -100,23 +100,23 @@ const Schedule = () => {
 
   const content: Content[] = [
     {
-      heading: "Registration & Networking",
-      description: "Attendee arrival, ID card collection, networking with background music",
-      time: "8:00 AM - 9:30 AM",
+      heading: "Registrations & Networking",
+      description: "Badge collection & community networking. Participants will collect badges at the desk and interact with fellow attendees.",
+      time: "8:30 AM - 9:45 AM",
       hue: "hue-rotate-30",
       icon: "/logos/registration.svg",
     },
     {
-      heading: "Lamp Lighting & Welcome Note",
-      description: "Lamp lighting ceremony and welcome note",
-      time: "9:30 AM - 10:00 AM",
+      heading: "Welcome Note & Lamp Lighting",
+      description: "Formal start. Event will commence with lamp lighting and formal introductions.",
+      time: "10:00 AM - 10:25 AM",
       hue: "hue-rotate-90",
       icon: "/logos/welcome.svg",
     },
     {
-      heading: "Keynote Address",
-      description: "Keynote session by Ridhima Kapoor",
-      time: "10:00 AM - 10:30 AM",
+      heading: "Keynote",
+      description: "Opening keynote by Ridhima Kapoor setting the theme of the day.",
+      time: "10:25 AM - 10:55 AM",
       hue: "-hue-rotate-30",
       icon: "/logos/mic.svg",
       people: [
@@ -127,9 +127,16 @@ const Schedule = () => {
       ],
     },
     {
+      heading: "Morning High Tea",
+      description: "Refreshments & networking. Attendees enjoy refreshments and casual networking over tea.",
+      time: "11:00 AM - 11:30 AM",
+      hue: "-hue-rotate-90",
+      icon: "/logos/coffee.svg",
+    },
+    {
       heading: "Session 1 - Agentic AI",
-      description: "Session on Agentic AI by Shubham Londhe",
-      time: "10:30 AM - 11:15 AM",
+      description: "Shubham Londhe shares insights into the future of Agentic AI.",
+      time: "11:30 AM - 12:10 PM",
       hue: "hue-rotate-60",
       icon: "/logos/mic.svg",
       people: [
@@ -140,29 +147,22 @@ const Schedule = () => {
       ],
     },
     {
-      heading: "Morning High Tea & Networking Break",
-      description: "30 minute tea and networking break",
-      time: "11:15 AM - 11:45 AM",
-      hue: "-hue-rotate-90",
-      icon: "/logos/coffee.svg",
-    },
-    {
-      heading: "Session 2 - AWS Certifications",
-      description: "Session on AWS Certifications by Shikha Nautiyal",
-      time: "11:45 AM - 12:15 PM",
+      heading: "Session 2 - Data Engineering",
+      description: "Kushal Nagrani covers modern approaches in data engineering.",
+      time: "12:10 PM - 12:50 PM",
       hue: "hue-rotate-30",
       icon: "/logos/mic.svg",
       people: [
         {
-          img: "/speakers/shikha.webp",
-          name: "Shikha Nautiyal",
+          img: "/speakers/kushal.webp",
+          name: "Kushal Nagrani",
         }
       ],
     },
     {
       heading: "Session 3 - Cloud Security",
-      description: "Session on Cloud Security by Purnesh Tripathi",
-      time: "12:15 PM - 1:00 PM",
+      description: "Purnesh Tripathi discusses best practices in securing cloud environments.",
+      time: "12:50 PM - 1:30 PM",
       hue: "-hue-rotate-60",
       icon: "/logos/mic.svg",
       people: [
@@ -173,30 +173,36 @@ const Schedule = () => {
       ],
     },
     {
-      heading: "Interaction & Networking Activity",
-      description: "Audience engagement, Q&A, and games",
-      time: "1:00 PM - 1:25 PM",
+      heading: "Networking Break",
+      description: "Sponsor booths + informal chats. Attendees visit sponsor booths and connect with peers informally.",
+      time: "1:30 PM - 1:55 PM",
       hue: "hue-rotate-180",
       icon: "/logos/welcome.svg",
     },
     {
       heading: "Lunch Break",
-      description: "Networking lunch for 400 participants",
-      time: "1:25 PM - 2:25 PM",
+      description: "Networking lunch. Networking lunch is served, encouraging interaction among participants.",
+      time: "2:00 PM - 3:00 PM",
       hue: "hue-rotate-30",
       icon: "/logos/coffee.svg",
     },
     {
       heading: "Panel Discussion",
-      description: "Panel discussion with Deepankar Anand, Hitesh Sir and others",
-      time: "2:25 PM - 2:55 PM",
+      description: "Experts, including Deepankar Anand and Hitesh Sir, discuss Cloud, DevOps, and AI.",
+      time: "3:00 PM - 3:30 PM",
       hue: "hue-rotate-90",
       icon: "/logos/mic.svg",
+      people: [
+        {
+          img: "/speakers/deepankar.jpeg",
+          name: "Deepankar Anand",
+        }
+      ],
     },
     {
       heading: "Session 4 - Prompt Engineering",
-      description: "Session on Prompt Engineering by Ameya Vaidya",
-      time: "2:55 PM - 3:35 PM",
+      description: "Ameya Vaidya presents strategies for effective prompt engineering.",
+      time: "3:30 PM - 4:10 PM",
       hue: "-hue-rotate-30",
       icon: "/logos/mic.svg",
       people: [
@@ -207,29 +213,29 @@ const Schedule = () => {
       ],
     },
     {
-      heading: "Session 5 - Data Engineering",
-      description: "Session on Data Engineering by Kushal Nagrani",
-      time: "3:35 PM - 4:15 PM",
+      heading: "Session 5 - AWS Certifications",
+      description: "Shikha Nautiyal guides attendees on AWS certifications and career paths.",
+      time: "4:10 PM - 4:50 PM",
       hue: "hue-rotate-60",
       icon: "/logos/mic.svg",
       people: [
         {
-          img: "/speakers/kushal.webp",
-          name: "Kushal Nagrani",
+          img: "/speakers/shikha.webp",
+          name: "Shikha Nautiyal",
         }
       ],
     },
     {
       heading: "Audience Quiz & Interaction",
-      description: "Fun, interactive quiz with prizes for winners",
-      time: "4:15 PM - 4:35 PM",
+      description: "Interactive quiz engages the audience with fun cloud-related questions.",
+      time: "4:50 PM - 5:10 PM",
       hue: "-hue-rotate-90",
       icon: "/logos/registration.svg",
     },
     {
       heading: "Session 6 - GitHub Actions",
-      description: "GitHub Actions session by Himank Varshney",
-      time: "4:35 PM - 4:55 PM",
+      description: "Himank Varshney demonstrates automation using GitHub Actions.",
+      time: "5:10 PM - 5:30 PM",
       hue: "hue-rotate-30",
       icon: "/logos/mic.svg",
       people: [
@@ -241,23 +247,16 @@ const Schedule = () => {
     },
     {
       heading: "Cultural Performance",
-      description: "15-minute cultural dance performance",
-      time: "4:55 PM - 5:10 PM",
+      description: "Enjoy a lively cultural dance performance to energize the audience.",
+      time: "5:30 PM - 5:40 PM",
       hue: "-hue-rotate-60",
       icon: "/logos/welcome.svg",
     },
     {
-      heading: "Felicitation Ceremony",
-      description: "Honoring speakers, guests and quiz winners",
-      time: "5:10 PM - 5:20 PM",
+      heading: "Felicitation & Goodies Distribution",
+      description: "Speakers, partners, and attendees are honored, followed by swag distribution.",
+      time: "5:40 PM - 6:00 PM",
       hue: "hue-rotate-180",
-      icon: "/logos/welcome.svg",
-    },
-    {
-      heading: "Goodies Distribution & Closing Note",
-      description: "Swags distribution, thank you note, and group photos",
-      time: "5:20 PM - 5:30 PM",
-      hue: "hue-rotate-30",
       icon: "/logos/registration.svg",
     },
   ];
@@ -316,7 +315,13 @@ const Schedule = () => {
   return (
     <section className="!px-2 md:!px-24 lg:!px-48 schedule">
       <h2>Event Schedule</h2>
-      <h4 className="px-1 pb-4">10 September 2025</h4>
+      <div className="flex ">
+        <h4 className="px-1 pb-4">10 September 2025</h4>
+        {/* <a href="/schedule.pdf" target="_blank" className="cursor-pointer bg-[#36affa] text-white px-5 py-2 mb-2 rounded-lg items-center font-medium text-lg ml-auto flex gap-x-1">
+          Download
+          <ArrowDown size={18} strokeWidth={2.5}/> 
+        </a> */}
+      </div>
       <div
         className="timeline w-full border border-[#bbb8] rounded-md overflow-clip relative"
       >
@@ -345,18 +350,18 @@ const Schedule = () => {
                 }
                 </div>
                 <div
-                  className={`w-full lg:w-2/3 xl:w-1/2 sm:mx-8 h-auto backdrop-blur-sm bg-white/50 rounded-lg overflow-clip py-3 px-4 m-4 border border-white/80 inset-shadow`}
+                  className={`w-full lg:w-2/3 xl:w-1/2 sm:mx-8 h-auto backdrop-blur-sm bg-white/50 rounded-lg overflow-clip py-3 px-4 mx-4 my-1 sm:m-4 border border-white/80 inset-shadow`}
                 >
                   <div className="w-full flex items-center gap-2">
                     <div
                       style={{
                         background: "no-repeat center #88f",
-                        WebkitMask: `url("${item.icon}")`,
+                        WebkitMask: `no-repeat url("${item.icon}")`,
                       }}
                       className={`size-8 rounded-md ${item.hue}`}
                     />
                     <div className="flex flex-col">
-                      <p className="font-medium text-lg text-gray-900 tracking-normal">
+                      <p className="font-medium text-lg leading-4 mb-1 text-gray-900 tracking-normal">
                         {item.heading}
                       </p>
                       <p
@@ -370,7 +375,7 @@ const Schedule = () => {
                     <div className="flex flex-col px-1 pt-2 gap-y-[.1rem]">
                       {item.people.map((person: {img: string, name:string}) => (
                         <div
-                          className="flex text-[#444] text-sm sm:text-base gap-2 items-center underline cursor-pointer"
+                          className="flex text-[#444] text-xs sm:text-sm md:text-base gap-2 items-center underline cursor-pointer"
                           onClick={() =>
                             document
                               .getElementsByClassName("speakers")[0]

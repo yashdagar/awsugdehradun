@@ -110,7 +110,7 @@ const Speakers = () => {
               {speaker["name"]}
             </h4>
             <p className="flex mx-auto mb-2">{speaker["companyImage"] && (<img src={speaker["companyImage"]} className="h-4 mr-2 rounded-sm" />)}{speaker["company"]}</p>
-            <div className="text-center text-gray-500 bg-white text-sm font-medium backdrop-blur-sm border border-black/10 rounded-full px-3 w-fit self-center">
+            <div className="text-center text-gray-500 bg-white text-xs md:text-sm font-medium backdrop-blur-sm border border-black/10 rounded-full px-3 py-1 w-fit self-center">
               {speaker["designation"]}
             </div>
           </div>

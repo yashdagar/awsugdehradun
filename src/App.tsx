@@ -32,7 +32,7 @@ function App() {
                 <About />
                 <Speakers />
                 <CommunityVoices />
-                {/* <Schedule /> */}
+                <Schedule />
                 <Gallery />
                 <Venue />
                 <Sponsors />
